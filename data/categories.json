@@ -25,7 +25,16 @@
       "icon": "🧩",
       "thumbnail": "/assets/images/categories/puzzle.jpg",
       "featured": true,
-      "featuredGames": ["puzzle-blocks", "color-match", "brain-teaser"]
+      "featuredGames": ["puzzle-blocks", "spades-spider-solitaire", "brain-teaser"]
+    },
+    {
+      "id": "card",
+      "name": "Card Games",
+      "description": "Enjoy classic and modern card games right in your browser.",
+      "icon": "🃏",
+      "thumbnail": "/assets/images/categories/card.jpg",
+      "featured": true,
+      "featuredGames": ["spades-spider-solitaire", "solitaire-classic", "poker-master"]
     },
     {
       "id": "simulation",
@@ -43,7 +52,7 @@
       "icon": "♟️",
       "thumbnail": "/assets/images/categories/strategy.jpg",
       "featured": false,
-      "featuredGames": ["chess-master", "tower-defense", "civilization-builder"]
+      "featuredGames": ["chess-master", "tower-defense", "spades-spider-solitaire"]
     },
     {
       "id": "racing",

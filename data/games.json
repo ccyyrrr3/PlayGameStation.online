@@ -24,6 +24,30 @@
       "relatedGames": ["9-ball-pool", "snooker-master", "trick-shots", "multiplayer-pool"]
     },
     {
+      "id": "spades-spider-solitaire",
+      "title": "Spades Spider Solitaire",
+      "description": "Enjoy this classic Spider Solitaire card game with a Spades theme in a beautifully designed interface.",
+      "longDescription": "Spades Spider Solitaire combines the traditional Spider Solitaire gameplay with a Spades theme. This addictive card game challenges you to arrange all cards in descending order by suit. Clear the board by building complete sequences from King to Ace and improve your strategic thinking skills.",
+      "iframe": "<script src=\"https://cdn.htmlgames.com/embed.js?game=SpadesSpiderSolitaire&bgcolor=white\"></script>",
+      "thumbnail": "/assets/images/games/spades-spider-solitaire.jpg",
+      "categories": ["card", "puzzle", "strategy"],
+      "features": [
+        "Classic Spider Solitaire gameplay",
+        "Beautiful card designs with Spades theme",
+        "Multiple difficulty levels",
+        "Undo feature for fixing mistakes",
+        "Hint system for when you're stuck",
+        "Game timer to track your progress"
+      ],
+      "controls": [
+        {"action": "Move", "description": "Click and drag cards to move them"},
+        {"action": "Stack", "description": "Arrange cards in descending order"},
+        {"action": "Deal", "description": "Click the deck to deal more cards when available"},
+        {"action": "Undo", "description": "Use the undo button to revert your last move"}
+      ],
+      "relatedGames": ["puzzle-blocks", "brain-teaser", "logic-master"]
+    },
+    {
       "id": "9-ball-pool",
       "title": "9-Ball Pool",
       "description": "Challenge yourself with a different set of pool rules in this exciting 9-ball variant.",
