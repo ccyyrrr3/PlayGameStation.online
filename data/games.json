@@ -1,0 +1,118 @@
+{
+  "games": [
+    {
+      "id": "8-ball-billiards-classic",
+      "title": "8 Ball Billiards Classic",
+      "description": "Experience the thrill of realistic pool gameplay with precise physics and stunning graphics.",
+      "longDescription": "8 Ball Billiards Classic is one of the most authentic pool simulation games available online. This game perfectly captures the essence of traditional 8-ball pool with its realistic physics engine and detailed graphics.",
+      "iframe": "https://games.crazygames.com/en_US/8-ball-billiards-classic/index.html?v=1.326",
+      "thumbnail": "/assets/images/games/8-ball-billiards-classic.jpg",
+      "categories": ["sports", "simulation", "popular"],
+      "features": [
+        "Realistic physics simulation",
+        "Stunning table graphics and ball animations",
+        "Intuitive controls for precise shots",
+        "Traditional 8-ball pool rules",
+        "Adjustable difficulty levels",
+        "Smooth gameplay experience"
+      ],
+      "controls": [
+        {"action": "Aim", "description": "Use your mouse to aim the cue in your desired direction"},
+        {"action": "Power", "description": "Pull back the cue stick with your mouse to adjust shot power"},
+        {"action": "Shoot", "description": "Release to take your shot"}
+      ],
+      "relatedGames": ["9-ball-pool", "snooker-master", "trick-shots", "multiplayer-pool"]
+    },
+    {
+      "id": "9-ball-pool",
+      "title": "9-Ball Pool",
+      "description": "Challenge yourself with a different set of pool rules in this exciting 9-ball variant.",
+      "longDescription": "9-Ball Pool is an exciting variation of the traditional pool game where players must hit balls in numerical order. With the same realistic physics as our 8-ball version, this game offers a fresh challenge for billiards enthusiasts.",
+      "iframe": "https://games.crazygames.com/en_US/9-ball-pool/index.html",
+      "thumbnail": "/assets/images/games/9-ball-pool.jpg",
+      "categories": ["sports", "simulation"],
+      "features": [
+        "9-ball rules variation",
+        "Realistic physics",
+        "Smooth ball movements",
+        "Multiple difficulty levels",
+        "Tournament mode"
+      ],
+      "controls": [
+        {"action": "Aim", "description": "Use your mouse to aim the cue"},
+        {"action": "Power", "description": "Pull back to set power"},
+        {"action": "Shoot", "description": "Release to shoot"}
+      ],
+      "relatedGames": ["8-ball-billiards-classic", "snooker-master", "trick-shots"]
+    },
+    {
+      "id": "snooker-master",
+      "title": "Snooker Master",
+      "description": "Test your precision with the more complex snooker variant on a larger table.",
+      "longDescription": "Snooker Master brings the popular British cue sport to your screen with impressive detail. Play on a full-size snooker table with 22 balls - 15 red and 6 colored. Master the complex rules and build impressive breaks in this challenging game.",
+      "iframe": "https://games.crazygames.com/en_US/snooker-master/index.html",
+      "thumbnail": "/assets/images/games/snooker-master.jpg",
+      "categories": ["sports", "simulation", "strategy"],
+      "features": [
+        "Full-size snooker table simulation",
+        "Official snooker rules",
+        "Realistic ball physics",
+        "Break building mechanics",
+        "Tournament mode with AI opponents"
+      ],
+      "controls": [
+        {"action": "Aim", "description": "Use your mouse to aim the cue"},
+        {"action": "Power", "description": "Pull back to set power"},
+        {"action": "Shoot", "description": "Release to shoot"},
+        {"action": "View", "description": "Right-click to look around the table"}
+      ],
+      "relatedGames": ["8-ball-billiards-classic", "9-ball-pool", "trick-shots"]
+    },
+    {
+      "id": "arcade-racing",
+      "title": "Arcade Racing",
+      "description": "Experience high-speed thrills in this action-packed arcade racing game.",
+      "longDescription": "Arcade Racing delivers heart-pounding speed on colorful tracks filled with obstacles and power-ups. Race against AI opponents or challenge your friends in this fast-paced racing game that prioritizes fun over simulation.",
+      "iframe": "https://games.crazygames.com/en_US/arcade-racing/index.html",
+      "thumbnail": "/assets/images/games/arcade-racing.jpg",
+      "categories": ["arcade", "racing", "popular"],
+      "features": [
+        "10 unique racetracks",
+        "Multiple vehicle options",
+        "Power-ups and special abilities",
+        "Nitro boost system",
+        "Local multiplayer support"
+      ],
+      "controls": [
+        {"action": "Steer", "description": "Arrow keys or WASD"},
+        {"action": "Accelerate", "description": "Up arrow or W"},
+        {"action": "Brake", "description": "Down arrow or S"},
+        {"action": "Nitro", "description": "Spacebar"}
+      ],
+      "relatedGames": ["kart-racer", "offroad-challenge", "city-driver"]
+    },
+    {
+      "id": "puzzle-blocks",
+      "title": "Puzzle Blocks",
+      "description": "Train your brain with this addictive block-matching puzzle game.",
+      "longDescription": "Puzzle Blocks combines elements of classic tetris with modern puzzle mechanics. Arrange falling blocks to create complete lines and earn points. Special blocks and power-ups add strategic depth to this seemingly simple but challenging game.",
+      "iframe": "https://games.crazygames.com/en_US/puzzle-blocks/index.html",
+      "thumbnail": "/assets/images/games/puzzle-blocks.jpg",
+      "categories": ["puzzle", "strategy", "popular"],
+      "features": [
+        "Classic and challenge modes",
+        "Special blocks with unique abilities",
+        "Progressive difficulty system",
+        "Global leaderboards",
+        "Achievement system"
+      ],
+      "controls": [
+        {"action": "Move", "description": "Arrow keys or WASD"},
+        {"action": "Rotate", "description": "Up arrow or W"},
+        {"action": "Drop", "description": "Spacebar"},
+        {"action": "Hold", "description": "C key"}
+      ],
+      "relatedGames": ["color-match", "brain-teaser", "logic-master"]
+    }
+  ]
+} 

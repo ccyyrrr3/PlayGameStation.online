@@ -1,0 +1,67 @@
+{
+  "categories": [
+    {
+      "id": "sports",
+      "name": "Sports",
+      "description": "Challenge yourself with realistic sports simulations and competitive games.",
+      "icon": "🏆",
+      "thumbnail": "/assets/images/categories/sports.jpg",
+      "featured": true,
+      "featuredGames": ["8-ball-billiards-classic", "9-ball-pool", "snooker-master"]
+    },
+    {
+      "id": "arcade",
+      "name": "Arcade",
+      "description": "Experience classic arcade action with simple controls and addictive gameplay.",
+      "icon": "🎮",
+      "thumbnail": "/assets/images/categories/arcade.jpg",
+      "featured": true,
+      "featuredGames": ["arcade-racing", "space-shooter", "pac-run"]
+    },
+    {
+      "id": "puzzle",
+      "name": "Puzzle",
+      "description": "Train your brain with challenging puzzles and mind-bending games.",
+      "icon": "🧩",
+      "thumbnail": "/assets/images/categories/puzzle.jpg",
+      "featured": true,
+      "featuredGames": ["puzzle-blocks", "color-match", "brain-teaser"]
+    },
+    {
+      "id": "simulation",
+      "name": "Simulation",
+      "description": "Immerse yourself in realistic simulations of real-world activities and environments.",
+      "icon": "🌎",
+      "thumbnail": "/assets/images/categories/simulation.jpg",
+      "featured": false,
+      "featuredGames": ["8-ball-billiards-classic", "snooker-master", "flight-sim"]
+    },
+    {
+      "id": "strategy",
+      "name": "Strategy",
+      "description": "Test your tactical thinking and planning in these strategic challenges.",
+      "icon": "♟️",
+      "thumbnail": "/assets/images/categories/strategy.jpg",
+      "featured": false,
+      "featuredGames": ["chess-master", "tower-defense", "civilization-builder"]
+    },
+    {
+      "id": "racing",
+      "name": "Racing",
+      "description": "Feel the speed and excitement in these fast-paced racing games.",
+      "icon": "🏎️",
+      "thumbnail": "/assets/images/categories/racing.jpg",
+      "featured": false,
+      "featuredGames": ["arcade-racing", "kart-racer", "offroad-challenge"]
+    },
+    {
+      "id": "popular",
+      "name": "Popular",
+      "description": "Check out the most played and loved games on PlayGameStation.",
+      "icon": "🔥",
+      "thumbnail": "/assets/images/categories/popular.jpg",
+      "featured": true,
+      "featuredGames": ["8-ball-billiards-classic", "arcade-racing", "puzzle-blocks"]
+    }
+  ]
+} 
