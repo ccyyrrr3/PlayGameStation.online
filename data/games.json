@@ -143,7 +143,7 @@
       "title": "Zuma",
       "description": "Experience the addictive marble-shooting puzzle game that has captivated millions of players worldwide.",
       "longDescription": "Zuma is a classic marble-shooting puzzle game that combines strategy, timing, and precision. The game features a frog that can shoot colored marbles at a chain of marbles moving along a spiral path. Match three or more marbles of the same color to eliminate them and prevent the chain from reaching the skull at the end.",
-      "iframe": "https://games.crazygames.com/en_US/zuma/index.html?v=1.326",
+      "iframe": "<script src=\"https://cdn.htmlgames.com/embed.js?game=ZumaLegend&bgcolor=white\"></script>",
       "thumbnail": "/assets/images/games/zuma.jpg",
       "categories": ["arcade", "puzzle", "action", "popular"],
       "features": [
