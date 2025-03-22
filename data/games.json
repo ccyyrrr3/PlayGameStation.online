@@ -137,6 +137,29 @@
         {"action": "Hold", "description": "C key"}
       ],
       "relatedGames": ["color-match", "brain-teaser", "logic-master"]
+    },
+    {
+      "id": "zuma",
+      "title": "Zuma",
+      "description": "Experience the addictive marble-shooting puzzle game that has captivated millions of players worldwide.",
+      "longDescription": "Zuma is a classic marble-shooting puzzle game that combines strategy, timing, and precision. The game features a frog that can shoot colored marbles at a chain of marbles moving along a spiral path. Match three or more marbles of the same color to eliminate them and prevent the chain from reaching the skull at the end.",
+      "iframe": "https://games.crazygames.com/en_US/zuma/index.html?v=1.326",
+      "thumbnail": "/assets/images/games/zuma.jpg",
+      "categories": ["arcade", "puzzle", "action", "popular"],
+      "features": [
+        "Classic Zuma gameplay mechanics",
+        "Beautiful marble graphics and animations",
+        "Multiple difficulty levels",
+        "Strategic power-ups and special marbles",
+        "Score tracking system",
+        "Engaging sound effects"
+      ],
+      "controls": [
+        {"action": "Aim", "description": "Move your mouse to aim the frog"},
+        {"action": "Shoot", "description": "Click to shoot the marble"},
+        {"action": "Power-ups", "description": "Collect special marbles for powerful effects"}
+      ],
+      "relatedGames": ["bubble-shooter", "marble-blast", "puzzle-quest", "match-3-master"]
     }
   ]
 } 
