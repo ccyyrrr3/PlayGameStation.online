@@ -16,7 +16,7 @@
       "icon": "🎮",
       "thumbnail": "/assets/images/categories/arcade.jpg",
       "featured": true,
-      "featuredGames": ["arcade-racing", "space-shooter", "pac-run"]
+      "featuredGames": ["arcade-racing", "space-shooter", "pac-run", "zuma"]
     },
     {
       "id": "puzzle",
@@ -25,7 +25,7 @@
       "icon": "🧩",
       "thumbnail": "/assets/images/categories/puzzle.jpg",
       "featured": true,
-      "featuredGames": ["puzzle-blocks", "spades-spider-solitaire", "brain-teaser"]
+      "featuredGames": ["puzzle-blocks", "spades-spider-solitaire", "brain-teaser", "zuma"]
     },
     {
       "id": "card",
@@ -70,7 +70,7 @@
       "icon": "🔥",
       "thumbnail": "/assets/images/categories/popular.jpg",
       "featured": true,
-      "featuredGames": ["8-ball-billiards-classic", "arcade-racing", "puzzle-blocks"]
+      "featuredGames": ["8-ball-billiards-classic", "arcade-racing", "puzzle-blocks", "zuma"]
     }
   ]
 } 
