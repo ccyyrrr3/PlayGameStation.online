@@ -275,11 +275,59 @@ li {
 
 /* Game Container */
 .game-container {
-  border-radius: 8px;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   overflow: hidden;
-  background-color: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
+  background-color: #000;
+  border-radius: 0.5rem;
+}
+
+/* For iframe games - makes them more responsive */
+.game-iframe-container {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.game-iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* For script-embedded games - constrain their size */
+.game-script-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Control game iframe scaling */
+.game-scale-up iframe {
+  transform: scale(1.2);
+  transform-origin: center center;
+}
+
+.game-scale-up-more iframe {
+  transform: scale(1.4);
+  transform-origin: center center;
+}
+
+/* For script embedded games that need to be contained */
+.game-script-container.constrain-height {
+  max-height: 80vh;
+  height: 600px;
 }
 
 /* Header Styles */
