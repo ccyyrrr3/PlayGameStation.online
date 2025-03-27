@@ -287,18 +287,19 @@ li {
 /* For iframe games - makes them more responsive */
 .game-iframe-container {
   position: relative;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
-  height: 0;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
+  background-color: #000;
 }
 
 .game-iframe-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   height: 100%;
   border: 0;
+  min-height: 600px;
+  z-index: 10;
 }
 
 /* For script-embedded games - constrain their size */
@@ -311,6 +312,7 @@ li {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background-color: #000;
 }
 
 /* Control game iframe scaling */
@@ -437,4 +439,16 @@ li {
   color: var(--apple-green);
   font-weight: bold;
   margin-right: 0.5rem;
+}
+
+/* iframe直接嵌入的统一样式 */
+iframe.aspect-video {
+  position: relative !important;
+  min-height: 600px !important;
+  height: 70vh !important;
+  z-index: 10 !important;
+  background-color: #000 !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
 } 
