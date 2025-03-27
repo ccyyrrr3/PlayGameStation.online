@@ -86,14 +86,91 @@
             </div>
         </section>
 
+        <!-- Recently Added -->
+        <section class="py-12 bg-apple-light">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-8 text-apple-blue">Recently Added</h2>
+                <div id="recent-games" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Dynamically populated by JavaScript -->
+                    
+                    <!-- Static fallback content -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
+                        <a href="/games/mini-putt-gem-forest.html" class="block">
+                            <div class="h-48 bg-apple-gray flex items-center justify-center relative">
+                                <img src="/assets/images/games/mini-putt-gem-forest.jpg" alt="Mini Putt Gem Forest" class="absolute inset-0 w-full h-full object-cover">
+                                <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Mini Putt Gem Forest</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-lg mb-2">Mini Putt Gem Forest</h3>
+                                <p class="text-apple-gray mb-2">Magical forest-themed minigolf with beautiful courses</p>
+                                <div class="flex flex-wrap">
+                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">New Game</span>
+                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Sports</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
+                        <a href="/games/mini-putt-gem-garden.html" class="block">
+                            <div class="h-48 bg-apple-gray flex items-center justify-center relative">
+                                <img src="/assets/images/games/mini-putt-gem-garden.jpg" alt="Mini Putt Gem Garden" class="absolute inset-0 w-full h-full object-cover">
+                                <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Mini Putt Gem Garden</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-lg mb-2">Mini Putt Gem Garden</h3>
+                                <p class="text-apple-gray mb-2">Garden-themed minigolf with colorful challenges</p>
+                                <div class="flex flex-wrap">
+                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">New Game</span>
+                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Sports</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
+                        <a href="/games/jelly-collapse.html" class="block">
+                            <div class="h-48 bg-apple-gray flex items-center justify-center relative">
+                                <img src="/assets/images/games/jelly-collapse.jpg" alt="Jelly Collapse" class="absolute inset-0 w-full h-full object-cover">
+                                <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Jelly Collapse</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-lg mb-2">Jelly Collapse</h3>
+                                <p class="text-apple-gray mb-2">Match and clear colorful jellies in this addictive puzzle</p>
+                                <div class="flex flex-wrap">
+                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">New Game</span>
+                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Puzzle</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
+                        <a href="/games/ufo-run.html" class="block">
+                            <div class="h-48 bg-apple-gray flex items-center justify-center relative">
+                                <img src="/assets/images/games/ufo-run.jpg" alt="UFO Run" class="absolute inset-0 w-full h-full object-cover">
+                                <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">UFO Run</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-lg mb-2">UFO Run</h3>
+                                <p class="text-apple-gray mb-2">Pilot your UFO through challenging obstacles</p>
+                                <div class="flex flex-wrap">
+                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">New Game</span>
+                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Action</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Featured Games -->
         <section id="featured-games" class="py-12 bg-white">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl font-bold mb-8 text-apple-blue">Featured Games</h2>
-                <div id="featured-games" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Dynamically populated by JavaScript -->
-                    
-                    <!-- Static fallback content -->
+                <div id="all-games" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Row 1 -->
                     <div class="bg-apple-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
                         <a href="/games/zuma.html" class="block">
                             <div class="h-48 bg-apple-gray flex items-center justify-center relative">
@@ -145,6 +222,75 @@
                     </div>
                     
                     <div class="bg-apple-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
+                        <a href="/games/mini-putt-gem-forest.html" class="block">
+                            <div class="h-48 bg-apple-gray flex items-center justify-center relative">
+                                <img src="/assets/images/games/mini-putt-gem-forest.jpg" alt="Mini Putt Gem Forest" class="absolute inset-0 w-full h-full object-cover">
+                                <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Mini Putt Gem Forest</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-lg mb-2">Mini Putt Gem Forest</h3>
+                                <p class="text-apple-gray mb-2">Magical forest-themed minigolf with beautiful courses</p>
+                                <div class="flex flex-wrap">
+                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">New Game</span>
+                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Sports</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="bg-apple-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
+                        <a href="/games/mini-putt-gem-garden.html" class="block">
+                            <div class="h-48 bg-apple-gray flex items-center justify-center relative">
+                                <img src="/assets/images/games/mini-putt-gem-garden.jpg" alt="Mini Putt Gem Garden" class="absolute inset-0 w-full h-full object-cover">
+                                <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Mini Putt Gem Garden</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-lg mb-2">Mini Putt Gem Garden</h3>
+                                <p class="text-apple-gray mb-2">Garden-themed minigolf with colorful challenges</p>
+                                <div class="flex flex-wrap">
+                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">New Game</span>
+                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Sports</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="bg-apple-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
+                        <a href="/games/ufo-run.html" class="block">
+                            <div class="h-48 bg-apple-gray flex items-center justify-center relative">
+                                <img src="/assets/images/games/ufo-run.jpg" alt="UFO Run" class="absolute inset-0 w-full h-full object-cover">
+                                <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">UFO Run</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-lg mb-2">UFO Run</h3>
+                                <p class="text-apple-gray mb-2">Pilot your UFO through challenging obstacles</p>
+                                <div class="flex flex-wrap">
+                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">New Game</span>
+                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Action</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="bg-apple-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
+                        <a href="/games/jelly-collapse.html" class="block">
+                            <div class="h-48 bg-apple-gray flex items-center justify-center relative">
+                                <img src="/assets/images/games/jelly-collapse.jpg" alt="Jelly Collapse" class="absolute inset-0 w-full h-full object-cover">
+                                <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Jelly Collapse</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-lg mb-2">Jelly Collapse</h3>
+                                <p class="text-apple-gray mb-2">Match and clear colorful jellies in this addictive puzzle</p>
+                                <div class="flex flex-wrap">
+                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">New Game</span>
+                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Puzzle</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="bg-apple-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
                         <a href="/games/spades-spider-solitaire.html" class="block">
                             <div class="h-48 bg-apple-gray flex items-center justify-center relative">
                                 <img src="/assets/images/games/spades-spider-solitaire.jpg" alt="Spades Spider Solitaire" class="absolute inset-0 w-full h-full object-cover">
@@ -160,44 +306,17 @@
                             </div>
                         </a>
                     </div>
-                    
-                    <div class="bg-apple-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
-                        <a href="/games/nut-rush.html" class="block">
-                            <div class="h-48 bg-apple-gray flex items-center justify-center relative">
-                                <img src="/assets/images/games/nut-rush.jpg" alt="Nut Rush" class="absolute inset-0 w-full h-full object-cover">
-                                <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Nut Rush</span>
-                            </div>
-                            <div class="p-4">
-                                <h3 class="font-semibold text-lg mb-2">Nut Rush</h3>
-                                <p class="text-apple-gray mb-2">Help a squirrel collect nuts in this fun platform game</p>
-                                <div class="flex flex-wrap">
-                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Action</span>
-                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Arcade</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Recently Added -->
-        <section class="py-12 bg-apple-light">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-8 text-apple-blue">Recently Added</h2>
-                <div id="recent-games" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Dynamically populated by JavaScript -->
-                    
-                    <!-- Static fallback content -->
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
-                        <a href="/games/zuma.html" class="block">
+                    <!-- Row 3 -->
+                    <div class="bg-apple-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
+                        <a href="/games/fit-it-quick.html" class="block">
                             <div class="h-48 bg-apple-gray flex items-center justify-center relative">
-                                <img src="/assets/images/games/zuma.jpg" alt="Zuma" class="absolute inset-0 w-full h-full object-cover">
-                                <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Zuma</span>
+                                <img src="/assets/images/games/fit-it-quick.jpg" alt="Fit It Quick" class="absolute inset-0 w-full h-full object-cover">
+                                <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Fit It Quick</span>
                             </div>
                             <div class="p-4">
-                                <h3 class="font-semibold text-lg mb-2">Zuma</h3>
-                                <p class="text-apple-gray mb-2">Classic ball-matching puzzle game</p>
+                                <h3 class="font-semibold text-lg mb-2">Fit It Quick</h3>
+                                <p class="text-apple-gray mb-2">Test your spatial awareness in this fast-paced puzzle</p>
                                 <div class="flex flex-wrap">
                                     <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">New Game</span>
                                     <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Puzzle</span>
@@ -206,50 +325,18 @@
                         </a>
                     </div>
 
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
-                        <a href="/games/nut-rush-2.html" class="block">
+                    <div class="bg-apple-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
+                        <a href="/games/love-tester.html" class="block">
                             <div class="h-48 bg-apple-gray flex items-center justify-center relative">
-                                <img src="/assets/images/games/nut-rush-2.jpg" alt="Nut Rush 2: Summer Sprint" class="absolute inset-0 w-full h-full object-cover">
-                                <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Nut Rush 2: Summer Sprint</span>
+                                <img src="/assets/images/games/love-tester.jpg" alt="Love Tester" class="absolute inset-0 w-full h-full object-cover">
+                                <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Love Tester</span>
                             </div>
                             <div class="p-4">
-                                <h3 class="font-semibold text-lg mb-2">Nut Rush 2: Summer Sprint</h3>
-                                <p class="text-apple-gray mb-2">The summer-themed sequel to Nut Rush</p>
+                                <h3 class="font-semibold text-lg mb-2">Love Tester</h3>
+                                <p class="text-apple-gray mb-2">Test your compatibility in this fun social game</p>
                                 <div class="flex flex-wrap">
                                     <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">New Game</span>
-                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Action</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
-                        <a href="/games/nut-rush.html" class="block">
-                            <div class="h-48 bg-apple-gray flex items-center justify-center relative">
-                                <img src="/assets/images/games/nut-rush.jpg" alt="Nut Rush" class="absolute inset-0 w-full h-full object-cover">
-                                <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Nut Rush</span>
-                            </div>
-                            <div class="p-4">
-                                <h3 class="font-semibold text-lg mb-2">Nut Rush</h3>
-                                <p class="text-apple-gray mb-2">Exciting platformer with a squirrel collecting nuts</p>
-                                <div class="flex flex-wrap">
-                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">New Game</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
-                        <a href="/games/spades-spider-solitaire.html" class="block">
-                            <div class="h-48 bg-apple-gray flex items-center justify-center relative">
-                                <img src="/assets/images/games/spades-spider-solitaire.jpg" alt="Spades Spider Solitaire" class="absolute inset-0 w-full h-full object-cover">
-                                <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Spades Spider Solitaire</span>
-                            </div>
-                            <div class="p-4">
-                                <h3 class="font-semibold text-lg mb-2">Spades Spider Solitaire</h3>
-                                <p class="text-apple-gray mb-2">Enjoy this classic spider solitaire game</p>
-                                <div class="flex flex-wrap">
-                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Card</span>
+                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Casual</span>
                                 </div>
                             </div>
                         </a>
@@ -259,14 +346,14 @@
         </section>
 
         <!-- Game Categories -->
-        <section id="categories" class="py-12 bg-white">
+        <section id="categories" class="py-12 bg-apple-light">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl font-bold mb-8 text-apple-blue">Game Categories</h2>
                 <div id="game-categories" class="grid grid-cols-1 md:grid-cols-4 gap-6">
                     <!-- Dynamically populated by JavaScript -->
                     
                     <!-- Static fallback content -->
-                    <div class="bg-apple-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
                         <a href="/categories/card.html" class="block">
                             <div class="h-48 bg-apple-gray flex items-center justify-center relative">
                                 <div class="text-5xl">🃏</div>
@@ -279,7 +366,7 @@
                         </a>
                     </div>
                     
-                    <div class="bg-apple-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
                         <a href="/categories/puzzle.html" class="block">
                             <div class="h-48 bg-apple-gray flex items-center justify-center relative">
                                 <div class="text-5xl">🧩</div>
@@ -292,7 +379,7 @@
                         </a>
                     </div>
                     
-                    <div class="bg-apple-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
                         <a href="/categories/sports.html" class="block">
                             <div class="h-48 bg-apple-gray flex items-center justify-center relative">
                                 <div class="text-5xl">⚽</div>
@@ -305,7 +392,7 @@
                         </a>
                     </div>
                     
-                    <div class="bg-apple-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
                         <a href="/categories/action.html" class="block">
                             <div class="h-48 bg-apple-gray flex items-center justify-center relative">
                                 <div class="text-5xl">🎮</div>
