@@ -57,29 +57,15 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="py-12 md:py-20 bg-gradient-to-r from-apple-blue to-blue-700 text-white">
+        <section class="py-8 bg-gradient-to-r from-apple-blue to-blue-700 text-white">
             <div class="container mx-auto px-4">
                 <div class="flex flex-col md:flex-row items-center justify-between">
-                    <div class="md:w-1/2 mb-8 md:mb-0">
-                        <h1 class="text-4xl md:text-5xl font-bold mb-4">Free Online Games on PlayGameStation</h1>
-                        <p class="text-xl mb-6">No download needed. Start playing instantly on any device with hundreds of carefully selected games.</p>
-                        <div class="flex flex-wrap gap-4">
-                            <a href="#featured-games" class="bg-white text-apple-blue px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition">Start Playing</a>
-                            <a href="#categories" class="bg-transparent border-2 border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:bg-opacity-10 transition">Browse Categories</a>
-                        </div>
-                    </div>
-                    <div class="md:w-1/2 flex justify-center">
-                        <div class="relative w-full max-w-md">
-                            <div class="absolute -top-4 -left-4 w-full h-full bg-apple-green rounded-lg"></div>
-                            <div class="absolute -bottom-4 -right-4 w-full h-full bg-apple-red rounded-lg"></div>
-                            <div class="relative bg-white p-6 rounded-lg shadow-xl">
-                                <div class="aspect-w-16 aspect-h-9 bg-apple-gray rounded-lg flex items-center justify-center">
-                                    <span class="text-4xl">🎮</span>
-                                </div>
-                                <div class="mt-4 text-center text-apple-dark">
-                                    <h3 class="font-bold text-xl">Start Your Gaming Journey Now</h3>
-                                </div>
-                            </div>
+                    <div class="md:w-3/4 mb-4 md:mb-0">
+                        <h1 class="text-3xl md:text-4xl font-bold mb-2">Free Online Games on PlayGameStation</h1>
+                        <p class="text-lg mb-4">No download needed. Play instantly on any device.</p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="#featured-games" class="bg-white text-apple-blue px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">Start Playing</a>
+                            <a href="#categories" class="bg-transparent border-2 border-white px-4 py-2 rounded-lg font-semibold hover:bg-white hover:bg-opacity-10 transition">Browse Categories</a>
                         </div>
                     </div>
                 </div>
@@ -87,59 +73,59 @@
         </section>
 
         <!-- Recently Added -->
-        <section class="py-12 bg-apple-light">
+        <section class="py-8 bg-apple-light">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-8 text-apple-blue">Recently Added</h2>
+                <h2 class="text-3xl font-bold mb-6 text-apple-blue">Recently Added</h2>
                 <div id="recent-games" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Dynamically populated by JavaScript -->
                     
                     <!-- Static fallback content -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
-                        <a href="/games/find-the-vampire.html" class="block">
+                        <a href="/games/basket-bros.html" class="block">
                             <div class="h-48 bg-apple-gray flex items-center justify-center relative">
-                                <img src="/assets/images/games/find-the-vampire.jpg" alt="Find the Vampire" class="absolute inset-0 w-full h-full object-cover">
-                                <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Find the Vampire</span>
+                                <img src="/assets/images/games/basket-bros.jpg" alt="Basket Bros" class="absolute inset-0 w-full h-full object-cover">
+                                <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Basket Bros</span>
                             </div>
                             <div class="p-4">
-                                <h3 class="font-semibold text-lg mb-2">Find the Vampire</h3>
-                                <p class="text-apple-gray mb-2">Test your observation skills in this hidden object game</p>
+                                <h3 class="font-semibold text-lg mb-2">Basket Bros</h3>
+                                <p class="text-apple-gray mb-2">Dunk on your opponents in this multiplayer basketball game</p>
+                                <div class="flex flex-wrap">
+                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">New Game</span>
+                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Sports</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
+                        <a href="/games/playground.html" class="block">
+                            <div class="h-48 bg-apple-gray flex items-center justify-center relative">
+                                <img src="/assets/images/games/playground.jpg" alt="Playground" class="absolute inset-0 w-full h-full object-cover">
+                                <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Playground</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-lg mb-2">Playground</h3>
+                                <p class="text-apple-gray mb-2">A fun physics playground with various sports mini-games</p>
+                                <div class="flex flex-wrap">
+                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">New Game</span>
+                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Sports</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
+                        <a href="/games/draw-climber.html" class="block">
+                            <div class="h-48 bg-apple-gray flex items-center justify-center relative">
+                                <img src="/assets/images/games/draw-climber.jpg" alt="Draw Climber" class="absolute inset-0 w-full h-full object-cover">
+                                <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Draw Climber</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-lg mb-2">Draw Climber</h3>
+                                <p class="text-apple-gray mb-2">Draw legs for your character and race to the finish line</p>
                                 <div class="flex flex-wrap">
                                     <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">New Game</span>
                                     <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Puzzle</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
-                        <a href="/games/10-minutes-till-dawn.html" class="block">
-                            <div class="h-48 bg-apple-gray flex items-center justify-center relative">
-                                <img src="/assets/images/games/10-minutes-till-dawn.jpg" alt="10 Minutes Till Dawn" class="absolute inset-0 w-full h-full object-cover">
-                                <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">10 Minutes Till Dawn</span>
-                            </div>
-                            <div class="p-4">
-                                <h3 class="font-semibold text-lg mb-2">10 Minutes Till Dawn</h3>
-                                <p class="text-apple-gray mb-2">Survive for 10 minutes in this intense action game</p>
-                                <div class="flex flex-wrap">
-                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">New Game</span>
-                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Action</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
-                        <a href="/games/idle-saga.html" class="block">
-                            <div class="h-48 bg-apple-gray flex items-center justify-center relative">
-                                <img src="/assets/images/games/idle-saga.jpg" alt="Idle Saga" class="absolute inset-0 w-full h-full object-cover">
-                                <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Idle Saga</span>
-                            </div>
-                            <div class="p-4">
-                                <h3 class="font-semibold text-lg mb-2">Idle Saga</h3>
-                                <p class="text-apple-gray mb-2">Build your empire in this engaging idle game</p>
-                                <div class="flex flex-wrap">
-                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">New Game</span>
-                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Strategy</span>
                                 </div>
                             </div>
                         </a>
@@ -166,40 +152,57 @@
         </section>
 
         <!-- Featured Games -->
-        <section id="featured-games" class="py-12 bg-white">
+        <section id="featured-games" class="py-8 bg-white">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-8 text-apple-blue">Featured Games</h2>
+                <h2 class="text-3xl font-bold mb-6 text-apple-blue">Featured Games</h2>
                 <div id="all-games" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Row 1 -->
                     <div class="bg-apple-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
-                        <a href="/games/zuma.html" class="block">
+                        <a href="/games/basket-bros.html" class="block">
                             <div class="h-48 bg-apple-gray flex items-center justify-center relative">
-                                <img src="/assets/images/games/zuma.jpg" alt="Zuma" class="absolute inset-0 w-full h-full object-cover">
-                                <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Zuma</span>
+                                <img src="/assets/images/games/basket-bros.jpg" alt="Basket Bros" class="absolute inset-0 w-full h-full object-cover">
+                                <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Basket Bros</span>
                             </div>
                             <div class="p-4">
-                                <h3 class="font-semibold text-lg mb-2">Zuma</h3>
-                                <p class="text-apple-gray mb-2">Classic puzzle game, shoot colored balls to eliminate chains</p>
+                                <h3 class="font-semibold text-lg mb-2">Basket Bros</h3>
+                                <p class="text-apple-gray mb-2">Dunk on your opponents in this multiplayer basketball game</p>
                                 <div class="flex flex-wrap">
-                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Puzzle</span>
-                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Action</span>
+                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">New Game</span>
+                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Sports</span>
                                 </div>
                             </div>
                         </a>
                     </div>
 
                     <div class="bg-apple-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
-                        <a href="/games/nut-rush-2.html" class="block">
+                        <a href="/games/draw-climber.html" class="block">
                             <div class="h-48 bg-apple-gray flex items-center justify-center relative">
-                                <img src="/assets/images/games/nut-rush-2.jpg" alt="Nut Rush 2: Summer Sprint" class="absolute inset-0 w-full h-full object-cover">
-                                <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Nut Rush 2: Summer Sprint</span>
+                                <img src="/assets/images/games/draw-climber.jpg" alt="Draw Climber" class="absolute inset-0 w-full h-full object-cover">
+                                <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Draw Climber</span>
                             </div>
                             <div class="p-4">
-                                <h3 class="font-semibold text-lg mb-2">Nut Rush 2: Summer Sprint</h3>
-                                <p class="text-apple-gray mb-2">Guide your squirrel through summer challenges</p>
+                                <h3 class="font-semibold text-lg mb-2">Draw Climber</h3>
+                                <p class="text-apple-gray mb-2">Draw legs for your character and race to the finish line</p>
                                 <div class="flex flex-wrap">
-                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Action</span>
-                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Platform</span>
+                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">New Game</span>
+                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Puzzle</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="bg-apple-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
+                        <a href="/games/playground.html" class="block">
+                            <div class="h-48 bg-apple-gray flex items-center justify-center relative">
+                                <img src="/assets/images/games/playground.jpg" alt="Playground" class="absolute inset-0 w-full h-full object-cover">
+                                <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Playground</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-lg mb-2">Playground</h3>
+                                <p class="text-apple-gray mb-2">A fun physics playground with various sports mini-games</p>
+                                <div class="flex flex-wrap">
+                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">New Game</span>
+                                    <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Sports</span>
                                 </div>
                             </div>
                         </a>
@@ -382,9 +385,9 @@
         </section>
 
         <!-- Categories -->
-        <section id="categories" class="py-12 bg-apple-light">
+        <section id="categories" class="py-8 bg-apple-light">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-8 text-apple-blue">Game Categories</h2>
+                <h2 class="text-3xl font-bold mb-6 text-apple-blue">Game Categories</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
                         <a href="/categories/card.html" class="block">
@@ -442,9 +445,9 @@
         </section>
 
         <!-- Why Choose Us -->
-        <section class="py-12 bg-apple-light">
+        <section class="py-8 bg-apple-light">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-8 text-center text-apple-blue">Why Choose PlayGameStation?</h2>
+                <h2 class="text-3xl font-bold mb-6 text-center text-apple-blue">Why Choose PlayGameStation?</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="bg-white p-6 rounded-lg shadow-md text-center">
                         <div class="text-4xl mb-4 text-apple-blue">🎮</div>
@@ -466,10 +469,10 @@
         </section>
 
         <!-- Newsletter -->
-        <section class="py-12 bg-apple-blue text-white">
+        <section class="py-8 bg-apple-blue text-white">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-3xl font-bold mb-4">Subscribe to Our New Game Alerts</h2>
-                <p class="text-xl mb-8 max-w-2xl mx-auto">Stay updated with the latest games and updates on our platform. We promise not to spam.</p>
+                <p class="text-lg mb-6 max-w-2xl mx-auto">Stay updated with the latest games and updates on our platform.</p>
                 <form class="max-w-md mx-auto flex">
                     <input type="email" placeholder="Your Email Address" class="flex-1 py-3 px-4 rounded-l-lg text-apple-dark focus:outline-none">
                     <button type="submit" class="bg-white text-apple-blue font-semibold py-3 px-6 rounded-r-lg hover:bg-opacity-90 transition">Subscribe</button>
@@ -520,7 +523,7 @@
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2023 PlayGameStation. All rights reserved.</p>
+                <p>&copy; 2025 PlayGameStation. All rights reserved.</p>
             </div>
         </div>
     </footer>
