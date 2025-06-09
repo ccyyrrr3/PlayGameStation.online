@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_3114978_qe0b39no76.eot');
+  src: url('//at.alicdn.com/t/font_3114978_qe0b39no76.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_3114978_qe0b39no76.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_3114978_qe0b39no76.woff') format('woff'),
+  url('//at.alicdn.com/t/font_3114978_qe0b39no76.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_3114978_qe0b39no76.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-gamepad:before {
+  content: "\e6b1";
+}
+
+.icon-home:before {
+  content: "\e6a3";
+}
+
+.icon-poker:before {
+  content: "\e6c2";
+}
+
+.icon-puzzle:before {
+  content: "\e6c5";
+}
+
+.icon-basketball:before {
+  content: "\e6a1";
+}
+
+.icon-rocket:before {
+  content: "\e6c8";
+}
+
+.icon-play:before {
+  content: "\e6c0";
+}
+
+.icon-category:before {
+  content: "\e6a2";
+}
+
+.icon-new:before {
+  content: "\e6b9";
+}
+
+.icon-arrow-right:before {
+  content: "\e69e";
+}
+
+.icon-hot:before {
+  content: "\e6b4";
+}
+
+.icon-simulation:before {
+  content: "\e6cb";
+}
+
+.icon-fun:before {
+  content: "\e6af";
+}
+
+.icon-multiplayer:before {
+  content: "\e6b8";
+}
+
+.icon-action:before {
+  content: "\e69c";
+}
+
+.icon-racing:before {
+  content: "\e6c6";
+}
+
+.icon-star:before {
+  content: "\e6cd";
+}
+
+.icon-sports:before {
+  content: "\e6cc";
+}
+
+.icon-free:before {
+  content: "\e6ae";
+}
+
+.icon-devices:before {
+  content: "\e6a8";
+}
+
+.icon-cloud-gaming:before {
+  content: "\e6a5";
+}
+
+.icon-subscribe:before {
+  content: "\e6ce";
+}
+
+.icon-facebook:before {
+  content: "\e6ac";
+}
+
+.icon-twitter:before {
+  content: "\e6d0";
+}
+
+.icon-instagram:before {
+  content: "\e6b5";
+}
