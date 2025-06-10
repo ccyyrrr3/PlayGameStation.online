@@ -22,79 +22,102 @@
             theme: {
                 extend: {
                     colors: {
-                        'apple-blue': '#007AFF',
-                        'apple-green': '#34C759',
-                        'apple-red': '#FF3B30',
-                        'apple-gray': '#8E8E93',
-                        'apple-light': '#F2F2F7',
-                        'apple-dark': '#1C1C1E',
+                        primary: '#4F46E5',    // Indigo
+                        secondary: '#7C3AED',  // Purple
+                        accent: '#F59E0B',     // Amber
+                        info: '#06B6D4',       // Cyan
+                        success: '#10B981',    // Emerald
+                        warning: '#F97316',    // Orange
+                        danger: '#EF4444',     // Red
+                        neutral: {
+                            50: '#fafafa',
+                            100: '#f5f5f5',
+                            200: '#e5e5e5',
+                            300: '#d4d4d4',
+                            400: '#a3a3a3',
+                            500: '#737373',
+                            600: '#525252',
+                            700: '#404040',
+                            800: '#262626',
+                            900: '#171717',
+                        }
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'righteous': ['Righteous', 'cursive']
+                    },
+                    boxShadow: {
+                        'game-card': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                        'hover': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'
                     }
                 }
             }
         }
     </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/icons.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
-<body class="bg-apple-light text-apple-dark">
-    <header class="bg-apple-blue text-white py-4 shadow-md">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="text-center md:text-left mb-4 md:mb-0">
-                    <a href="/" class="text-2xl font-bold">PlayGameStation</a>
+<body class="bg-neutral-100 min-h-screen flex flex-col font-poppins">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4">
+            <nav class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-primary font-righteous flex items-center">
+                    <i class="icon-gamepad text-accent mr-2"></i>
+                    PlayGameStation
+                </a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="text-neutral-600 hover:text-primary transition-colors duration-300">Home</a>
+                    <a href="/categories.html" class="text-neutral-600 hover:text-primary transition-colors duration-300">Categories</a>
+                    <a href="/about.html" class="text-neutral-600 hover:text-primary transition-colors duration-300">About</a>
                 </div>
-                <nav>
-                    <ul class="flex space-x-6">
-                        <li><a href="/" class="hover:text-apple-light transition">Home</a></li>
-                        <li><a href="/categories/card.html" class="hover:text-apple-light transition">Card Games</a></li>
-                        <li><a href="/categories/puzzle.html" class="hover:text-apple-light transition">Puzzle Games</a></li>
-                        <li><a href="/categories/sports.html" class="hover:text-apple-light transition">Sports Games</a></li>
-                        <li><a href="/categories/action.html" class="hover:text-apple-light transition">Action Games</a></li>
-                    </ul>
-                </nav>
+                <button class="md:hidden text-primary">
+                    <i class="icon-menu text-xl"></i>
+                </button>
             </div>
         </div>
     </header>
 
-    <main class="container mx-auto px-4 py-8">
-        <!-- Game Header -->
-        <section class="mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-apple-blue">Jelly Collapse</h1>
-            <div class="flex flex-wrap gap-2 mb-4">
-                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded">Puzzle</span>
-                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded">Match Three</span>
-                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded">Casual</span>
+    <main class="container mx-auto px-4 py-4">
+        <!-- Game Frame -->
+        <section class="mb-8">
+            <div class="w-full max-w-5xl mx-auto rounded-lg overflow-hidden shadow-game-card border-4 border-primary">
+                <iframe src="https://html5games.com/Game/Jelly-Collapse/2457cf73-a186-4462-b931-9c56898eac22" 
+                       class="w-full aspect-video relative" 
+                       style="z-index: 10; min-height: 600px; height: 70vh;"
+                       allow="fullscreen" 
+                       scrolling="no"
+                       frameborder="0"
+                       title="Jelly Collapse"
+                       loading="lazy">
+               </iframe>
             </div>
-            <p class="text-xl mb-8">Match and clear colorful jellies in this addictive puzzle game. Connect groups of the same color, create combos, and solve increasingly challenging levels!</p>
         </section>
 
-        <!-- Game Frame -->
-        <section class="mb-12">
-            <div class="w-full max-w-5xl mx-auto rounded-lg overflow-hidden shadow-xl border-4 border-apple-blue">
-                <iframe src="https://html5games.com/Game/Jelly-Collapse/2457cf73-a186-4462-b931-9c56898eac22" 
-                        class="w-full aspect-video relative" 
-                        style="z-index: 10; min-height: 600px; height: 70vh;"
-                        allow="fullscreen" 
-                        scrolling="no"
-                        frameborder="0"
-                        title="Jelly Collapse"
-                        loading="lazy">
-                </iframe>
+        <!-- Game Header -->
+        <section class="mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-primary font-righteous">Jelly Collapse</h1>
+            <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-primary text-white text-xs px-3 py-1 rounded-full">Puzzle</span>
+                <span class="bg-success text-white text-xs px-3 py-1 rounded-full">Match Three</span>
+                <span class="bg-accent text-white text-xs px-3 py-1 rounded-full">Casual</span>
             </div>
+            <p class="text-lg mb-6">Match and clear colorful jellies in this addictive puzzle game. Connect groups of the same color, create combos, and solve increasingly challenging levels!</p>
         </section>
 
         <!-- Game Info -->
-        <section class="mb-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <section class="mb-8 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="col-span-2">
-                <h2 class="text-2xl font-bold mb-4 text-apple-blue">Game Description</h2>
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold mb-4 text-primary font-righteous">Game Description</h2>
+                <div class="bg-white p-6 rounded-lg shadow-game-card hover:shadow-hover transition-shadow duration-300">
                     <p class="mb-4">Jelly Collapse is a delightful and challenging puzzle game that will test your pattern recognition and strategic thinking. The game features a grid filled with colorful jelly blocks in various shapes and colors. Your objective is to match and connect jellies of the same color to make them collapse and disappear from the board.</p>
                     <p class="mb-4">As you progress through the levels, you'll encounter new challenges, obstacles, and special jellies with unique properties. Some levels have move limits, while others may introduce locked jellies, bombs, or color-changing power-ups that add depth to the gameplay.</p>
                     <p>With its bright, colorful visuals, satisfying sound effects, and gradually increasing difficulty, Jelly Collapse offers a perfect balance of accessibility and challenge. Whether you have a few minutes to spare or want to enjoy a longer gaming session, this addictive puzzle game will keep you entertained for hours!</p>
                 </div>
             </div>
             <div>
-                <h2 class="text-2xl font-bold mb-4 text-apple-blue">How to Play</h2>
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold mb-4 text-primary font-righteous">How to Play</h2>
+                <div class="bg-white p-6 rounded-lg shadow-game-card hover:shadow-hover transition-shadow duration-300">
                     <ul class="list-disc pl-5 space-y-2">
                         <li><strong>Connect:</strong> Click on groups of the same color jellies</li>
                         <li><strong>Match:</strong> Need at least 3 jellies of the same color</li>
@@ -115,34 +138,34 @@
         </section>
 
         <!-- Similar Games -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-6 text-apple-blue">You Might Also Like</h2>
-            <div id="related-games" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+         <section class="mb-8">
+             <h2 class="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2 font-righteous">You Might Also Like</h2>
+             <div id="related-games" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Related games will be dynamically loaded by JavaScript -->
                 
                 <!-- Static fallback content -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
+                <div class="bg-white rounded-lg overflow-hidden shadow-game-card hover:shadow-hover transition-shadow duration-300 static-content">
                     <a href="/games/fit-it-quick.html" class="block">
-                        <div class="h-48 bg-apple-gray flex items-center justify-center relative">
+                        <div class="h-48 bg-neutral-200 flex items-center justify-center relative">
                             <img src="/assets/images/games/fit-it-quick.jpg" alt="Fit It Quick" class="w-full h-full object-cover">
                             <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Fit It Quick</span>
                         </div>
                         <div class="p-4">
                             <h3 class="font-semibold text-lg mb-2">Fit It Quick</h3>
-                            <p class="text-apple-gray mb-2">Test your shape-fitting skills in this fast-paced puzzle</p>
+                            <p class="text-neutral-500 mb-2">Test your shape-fitting skills in this fast-paced puzzle</p>
                         </div>
                     </a>
                 </div>
                 
-                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
+                <div class="bg-white rounded-lg overflow-hidden shadow-game-card hover:shadow-hover transition-shadow duration-300 static-content">
                     <a href="/games/ufo-run.html" class="block">
-                        <div class="h-48 bg-apple-gray flex items-center justify-center relative">
+                        <div class="h-48 bg-neutral-200 flex items-center justify-center relative">
                             <img src="/assets/images/games/ufo-run.jpg" alt="UFO Run" class="w-full h-full object-cover">
                             <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">UFO Run</span>
                         </div>
                         <div class="p-4">
                             <h3 class="font-semibold text-lg mb-2">UFO Run</h3>
-                            <p class="text-apple-gray mb-2">Pilot your UFO through challenging obstacles in this action game</p>
+                            <p class="text-neutral-500 mb-2">Pilot your UFO through challenging obstacles in this action game</p>
                         </div>
                     </a>
                 </div>
@@ -150,53 +173,47 @@
         </section>
     </main>
 
-    <footer class="bg-apple-dark text-white py-8">
+    <footer class="bg-neutral-800 text-white py-8">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between">
-                <div class="mb-8 md:mb-0">
-                    <h2 class="text-2xl font-bold mb-4">PlayGameStation</h2>
-                    <p class="mb-4 max-w-md text-gray-400">Your destination for free online games. No downloads, no installations, play high-quality games instantly.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition">Facebook</a>
-                        <a href="#" class="text-gray-400 hover:text-white transition">Twitter</a>
-                        <a href="#" class="text-gray-400 hover:text-white transition">Instagram</a>
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0 flex items-center">
+                    <i class="icon-gamepad text-2xl text-accent mr-2"></i>
+                    <div>
+                        <h3 class="text-xl font-bold font-righteous">PlayGameStation.online</h3>
+                        <p class="text-sm">The best place to play free online games</p>
                     </div>
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
-                    <div>
-                        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                        <ul class="space-y-2">
-                            <li><a href="/" class="text-gray-400 hover:text-white transition">Home</a></li>
-                            <li><a href="/#featured-games" class="text-gray-400 hover:text-white transition">Featured Games</a></li>
-                            <li><a href="/#categories" class="text-gray-400 hover:text-white transition">Game Categories</a></li>
-                        </ul>
+                    <div class="flex space-x-6">
+                        <a href="/about.html" class="text-neutral-400 hover:text-accent transition-colors duration-300">About</a>
+                        <a href="/contact.html" class="text-neutral-400 hover:text-accent transition-colors duration-300">Contact</a>
+                        <a href="/privacy.html" class="text-neutral-400 hover:text-accent transition-colors duration-300">Privacy</a>
+                        <a href="/terms.html" class="text-neutral-400 hover:text-accent transition-colors duration-300">Terms</a>
                     </div>
                     <div>
-                        <h3 class="text-lg font-semibold mb-4">Categories</h3>
-                        <ul class="space-y-2">
-                            <li><a href="/categories/card.html" class="text-gray-400 hover:text-white transition">Card Games</a></li>
-                            <li><a href="/categories/puzzle.html" class="text-gray-400 hover:text-white transition">Puzzle Games</a></li>
-                            <li><a href="/categories/sports.html" class="text-gray-400 hover:text-white transition">Sports Games</a></li>
-                            <li><a href="/categories/action.html" class="text-gray-400 hover:text-white transition">Action Games</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-semibold mb-4">About Us</h3>
-                        <ul class="space-y-2">
-                            <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
-                        </ul>
-                    </div>
+                         <h3 class="text-lg font-semibold mb-4 text-accent">Categories</h3>
+                         <ul class="space-y-2">
+                             <li><a href="/categories/puzzle.html" class="text-neutral-400 hover:text-accent transition-colors duration-300">Puzzle Games</a></li>
+                             <li><a href="/categories/arcade.html" class="text-neutral-400 hover:text-accent transition-colors duration-300">Arcade Games</a></li>
+                             <li><a href="/categories/strategy.html" class="text-neutral-400 hover:text-accent transition-colors duration-300">Strategy Games</a></li>
+                         </ul>
+                     </div>
+                     <div>
+                         <h3 class="text-lg font-semibold mb-4 text-accent">Legal</h3>
+                         <ul class="space-y-2">
+                             <li><a href="/privacy-policy.html" class="text-neutral-400 hover:text-accent transition-colors duration-300">Privacy Policy</a></li>
+                             <li><a href="/terms-of-service.html" class="text-neutral-400 hover:text-accent transition-colors duration-300">Terms of Service</a></li>
+                             <li><a href="/cookie-policy.html" class="text-neutral-400 hover:text-accent transition-colors duration-300">Cookie Policy</a></li>
+                         </ul>
+                     </div>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 PlayGameStation. All rights reserved.</p>
+            <div class="border-t border-neutral-700 mt-6 pt-6 text-center text-neutral-400">
+                <p>&copy; 2023 PlayGameStation.online. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="/assets/js/main.js"></script>
 </body>
-</html> 
+</html>

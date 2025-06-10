@@ -22,54 +22,73 @@
             theme: {
                 extend: {
                     colors: {
-                        'apple-blue': '#007AFF',
-                        'apple-green': '#34C759',
-                        'apple-red': '#FF3B30',
-                        'apple-gray': '#8E8E93',
-                        'apple-light': '#F2F2F7',
-                        'apple-dark': '#1C1C1E',
-                    }
+                        primary: '#4F46E5',
+                        'primary-dark': '#4338CA',
+                        secondary: '#EC4899',
+                        'secondary-dark': '#DB2777',
+                        accent: '#F59E0B',
+                        'accent-dark': '#D97706',
+                        info: '#06B6D4',
+                        success: '#10B981',
+                        warning: '#F59E0B',
+                        danger: '#EF4444',
+                        neutral: '#6B7280',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Righteous', 'cursive'],
+                    },
+                    boxShadow: {
+                        'game-card': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+                        'hover': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                    },
                 }
             }
         }
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/iconfont.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
-<body class="bg-apple-light text-apple-dark">
-    <header class="bg-apple-blue text-white py-4 shadow-md">
+<body class="bg-neutral-100 text-neutral-800 font-sans">
+    <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="text-center md:text-left mb-4 md:mb-0">
-                    <a href="/" class="text-2xl font-bold">PlayGameStation</a>
-                </div>
-                <nav>
-                    <ul class="flex space-x-6">
-                        <li><a href="/" class="hover:text-apple-light transition">Home</a></li>
-                        <li><a href="/categories/card.html" class="hover:text-apple-light transition">Card Games</a></li>
-                        <li><a href="/categories/puzzle.html" class="hover:text-apple-light transition">Puzzle Games</a></li>
-                        <li><a href="/categories/sports.html" class="hover:text-apple-light transition">Sports Games</a></li>
-                        <li><a href="/categories/action.html" class="hover:text-apple-light transition">Action Games</a></li>
-                    </ul>
+                <a href="../index.html" class="text-2xl font-bold text-primary font-display flex items-center">
+                    <i class="iconfont icon-gamepad mr-2 text-accent"></i> PlayGameStation
+                </a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="../index.html" class="hover:text-primary transition duration-300 flex items-center">
+                        <i class="iconfont icon-home mr-1"></i> Home
+                    </a>
+                    <a href="../categories.html" class="hover:text-primary transition duration-300 flex items-center">
+                        <i class="iconfont icon-category mr-1"></i> Categories
+                    </a>
+                    <a href="../new-games.html" class="hover:text-primary transition duration-300 flex items-center">
+                        <i class="iconfont icon-new mr-1"></i> New Games
+                    </a>
+                    <a href="../top-games.html" class="hover:text-primary transition duration-300 flex items-center">
+                        <i class="iconfont icon-star mr-1"></i> Top Games
+                    </a>
+                    <a href="../about.html" class="hover:text-primary transition duration-300 flex items-center">
+                        <i class="iconfont icon-info mr-1"></i> About
+                    </a>
                 </nav>
+                <button class="md:hidden text-primary focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
             </div>
         </div>
     </header>
 
-    <main class="container mx-auto px-4 py-8">
-        <!-- Game Header -->
-        <section class="mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-apple-blue">Fit It Quick</h1>
-            <div class="flex flex-wrap gap-2 mb-4">
-                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded">Puzzle</span>
-                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded">Brain Training</span>
-                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded">Speed</span>
-            </div>
-            <p class="text-xl mb-8">Race against the clock to fit shapes into their corresponding outlines. This fast-paced puzzle game will test your spatial recognition skills and quick thinking!</p>
-        </section>
-
+    <main class="container mx-auto px-4 py-4">
         <!-- Game Frame -->
-        <section class="mb-12">
-            <div class="w-full max-w-5xl mx-auto rounded-lg overflow-hidden shadow-xl border-4 border-apple-blue">
+        <div class="bg-white p-6 rounded-xl shadow-game-card mb-8 border border-neutral-200">
+            <div class="aspect-w-16 aspect-h-9">
                 <iframe src="https://html5games.com/Game/Fit-it-quick/539654fd-5ea8-4c05-b648-f4fa3666f0c2" 
                         class="w-full aspect-video relative" 
                         style="z-index: 10; min-height: 600px; height: 70vh;"
@@ -80,12 +99,26 @@
                         loading="lazy">
                 </iframe>
             </div>
-        </section>
+        </div>
+        
+        <!-- Game Header -->
+        <div class="relative overflow-hidden bg-gradient-to-r from-primary/90 to-secondary/90 rounded-2xl mb-8 p-8 text-white">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-20 -mt-20 blur-3xl"></div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 font-display relative z-10">Fit It Quick</h1>
+            <div class="flex flex-wrap gap-2 mb-4 relative z-10">
+                <span class="bg-white/20 text-white text-xs px-3 py-1 rounded-full">Puzzle</span>
+                <span class="bg-white/20 text-white text-xs px-3 py-1 rounded-full">Brain Training</span>
+                <span class="bg-white/20 text-white text-xs px-3 py-1 rounded-full">Speed</span>
+            </div>
+            <p class="text-xl mb-2 max-w-3xl relative z-10">Race against the clock to fit shapes into their corresponding outlines. This fast-paced puzzle game will test your spatial recognition skills and quick thinking!</p>
+        </div>
+
+
 
         <!-- Game Info -->
         <section class="mb-12 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="col-span-2">
-                <h2 class="text-2xl font-bold mb-4 text-apple-blue">Game Description</h2>
+                <h2 class="text-2xl font-bold mb-4 text-primary">Game Description</h2>
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <p class="mb-4">Fit It Quick is a challenging brain teaser that combines spatial recognition with quick reflexes. The game presents you with various colorful shapes and their corresponding outlines, and your task is to drag and fit each shape into its correct position before time runs out.</p>
                     <p class="mb-4">As you progress through the levels, the challenges become increasingly difficult with more complex shapes, rotating pieces, and tighter time limits. The clean, colorful design and intuitive controls make the gameplay both accessible and addictive.</p>
@@ -93,7 +126,7 @@
                 </div>
             </div>
             <div>
-                <h2 class="text-2xl font-bold mb-4 text-apple-blue">How to Play</h2>
+                <h2 class="text-2xl font-bold mb-4 text-primary">How to Play</h2>
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <ul class="list-disc pl-5 space-y-2">
                         <li><strong>Drag:</strong> Click and drag shapes to move them</li>
@@ -116,33 +149,33 @@
 
         <!-- Similar Games -->
         <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-6 text-apple-blue">You Might Also Like</h2>
+            <h2 class="text-2xl font-bold mb-6 text-primary">You Might Also Like</h2>
             <div id="related-games" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Related games will be dynamically loaded by JavaScript -->
                 
                 <!-- Static fallback content -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
+                <div class="bg-white rounded-lg overflow-hidden shadow-game-card hover:shadow-hover transition-shadow duration-300 static-content">
                     <a href="/games/jelly-collapse.html" class="block">
-                        <div class="h-48 bg-apple-gray flex items-center justify-center relative">
+                        <div class="h-48 bg-neutral-200 flex items-center justify-center relative">
                             <img src="/assets/images/games/jelly-collapse.jpg" alt="Jelly Collapse" class="w-full h-full object-cover">
                             <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Jelly Collapse</span>
                         </div>
                         <div class="p-4">
                             <h3 class="font-semibold text-lg mb-2">Jelly Collapse</h3>
-                            <p class="text-apple-gray mb-2">Match and clear colorful jellies in this addictive puzzle</p>
+                            <p class="text-neutral mb-2">Match and clear colorful jellies in this addictive puzzle</p>
                         </div>
                     </a>
                 </div>
                 
-                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
+                <div class="bg-white rounded-lg overflow-hidden shadow-game-card hover:shadow-hover transition-shadow duration-300 static-content">
                     <a href="/games/love-tester.html" class="block">
-                        <div class="h-48 bg-apple-gray flex items-center justify-center relative">
+                        <div class="h-48 bg-neutral-200 flex items-center justify-center relative">
                             <img src="/assets/images/games/love-tester.jpg" alt="Love Tester" class="w-full h-full object-cover">
                             <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Love Tester</span>
                         </div>
                         <div class="p-4">
                             <h3 class="font-semibold text-lg mb-2">Love Tester</h3>
-                            <p class="text-apple-gray mb-2">A fun compatibility game to test your love match</p>
+                            <p class="text-neutral mb-2">A fun compatibility game to test your love match</p>
                         </div>
                     </a>
                 </div>
@@ -150,11 +183,11 @@
         </section>
     </main>
 
-    <footer class="bg-apple-dark text-white py-8">
+    <footer class="bg-neutral-800 text-white py-8">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between">
                 <div class="mb-8 md:mb-0">
-                    <h2 class="text-2xl font-bold mb-4">PlayGameStation</h2>
+                    <h2 class="text-2xl font-bold mb-4 font-display flex items-center"><i class="iconfont icon-gamepad mr-2 text-accent"></i> PlayGameStation</h2>
                     <p class="mb-4 max-w-md text-gray-400">Your destination for free online games. No downloads, no installations, play high-quality games instantly.</p>
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-400 hover:text-white transition">Facebook</a>
@@ -199,4 +232,4 @@
 
     <script src="/assets/js/main.js"></script>
 </body>
-</html> 
+</html>

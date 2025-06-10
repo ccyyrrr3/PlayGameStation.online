@@ -1,64 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2QR0Z9JXHZ"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 Ball Billiards Classic - PlayGameStation</title>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ABCDEFGHIJ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
-        gtag('config', 'G-2QR0Z9JXHZ');
+        gtag('config', 'G-ABCDEFGHIJ');
     </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>8 Ball Billiards Classic - Play Online | PlayGameStation</title>
-    <meta name="description" content="Play 8 Ball Billiards Classic online for free. Enjoy this realistic pool game with stunning graphics and precise physics on PlayGameStation.">
-    <meta name="keywords" content="8 ball billiards classic, online pool game, billiards game, 8 ball pool, free online games">
-    <link rel="canonical" href="https://playgamestation.online/games/8-ball-billiards-classic.html">
+    <meta name="description" content="Play 8 Ball Billiards Classic online for free. Challenge yourself with realistic physics and smooth gameplay in this classic pool game.">
+    <meta name="keywords" content="8 ball pool, billiards game, online pool, free billiards, sports games">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/iconfont.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'apple-blue': '#007AFF',
-                        'apple-green': '#34C759',
-                        'apple-red': '#FF3B30',
-                        'apple-gray': '#8E8E93',
-                        'apple-light': '#F2F2F7',
-                        'apple-dark': '#1C1C1E',
-                    }
+                        primary: '#4F46E5',
+                        'primary-dark': '#4338CA',
+                        secondary: '#EC4899',
+                        'secondary-dark': '#DB2777',
+                        accent: '#F59E0B',
+                        'accent-dark': '#D97706',
+                        info: '#06B6D4',
+                        success: '#10B981',
+                        warning: '#F59E0B',
+                        danger: '#EF4444',
+                        neutral: '#6B7280',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Righteous', 'cursive'],
+                    },
+                    boxShadow: {
+                        'game-card': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+                        'hover': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                    },
                 }
             }
         }
     </script>
 </head>
-<body class="bg-apple-light text-apple-dark">
-    <header class="bg-apple-blue text-white py-4 shadow-md">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="text-center md:text-left mb-4 md:mb-0">
-                    <a href="/" class="text-2xl font-bold">PlayGameStation</a>
-                </div>
-                <nav>
-                    <ul class="flex space-x-6">
-                        <li><a href="/" class="hover:text-apple-light transition">Home</a></li>
-                        <li><a href="/categories/sports.html" class="hover:text-apple-light transition">Sports</a></li>
-                        <li><a href="/categories/arcade.html" class="hover:text-apple-light transition">Arcade</a></li>
-                        <li><a href="/categories/puzzle.html" class="hover:text-apple-light transition">Puzzle</a></li>
-                    </ul>
+<body class="bg-neutral-100 text-neutral-800 font-sans">
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-2xl font-bold text-primary font-display flex items-center">
+                    <i class="iconfont icon-gamepad mr-2 text-accent"></i> PlayGameStation
+                </a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="../index.html" class="hover:text-primary transition duration-300 flex items-center">
+                        <i class="iconfont icon-home mr-1"></i> Home
+                    </a>
+                    <a href="../categories.html" class="hover:text-primary transition duration-300 flex items-center">
+                        <i class="iconfont icon-category mr-1"></i> Categories
+                    </a>
+                    <a href="../new-games.html" class="hover:text-primary transition duration-300 flex items-center">
+                        <i class="iconfont icon-new mr-1"></i> New Games
+                    </a>
+                    <a href="../top-games.html" class="hover:text-primary transition duration-300 flex items-center">
+                        <i class="iconfont icon-star mr-1"></i> Top Games
+                    </a>
+                    <a href="../about.html" class="hover:text-primary transition duration-300 flex items-center">
+                        <i class="iconfont icon-info mr-1"></i> About
+                    </a>
                 </nav>
+                <button class="md:hidden text-primary focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
             </div>
         </div>
     </header>
 
-    <main class="container mx-auto px-4 py-8">
-        <section class="mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center text-apple-blue">8 Ball Billiards Classic</h1>
-            <p class="text-xl text-center mb-8">Experience the thrill of realistic pool gameplay with precise physics and stunning graphics.</p>
-            
-            <div class="w-full max-w-5xl mx-auto rounded-lg overflow-hidden shadow-xl border-4 border-apple-blue">
+    <main class="container mx-auto px-4 py-4">
+        <div class="bg-white p-6 rounded-xl shadow-game-card mb-8 border border-neutral-200">
+            <div class="aspect-w-16 aspect-h-9">
                 <iframe src="https://games.crazygames.com/en_US/8-ball-billiards-classic/index.html?v=1.326" 
                         class="w-full aspect-video relative" 
                         style="z-index: 10;"
@@ -67,151 +94,324 @@
                         title="8 Ball Billiards Classic"
                         loading="lazy"></iframe>
             </div>
-        </section>
-
-        <section id="about" class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">About the Game</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                    <p class="mb-4">8 Ball Billiards Classic is one of the most authentic pool simulation games available online. This game perfectly captures the essence of traditional 8-ball pool with its realistic physics engine and detailed graphics.</p>
-                    <p class="mb-4">Whether you're a pool enthusiast or just looking for a casual game, 8 Ball Billiards Classic offers an engaging experience that will keep you entertained for hours. Test your skills against the computer or challenge yourself to improve your aim and strategy.</p>
-                </div>
-                <div>
-                    <h3 class="text-2xl font-semibold mb-3 text-apple-green">Game Features</h3>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li>Realistic physics simulation</li>
-                        <li>Stunning table graphics and ball animations</li>
-                        <li>Intuitive controls for precise shots</li>
-                        <li>Traditional 8-ball pool rules</li>
-                        <li>Adjustable difficulty levels</li>
-                        <li>Smooth gameplay experience</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="controls" class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">How to Play</h2>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-3 text-apple-green">Basic Controls</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Aim</span>
-                                <span>Use your mouse to aim the cue in your desired direction</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Power</span>
-                                <span>Pull back the cue stick with your mouse to adjust shot power</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Shoot</span>
-                                <span>Release to take your shot</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-3 text-apple-green">Game Rules</h3>
-                        <p class="mb-3">The game follows standard 8-ball pool rules:</p>
-                        <ul class="list-disc pl-5 space-y-2">
-                            <li>Players are assigned solids or stripes after the first ball is pocketed</li>
-                            <li>Pot all your assigned balls (solids or stripes) before the 8-ball</li>
-                            <li>Pocketing the 8-ball before clearing your balls results in a loss</li>
-                            <li>Pocketing the cue ball (scratch) forfeits your turn</li>
-                            <li>Win by legally pocketing the 8-ball after clearing your assigned balls</li>
-                        </ul>
-                    </div>
+        </div>
+        
+        <div class="relative overflow-hidden bg-gradient-to-r from-primary/90 to-secondary/90 rounded-2xl mb-8 p-8 text-white">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-20 -mt-20 blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full -ml-20 -mb-20 blur-3xl"></div>
+            
+            <div class="relative z-10">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 font-display">8 Ball Billiards Classic</h1>
+                <p class="text-lg mb-6 text-white/80 max-w-2xl">Challenge yourself with realistic physics and smooth gameplay in this classic pool game. Perfect your shots and become a billiards master!</p>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm flex items-center">
+                        <i class="iconfont icon-sports mr-1"></i> Sports
+                    </span>
+                    <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm flex items-center">
+                        <i class="iconfont icon-skill mr-1"></i> Skill
+                    </span>
+                    <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm flex items-center">
+                        <i class="iconfont icon-physics mr-1"></i> Physics
+                    </span>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">Why Players Love This Game</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-green">Realistic Physics</h3>
-                    <p>The ball movements and collisions are incredibly lifelike, making each shot feel authentic and satisfying.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-green">Stunning Graphics</h3>
-                    <p>With detailed textures and smooth animations, the visual presentation brings the pool hall atmosphere to your screen.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-green">Perfect for All Skill Levels</h3>
-                    <p>Whether you're a beginner or an experienced player, the intuitive controls make it easy to jump in and start playing.</p>
-                </div>
-            </div>
-        </section>
+         <section id="about" class="mb-12 bg-white rounded-xl shadow-game-card p-6">
+             <h2 class="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2 font-display flex items-center">
+                 <i class="iconfont icon-info-circle mr-2"></i> About the Game
+             </h2>
+             <p class="mb-6 text-neutral-700 leading-relaxed">8 Ball Billiards Classic is a realistic pool simulation game that brings the excitement of billiards right to your browser. With stunning graphics, realistic physics, and smooth gameplay, this game offers an authentic billiards experience for players of all skill levels.</p>
+             
+             <div class="bg-gradient-to-r from-success/10 to-success/5 p-6 rounded-xl mb-6">
+                 <h3 class="text-xl font-bold mb-4 text-success font-display flex items-center">
+                     <i class="iconfont icon-features mr-2"></i> Game Features:
+                 </h3>
+                 <ul class="space-y-3">
+                     <li class="flex items-start">
+                         <i class="iconfont icon-check text-success mt-1 mr-2"></i>
+                         <span>Realistic physics engine for authentic ball movement</span>
+                     </li>
+                     <li class="flex items-start">
+                         <i class="iconfont icon-check text-success mt-1 mr-2"></i>
+                         <span>Beautiful 3D graphics with detailed table and environment</span>
+                     </li>
+                     <li class="flex items-start">
+                         <i class="iconfont icon-check text-success mt-1 mr-2"></i>
+                         <span>Multiple game modes including 8-ball and practice mode</span>
+                     </li>
+                     <li class="flex items-start">
+                         <i class="iconfont icon-check text-success mt-1 mr-2"></i>
+                         <span>Intuitive controls for precise shot placement</span>
+                     </li>
+                     <li class="flex items-start">
+                         <i class="iconfont icon-check text-success mt-1 mr-2"></i>
+                         <span>Adjustable difficulty levels for players of all skill levels</span>
+                     </li>
+                 </ul>
+             </div>
+         </section>
+         
+         <section id="how-to-play" class="mb-12 bg-white rounded-xl shadow-game-card p-6">
+             <h2 class="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2 font-display flex items-center">
+                 <i class="iconfont icon-controller mr-2"></i> How to Play
+             </h2>
+             
+             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                 <div class="bg-gradient-to-r from-info/10 to-info/5 p-6 rounded-xl">
+                     <h3 class="text-xl font-bold mb-4 text-info font-display flex items-center">
+                         <i class="iconfont icon-controls mr-2"></i> Basic Controls:
+                     </h3>
+                     <ul class="space-y-3">
+                         <li class="flex items-center">
+                             <span class="bg-primary text-white rounded-lg px-2 py-1 mr-2 font-medium">Aim</span>
+                             <span>Move your mouse to aim the cue</span>
+                         </li>
+                         <li class="flex items-center">
+                             <span class="bg-primary text-white rounded-lg px-2 py-1 mr-2 font-medium">Power</span>
+                             <span>Hold left mouse button and drag back to set power</span>
+                         </li>
+                         <li class="flex items-center">
+                             <span class="bg-primary text-white rounded-lg px-2 py-1 mr-2 font-medium">Shoot</span>
+                             <span>Release the left mouse button</span>
+                         </li>
+                         <li class="flex items-center">
+                             <span class="bg-primary text-white rounded-lg px-2 py-1 mr-2 font-medium">Place</span>
+                             <span>Click to position after a scratch</span>
+                         </li>
+                         <li class="flex items-center">
+                             <span class="bg-primary text-white rounded-lg px-2 py-1 mr-2 font-medium">View</span>
+                             <span>Right-click and drag to look around</span>
+                         </li>
+                     </ul>
+                 </div>
+                 
+                 <div class="bg-gradient-to-r from-success/10 to-success/5 p-6 rounded-xl">
+                     <h3 class="text-xl font-bold mb-4 text-success font-display flex items-center">
+                         <i class="iconfont icon-rules mr-2"></i> Game Rules:
+                     </h3>
+                     <ul class="space-y-3">
+                         <li class="flex items-start">
+                             <i class="iconfont icon-check text-success mt-1 mr-2"></i>
+                             <span>Players take turns shooting until they miss or commit a foul</span>
+                         </li>
+                         <li class="flex items-start">
+                             <i class="iconfont icon-check text-success mt-1 mr-2"></i>
+                             <span>Sink all your assigned balls (stripes or solids) before the 8-ball</span>
+                         </li>
+                         <li class="flex items-start">
+                             <i class="iconfont icon-check text-success mt-1 mr-2"></i>
+                             <span>Sinking the 8-ball before clearing your balls results in a loss</span>
+                         </li>
+                         <li class="flex items-start">
+                             <i class="iconfont icon-check text-success mt-1 mr-2"></i>
+                             <span>Sinking the cue ball while shooting at the 8-ball is a loss</span>
+                         </li>
+                         <li class="flex items-start">
+                             <i class="iconfont icon-check text-success mt-1 mr-2"></i>
+                             <span>You must call the pocket when shooting the 8-ball</span>
+                         </li>
+                     </ul>
+                 </div>
+             </div>
+         </section>
 
-        <section class="mb-8">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">Related Games You Might Enjoy</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                    <a href="/games/mini-putt-gem-forest.html" class="block">
-                        <div class="h-40 bg-apple-gray relative">
-                            <img src="/assets/images/games/mini-putt-gem-forest.jpg" alt="Mini Putt Gem Forest" class="w-full h-full object-cover">
-                            <span class="text-white text-lg absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 z-10">Mini Putt Gem Forest</span>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-semibold mb-2">Mini Putt Gem Forest</h3>
-                            <p class="text-sm text-apple-gray">Magical forest-themed minigolf with beautiful courses.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                    <a href="/games/mini-putt-gem-garden.html" class="block">
-                        <div class="h-40 bg-apple-gray relative">
-                            <img src="/assets/images/games/mini-putt-gem-garden.jpg" alt="Mini Putt Gem Garden" class="w-full h-full object-cover">
-                            <span class="text-white text-lg absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 z-10">Mini Putt Gem Garden</span>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-semibold mb-2">Mini Putt Gem Garden</h3>
-                            <p class="text-sm text-apple-gray">Garden-themed minigolf with colorful challenges.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                    <a href="/games/ufo-run.html" class="block">
-                        <div class="h-40 bg-apple-gray relative">
-                            <img src="/assets/images/games/ufo-run.jpg" alt="UFO Run" class="w-full h-full object-cover">
-                            <span class="text-white text-lg absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 z-10">UFO Run</span>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-semibold mb-2">UFO Run</h3>
-                            <p class="text-sm text-apple-gray">Pilot your UFO through challenging obstacles in this action game.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                    <a href="/games/love-tester.html" class="block">
-                        <div class="h-40 bg-apple-gray relative">
-                            <img src="/assets/images/games/love-tester.jpg" alt="Love Tester" class="w-full h-full object-cover">
-                            <span class="text-white text-lg absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 z-10">Love Tester</span>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-semibold mb-2">Love Tester</h3>
-                            <p class="text-sm text-apple-gray">Test your compatibility in this fun social game.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
+         <section class="mb-12 bg-white rounded-xl shadow-game-card p-6">
+             <h2 class="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2 font-display flex items-center">
+                 <i class="iconfont icon-heart mr-2"></i> Why Players Love This Game
+             </h2>
+             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                 <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-info hover:shadow-hover transition-all duration-300 transform hover:-translate-y-1">
+                     <h3 class="text-xl font-bold mb-3 text-info font-display flex items-center">
+                         <i class="iconfont icon-physics mr-2"></i> Realistic Physics
+                     </h3>
+                     <p class="text-neutral-700">The game features an advanced physics engine that accurately simulates ball collisions, spin, and momentum, creating a truly authentic billiards experience.</p>
+                 </div>
+                 <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-primary hover:shadow-hover transition-all duration-300 transform hover:-translate-y-1">
+                     <h3 class="text-xl font-bold mb-3 text-primary font-display flex items-center">
+                         <i class="iconfont icon-controls mr-2"></i> Smooth Controls
+                     </h3>
+                     <p class="text-neutral-700">The intuitive control system makes it easy to line up shots, adjust power, and apply spin, allowing players to execute complex shots with precision.</p>
+                 </div>
+                 <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-success hover:shadow-hover transition-all duration-300 transform hover:-translate-y-1">
+                     <h3 class="text-xl font-bold mb-3 text-success font-display flex items-center">
+                         <i class="iconfont icon-graphics mr-2"></i> Stunning Graphics
+                     </h3>
+                     <p class="text-neutral-700">With its high-quality 3D graphics, detailed textures, and realistic lighting effects, 8 Ball Billiards Classic offers a visually impressive gaming experience.</p>
+                 </div>
+             </div>
+         </section>
+
+         <section class="mb-8">
+             <h2 class="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2 font-display flex items-center">
+                 <i class="iconfont icon-games mr-2"></i> Related Games You Might Enjoy
+             </h2>
+             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                 <div class="bg-white rounded-xl overflow-hidden shadow-game-card hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 relative group">
+                     <a href="../games/mini-golf-club.html" class="block">
+                         <div class="h-48 bg-neutral/10 relative overflow-hidden">
+                             <img src="../assets/images/games/mini-golf-club.jpg" alt="Mini Golf Club" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                             <div class="absolute top-2 left-2 bg-success text-white text-xs font-bold px-2 py-1 rounded-lg flex items-center">
+                                 <i class="iconfont icon-popular mr-1"></i> Popular
+                             </div>
+                         </div>
+                         <div class="p-4">
+                             <h3 class="font-semibold text-lg mb-2 font-display">Mini Golf Club</h3>
+                             <p class="text-sm text-neutral/70 mb-3">Enjoy a relaxing round of mini golf with beautiful courses and realistic physics.</p>
+                             <div class="flex flex-wrap gap-2">
+                                 <span class="bg-success/10 text-success text-xs px-2 py-1 rounded-full flex items-center">
+                                     <i class="iconfont icon-sports mr-1"></i> Sports
+                                 </span>
+                                 <span class="bg-info/10 text-info text-xs px-2 py-1 rounded-full flex items-center">
+                                     <i class="iconfont icon-golf mr-1"></i> Golf
+                                 </span>
+                             </div>
+                         </div>
+                     </a>
+                 </div>
+                 <div class="bg-white rounded-xl overflow-hidden shadow-game-card hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 relative group">
+                     <a href="../games/basketball-stars.html" class="block">
+                         <div class="h-48 bg-neutral/10 relative overflow-hidden">
+                             <img src="../assets/images/games/basketball-stars.jpg" alt="Basketball Stars" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                             <div class="absolute top-2 left-2 bg-warning text-white text-xs font-bold px-2 py-1 rounded-lg flex items-center">
+                                 <i class="iconfont icon-hot mr-1"></i> Hot
+                             </div>
+                         </div>
+                         <div class="p-4">
+                             <h3 class="font-semibold text-lg mb-2 font-display">Basketball Stars</h3>
+                             <p class="text-sm text-neutral/70 mb-3">Show off your basketball skills in this fast-paced sports game.</p>
+                             <div class="flex flex-wrap gap-2">
+                                 <span class="bg-success/10 text-success text-xs px-2 py-1 rounded-full flex items-center">
+                                     <i class="iconfont icon-sports mr-1"></i> Sports
+                                 </span>
+                                 <span class="bg-accent/10 text-accent text-xs px-2 py-1 rounded-full flex items-center">
+                                     <i class="iconfont icon-action mr-1"></i> Action
+                                 </span>
+                             </div>
+                         </div>
+                     </a>
+                 </div>
+                 <div class="bg-white rounded-xl overflow-hidden shadow-game-card hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 relative group">
+                     <a href="../games/table-tennis-world-tour.html" class="block">
+                         <div class="h-48 bg-neutral/10 relative overflow-hidden">
+                             <img src="../assets/images/games/table-tennis-world-tour.jpg" alt="Table Tennis World Tour" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                             <div class="absolute top-2 left-2 bg-accent text-white text-xs font-bold px-2 py-1 rounded-lg flex items-center">
+                                 <i class="iconfont icon-new mr-1"></i> New Game
+                             </div>
+                         </div>
+                         <div class="p-4">
+                             <h3 class="font-semibold text-lg mb-2 font-display">Table Tennis World Tour</h3>
+                             <p class="text-sm text-neutral/70 mb-3">Test your reflexes in this realistic table tennis simulation.</p>
+                             <div class="flex flex-wrap gap-2">
+                                 <span class="bg-success/10 text-success text-xs px-2 py-1 rounded-full flex items-center">
+                                     <i class="iconfont icon-sports mr-1"></i> Sports
+                                 </span>
+                                 <span class="bg-info/10 text-info text-xs px-2 py-1 rounded-full flex items-center">
+                                     <i class="iconfont icon-skill mr-1"></i> Skill
+                                 </span>
+                             </div>
+                         </div>
+                     </a>
+                 </div>
+                 <div class="bg-white rounded-xl overflow-hidden shadow-game-card hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 relative group">
+                     <a href="../games/bowling-masters.html" class="block">
+                         <div class="h-48 bg-neutral/10 relative overflow-hidden">
+                             <img src="../assets/images/games/bowling-masters.jpg" alt="Bowling Masters" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                             <div class="absolute top-2 left-2 bg-primary text-white text-xs font-bold px-2 py-1 rounded-lg flex items-center">
+                                 <i class="iconfont icon-featured mr-1"></i> Featured
+                             </div>
+                         </div>
+                         <div class="p-4">
+                             <h3 class="font-semibold text-lg mb-2 font-display">Bowling Masters</h3>
+                             <p class="text-sm text-neutral/70 mb-3">Experience the thrill of bowling with realistic physics and multiple game modes.</p>
+                             <div class="flex flex-wrap gap-2">
+                                 <span class="bg-success/10 text-success text-xs px-2 py-1 rounded-full flex items-center">
+                                     <i class="iconfont icon-sports mr-1"></i> Sports
+                                 </span>
+                                 <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full flex items-center">
+                                     <i class="iconfont icon-physics mr-1"></i> Physics
+                                 </span>
+                             </div>
+                         </div>
+                     </a>
+                 </div>
+             </div>
+         </section>
     </main>
 
-    <footer class="bg-apple-dark text-white py-8">
+    <footer class="bg-neutral text-white py-12">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <p class="text-xl font-bold">PlayGameStation</p>
-                    <p class="text-sm text-gray-400">Your destination for the best online games</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold font-display flex items-center">
+                        <i class="iconfont icon-gamepad text-2xl mr-2 text-accent"></i> PlayGameStation
+                    </h3>
+                    <p class="text-base-100/70">Your destination for free online games. No downloads, just fun!</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-base-100/70 hover:text-white transition-colors">
+                            <i class="iconfont icon-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-base-100/70 hover:text-white transition-colors">
+                            <i class="iconfont icon-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-base-100/70 hover:text-white transition-colors">
+                            <i class="iconfont icon-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-base-100/70 hover:text-white transition-colors">
+                            <i class="iconfont icon-discord text-xl"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="text-sm text-gray-400">
-                    <p>&copy; 2025 PlayGameStation. All rights reserved.</p>
-                    <p>8 Ball Billiards Classic game is provided by CrazyGames</p>
+                
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold mb-4 font-display">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-base-100/70 hover:text-white transition-colors flex items-center"><i class="iconfont icon-arrow-right mr-2 text-xs text-primary"></i> Home</a></li>
+                        <li><a href="../games.html" class="text-base-100/70 hover:text-white transition-colors flex items-center"><i class="iconfont icon-arrow-right mr-2 text-xs text-primary"></i> All Games</a></li>
+                        <li><a href="../about.html" class="text-base-100/70 hover:text-white transition-colors flex items-center"><i class="iconfont icon-arrow-right mr-2 text-xs text-primary"></i> About Us</a></li>
+                        <li><a href="../contact.html" class="text-base-100/70 hover:text-white transition-colors flex items-center"><i class="iconfont icon-arrow-right mr-2 text-xs text-primary"></i> Contact</a></li>
+                        <li><a href="../privacy.html" class="text-base-100/70 hover:text-white transition-colors flex items-center"><i class="iconfont icon-arrow-right mr-2 text-xs text-primary"></i> Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold mb-4 font-display">Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../categories/action.html" class="text-base-100/70 hover:text-white transition-colors flex items-center"><i class="iconfont icon-arrow-right mr-2 text-xs text-primary"></i> Action Games</a></li>
+                        <li><a href="../categories/puzzle.html" class="text-base-100/70 hover:text-white transition-colors flex items-center"><i class="iconfont icon-arrow-right mr-2 text-xs text-primary"></i> Puzzle Games</a></li>
+                        <li><a href="../categories/adventure.html" class="text-base-100/70 hover:text-white transition-colors flex items-center"><i class="iconfont icon-arrow-right mr-2 text-xs text-primary"></i> Adventure Games</a></li>
+                        <li><a href="../categories/strategy.html" class="text-base-100/70 hover:text-white transition-colors flex items-center"><i class="iconfont icon-arrow-right mr-2 text-xs text-primary"></i> Strategy Games</a></li>
+                        <li><a href="../categories/sports.html" class="text-base-100/70 hover:text-white transition-colors flex items-center"><i class="iconfont icon-arrow-right mr-2 text-xs text-primary"></i> Sports Games</a></li>
+                    </ul>
+                </div>
+                
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold mb-4 font-display">Newsletter</h4>
+                    <p class="text-base-100/70">Subscribe to our newsletter for updates on new games and features.</p>
+                    <form class="space-y-2">
+                        <input type="email" placeholder="Your email address" class="w-full px-4 py-2 rounded-lg bg-neutral-700 border border-base-100/20 focus:outline-none focus:ring-2 focus:ring-primary">
+                        <button type="submit" class="w-full bg-primary hover:bg-secondary text-white font-bold py-2 px-4 rounded-lg transition-colors flex items-center justify-center">
+                            <i class="iconfont icon-subscribe mr-2"></i> Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-base-100/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-base-100/70">&copy; 2023 PlayGameStation. All rights reserved.</p>
+                <div class="mt-4 md:mt-0">
+                    <a href="../terms.html" class="text-base-100/70 hover:text-primary transition-colors mx-2">Terms of Service</a>
+                    <a href="../privacy.html" class="text-base-100/70 hover:text-primary transition-colors mx-2">Privacy Policy</a>
+                    <a href="../cookies.html" class="text-base-100/70 hover:text-primary transition-colors mx-2">Cookie Policy</a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script src="../js/main.js"></script>
 </body>
-</html> 
+</html>

@@ -22,199 +22,351 @@
             theme: {
                 extend: {
                     colors: {
-                        'apple-blue': '#007AFF',
-                        'apple-green': '#34C759',
-                        'apple-red': '#FF3B30',
-                        'apple-gray': '#8E8E93',
-                        'apple-light': '#F2F2F7',
-                        'apple-dark': '#1C1C1E',
-                    }
+                        'primary': '#6366F1', // 新的主色调：靛蓝色
+                        'secondary': '#4F46E5', // 深靛蓝色
+                        'accent': '#EC4899', // 亮粉色作为强调色
+                        'neutral': '#1F2937', // 深灰色
+                        'base-100': '#F3F4F6', // 浅灰色背景
+                        'info': '#3ABFF8', // 信息色
+                        'success': '#36D399', // 成功色
+                        'warning': '#FBBD23', // 警告色
+                        'error': '#F87272', // 错误色
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
+                        'display': ['Lexend', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'game-card': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+                        'hover': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                    },
                 }
             }
         }
     </script>
+    <!-- 添加Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- 添加iconfont图标库 -->
+    <link rel="stylesheet" href="../assets/css/iconfont.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
-<body class="bg-apple-light text-apple-dark">
-    <header class="bg-apple-blue text-white py-4 shadow-md">
+<body class="bg-base-100 text-neutral font-sans">
+    <header class="bg-primary text-white py-4 shadow-lg sticky top-0 z-50">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-center md:text-left mb-4 md:mb-0">
-                    <a href="/" class="text-2xl font-bold">PlayGameStation</a>
+                    <a href="../index.html" class="text-2xl font-bold font-display flex items-center">
+                        <i class="iconfont icon-gamepad text-3xl mr-2"></i> PlayGameStation
+                    </a>
                 </div>
                 <nav>
                     <ul class="flex space-x-6">
-                        <li><a href="/" class="hover:text-apple-light transition">Home</a></li>
-                        <li><a href="/categories/action.html" class="hover:text-apple-light transition">Action</a></li>
-                        <li><a href="/categories/survival.html" class="hover:text-apple-light transition">Survival</a></li>
+                        <li><a href="../index.html" class="hover:text-white/80 transition flex items-center"><i class="iconfont icon-home mr-1"></i> Home</a></li>
+                        <li><a href="../categories/card.html" class="hover:text-white/80 transition flex items-center"><i class="iconfont icon-poker mr-1"></i> Card Games</a></li>
+                        <li><a href="../categories/puzzle.html" class="hover:text-white/80 transition flex items-center"><i class="iconfont icon-puzzle mr-1"></i> Puzzle Games</a></li>
+                        <li><a href="../categories/sports.html" class="hover:text-white/80 transition flex items-center"><i class="iconfont icon-basketball mr-1"></i> Sports Games</a></li>
+                        <li><a href="../categories/action.html" class="hover:text-white/80 transition flex items-center font-bold"><i class="iconfont icon-rocket mr-1"></i> Action Games</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <main class="container mx-auto px-4 py-8">
-        <section class="mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center text-apple-blue">10 Minutes Till Dawn</h1>
-            <p class="text-xl text-center mb-8">Survive for 10 minutes in this intense action game against waves of enemies. Upgrade your weapons and abilities to last longer.</p>
-            
-            <div class="w-full max-w-5xl mx-auto rounded-lg overflow-hidden shadow-xl border-4 border-apple-blue">
-                <iframe src="https://games.crazygames.com/en_US/10-minutes-till-dawn/index.html?v=1.328" 
+    <main>
+        <div class="container mx-auto px-4 py-4">
+            <section class="mb-8">
+                <div class="w-full max-w-5xl mx-auto rounded-lg overflow-hidden shadow-xl border-4 border-primary">
+                <iframe src="https://v6p9d9t4.ssl.hwcdn.net/html/4017197/index.html" 
                         class="w-full aspect-video relative" 
                         style="z-index: 10;"
                         allow="fullscreen" 
                         frameborder="0"
                         title="10 Minutes Till Dawn"
                         loading="lazy"></iframe>
-            </div>
-        </section>
-
-        <section id="about" class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">About the Game</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                    <p class="mb-4">10 Minutes Till Dawn is an intense survival game where your goal is to survive for 10 minutes against increasingly difficult waves of enemies. The game features a unique upgrade system that allows you to enhance your weapons and abilities as you progress.</p>
-                    <p class="mb-4">With each passing minute, the enemies become stronger and more numerous, testing your skills and strategy. Choose your upgrades wisely to create powerful combinations that will help you survive until dawn.</p>
                 </div>
-                <div>
-                    <h3 class="text-2xl font-semibold mb-3 text-apple-green">Game Features</h3>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li>Intense 10-minute survival gameplay</li>
-                        <li>Multiple character classes to choose from</li>
-                        <li>Diverse weapon and ability upgrades</li>
-                        <li>Increasing difficulty with each minute</li>
-                        <li>Strategic gameplay elements</li>
-                        <li>Addictive progression system</li>
-                    </ul>
+            </section>
+            
+            <!-- 游戏标题区域 - 现代化设计 -->
+            <section class="py-8 bg-gradient-to-br from-primary via-secondary to-accent text-white relative overflow-hidden rounded-xl mb-8">
+                <!-- 背景动画元素 -->
+                <div class="absolute inset-0 opacity-10">
+                    <div class="absolute top-10 left-10 w-20 h-20 rounded-full bg-white animate-ping" style="animation-duration: 3s;"></div>
+                    <div class="absolute bottom-20 right-20 w-32 h-32 rounded-full bg-white animate-ping" style="animation-duration: 4s;"></div>
+                    <div class="absolute top-1/2 left-1/3 w-16 h-16 rounded-full bg-white animate-ping" style="animation-duration: 5s;"></div>
                 </div>
-            </div>
-        </section>
+                
+                <div class="container mx-auto px-4 relative z-10 text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4 font-display">10 Minutes Till Dawn</h1>
+                    <p class="text-xl mb-6 max-w-3xl mx-auto">Survive for 10 minutes in this intense action game against waves of enemies. Upgrade your weapons and abilities to last longer.</p>
+                </div>
+            </section>
 
-        <section id="controls" class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">How to Play</h2>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <section id="about" class="mb-12 bg-white rounded-xl shadow-lg p-6">
+                <h2 class="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2 font-display">About the Game</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
-                        <h3 class="text-2xl font-semibold mb-3 text-apple-green">Basic Controls</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Move</span>
-                                <span>Use WASD or arrow keys to move your character</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Aim</span>
-                                <span>Move your mouse to aim your weapon</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Shoot</span>
-                                <span>Left-click to fire your weapon</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Upgrade</span>
-                                <span>Choose upgrades when leveling up</span>
-                            </li>
-                        </ul>
+                        <p class="mb-4">10 Minutes Till Dawn is an intense survival game where your goal is to survive for 10 minutes against increasingly difficult waves of enemies. The game features a unique upgrade system that allows you to enhance your weapons and abilities as you progress.</p>
+                        <p class="mb-4">With each passing minute, the enemies become stronger and more numerous, testing your skills and strategy. Choose your upgrades wisely to create powerful combinations that will help you survive until dawn.</p>
                     </div>
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-3 text-apple-green">Game Rules</h3>
-                        <p class="mb-3">The objective is to survive for 10 minutes:</p>
+                    <div class="bg-gradient-to-br from-primary/10 to-secondary/10 p-5 rounded-lg">
+                        <h3 class="text-2xl font-semibold mb-3 text-success font-display flex items-center">
+                            <i class="iconfont icon-features mr-2"></i> Game Features
+                        </h3>
                         <ul class="list-disc pl-5 space-y-2">
-                            <li>Survive against waves of enemies</li>
-                            <li>Collect experience points to level up</li>
-                            <li>Choose upgrades to enhance your abilities</li>
-                            <li>Defeat enemies to gain resources</li>
-                            <li>Last until dawn to win</li>
+                            <li>Intense 10-minute survival gameplay</li>
+                            <li>Multiple character classes to choose from</li>
+                            <li>Diverse weapon and ability upgrades</li>
+                            <li>Increasing difficulty with each minute</li>
+                            <li>Strategic gameplay elements</li>
+                            <li>Addictive progression system</li>
                         </ul>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">Why Players Love This Game</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-green">Intense Action</h3>
-                    <p>Fast-paced gameplay that keeps you on the edge of your seat.</p>
+            <section id="controls" class="mb-12">
+                <h2 class="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2 font-display flex items-center">
+                    <i class="iconfont icon-controller mr-2"></i> How to Play
+                </h2>
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gradient-to-br from-info/10 to-info/5 p-5 rounded-lg">
+                            <h3 class="text-2xl font-semibold mb-3 text-info font-display flex items-center">
+                                <i class="iconfont icon-keyboard mr-2"></i> Basic Controls
+                            </h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <span class="bg-primary text-white px-3 py-1 rounded-lg mr-3 font-medium">Move</span>
+                                    <span>Use WASD or arrow keys to move your character</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="bg-primary text-white px-3 py-1 rounded-lg mr-3 font-medium">Aim</span>
+                                    <span>Move your mouse to aim your weapon</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="bg-primary text-white px-3 py-1 rounded-lg mr-3 font-medium">Shoot</span>
+                                    <span>Left-click to fire your weapon</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="bg-primary text-white px-3 py-1 rounded-lg mr-3 font-medium">Upgrade</span>
+                                    <span>Choose upgrades when leveling up</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-gradient-to-br from-success/10 to-success/5 p-5 rounded-lg">
+                            <h3 class="text-2xl font-semibold mb-3 text-success font-display flex items-center">
+                                <i class="iconfont icon-rules mr-2"></i> Game Rules
+                            </h3>
+                            <p class="mb-3">The objective is to survive for 10 minutes:</p>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>Survive against waves of enemies</li>
+                                <li>Collect experience points to level up</li>
+                                <li>Choose upgrades to enhance your abilities</li>
+                                <li>Defeat enemies to gain resources</li>
+                                <li>Last until dawn to win</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-green">Strategic Depth</h3>
-                    <p>Deep upgrade system that allows for different playstyles and strategies.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-green">Replay Value</h3>
-                    <p>Multiple characters and upgrade paths provide endless replayability.</p>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="mb-8">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">Related Games You Might Enjoy</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                    <a href="/games/find-the-vampire.html" class="block">
-                        <div class="h-40 bg-apple-gray relative">
-                            <img src="/assets/images/games/find-the-vampire.jpg" alt="Find the Vampire" class="w-full h-full object-cover">
-                            <span class="text-white text-lg absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 z-10">Find the Vampire</span>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-semibold mb-2">Find the Vampire</h3>
-                            <p class="text-sm text-apple-gray">Test your observation skills in this hidden object game.</p>
-                        </div>
-                    </a>
+            <section class="mb-12">
+                <h2 class="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2 font-display flex items-center">
+                    <i class="iconfont icon-star mr-2"></i> Why Players Love This Game
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 border-t-4 border-info">
+                        <h3 class="text-xl font-semibold mb-3 text-info font-display flex items-center">
+                            <i class="iconfont icon-fire mr-2"></i> Intense Action
+                        </h3>
+                        <p>Fast-paced gameplay that keeps you on the edge of your seat.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 border-t-4 border-primary">
+                        <h3 class="text-xl font-semibold mb-3 text-primary font-display flex items-center">
+                            <i class="iconfont icon-strategy mr-2"></i> Strategic Depth
+                        </h3>
+                        <p>Deep upgrade system that allows for different playstyles and strategies.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 border-t-4 border-success">
+                        <h3 class="text-xl font-semibold mb-3 text-success font-display flex items-center">
+                            <i class="iconfont icon-replay mr-2"></i> Replay Value
+                        </h3>
+                        <p>Multiple characters and upgrade paths provide endless replayability.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                    <a href="/games/idle-saga.html" class="block">
-                        <div class="h-40 bg-apple-gray relative">
-                            <img src="/assets/images/games/idle-saga.jpg" alt="Idle Saga" class="w-full h-full object-cover">
-                            <span class="text-white text-lg absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 z-10">Idle Saga</span>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-semibold mb-2">Idle Saga</h3>
-                            <p class="text-sm text-apple-gray">Build your empire in this engaging idle game.</p>
-                        </div>
-                    </a>
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2 font-display flex items-center">
+                    <i class="iconfont icon-games mr-2"></i> Related Games You Might Enjoy
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-game-card hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 relative group">
+                        <a href="../games/find-the-vampire.html" class="block">
+                            <div class="h-48 bg-neutral/10 relative overflow-hidden">
+                                <img src="../assets/images/games/find-the-vampire.jpg" alt="Find the Vampire" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                                <div class="absolute top-2 left-2 bg-accent text-white text-xs font-bold px-2 py-1 rounded-lg flex items-center">
+                                    <i class="iconfont icon-new mr-1"></i> New Game
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-lg mb-2 font-display">Find the Vampire</h3>
+                                <p class="text-sm text-neutral/70 mb-3">Test your observation skills in this hidden object game.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-info/10 text-info text-xs px-2 py-1 rounded-full flex items-center">
+                                        <i class="iconfont icon-puzzle mr-1"></i> Puzzle
+                                    </span>
+                                    <span class="bg-warning/10 text-warning text-xs px-2 py-1 rounded-full flex items-center">
+                                        <i class="iconfont icon-detective mr-1"></i> Mystery
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="bg-white rounded-xl overflow-hidden shadow-game-card hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 relative group">
+                        <a href="../games/idle-saga.html" class="block">
+                            <div class="h-48 bg-neutral/10 relative overflow-hidden">
+                                <img src="../assets/images/games/idle-saga.jpg" alt="Idle Saga" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                                <div class="absolute top-2 left-2 bg-success text-white text-xs font-bold px-2 py-1 rounded-lg flex items-center">
+                                    <i class="iconfont icon-popular mr-1"></i> Popular
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-lg mb-2 font-display">Idle Saga</h3>
+                                <p class="text-sm text-neutral/70 mb-3">Build your empire in this engaging idle game.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full flex items-center">
+                                        <i class="iconfont icon-strategy mr-1"></i> Strategy
+                                    </span>
+                                    <span class="bg-secondary/10 text-secondary text-xs px-2 py-1 rounded-full flex items-center">
+                                        <i class="iconfont icon-idle mr-1"></i> Idle
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="bg-white rounded-xl overflow-hidden shadow-game-card hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 relative group">
+                        <a href="../games/ragdoll-archers.html" class="block">
+                            <div class="h-48 bg-neutral/10 relative overflow-hidden">
+                                <img src="../assets/images/games/ragdoll-archers.jpg" alt="Ragdoll Archers" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                                <div class="absolute top-2 left-2 bg-warning text-white text-xs font-bold px-2 py-1 rounded-lg flex items-center">
+                                    <i class="iconfont icon-hot mr-1"></i> Hot
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-lg mb-2 font-display">Ragdoll Archers</h3>
+                                <p class="text-sm text-neutral/70 mb-3">Engage in hilarious archery battles with ragdoll physics.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-accent/10 text-accent text-xs px-2 py-1 rounded-full flex items-center">
+                                        <i class="iconfont icon-action mr-1"></i> Action
+                                    </span>
+                                    <span class="bg-info/10 text-info text-xs px-2 py-1 rounded-full flex items-center">
+                                        <i class="iconfont icon-physics mr-1"></i> Physics
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="bg-white rounded-xl overflow-hidden shadow-game-card hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 relative group">
+                        <a href="../games/ufo-run.html" class="block">
+                            <div class="h-48 bg-neutral/10 relative overflow-hidden">
+                                <img src="../assets/images/games/ufo-run.jpg" alt="UFO Run" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                                <div class="absolute top-2 left-2 bg-accent text-white text-xs font-bold px-2 py-1 rounded-lg flex items-center">
+                                    <i class="iconfont icon-new mr-1"></i> New Game
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-lg mb-2 font-display">UFO Run</h3>
+                                <p class="text-sm text-neutral/70 mb-3">Pilot your UFO through challenging obstacles in this action game.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-accent/10 text-accent text-xs px-2 py-1 rounded-full flex items-center">
+                                        <i class="iconfont icon-action mr-1"></i> Action
+                                    </span>
+                                    <span class="bg-success/10 text-success text-xs px-2 py-1 rounded-full flex items-center">
+                                        <i class="iconfont icon-arcade mr-1"></i> Arcade
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                    <a href="/games/ragdoll-archers.html" class="block">
-                        <div class="h-40 bg-apple-gray relative">
-                            <img src="/assets/images/games/ragdoll-archers.jpg" alt="Ragdoll Archers" class="w-full h-full object-cover">
-                            <span class="text-white text-lg absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 z-10">Ragdoll Archers</span>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-semibold mb-2">Ragdoll Archers</h3>
-                            <p class="text-sm text-apple-gray">Engage in hilarious archery battles with ragdoll physics.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                    <a href="/games/solar-smash.html" class="block">
-                        <div class="h-40 bg-apple-gray relative">
-                            <img src="/assets/images/games/solar-smash.jpg" alt="Solar Smash" class="w-full h-full object-cover">
-                            <span class="text-white text-lg absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 z-10">Solar Smash</span>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-semibold mb-2">Solar Smash</h3>
-                            <p class="text-sm text-apple-gray">Destroy planets in this satisfying simulation game.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
+            </section>
     </main>
 
-    <footer class="bg-apple-dark text-white py-8">
+    <footer class="bg-neutral text-white py-12">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <p class="text-xl font-bold">PlayGameStation</p>
-                    <p class="text-sm text-gray-400">Your destination for the best online games</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold font-display flex items-center">
+                        <i class="iconfont icon-gamepad text-2xl mr-2 text-accent"></i> PlayGameStation
+                    </h3>
+                    <p class="text-base-100/70">Your ultimate destination for free online browser games. No downloads required, just click and play!</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-base-100/70 hover:text-white transition-colors">
+                            <i class="iconfont icon-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-base-100/70 hover:text-white transition-colors">
+                            <i class="iconfont icon-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-base-100/70 hover:text-white transition-colors">
+                            <i class="iconfont icon-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-base-100/70 hover:text-white transition-colors">
+                            <i class="iconfont icon-discord text-xl"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="text-sm text-gray-400">
-                    <p>&copy; 2025 PlayGameStation. All rights reserved.</p>
-                    <p>10 Minutes Till Dawn game is provided by CrazyGames</p>
+                
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold mb-4 font-display">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-base-100/70 hover:text-white transition-colors flex items-center"><i class="iconfont icon-arrow-right mr-2 text-xs text-primary"></i> Home</a></li>
+                        <li><a href="../about.html" class="text-base-100/70 hover:text-white transition-colors flex items-center"><i class="iconfont icon-arrow-right mr-2 text-xs text-primary"></i> About Us</a></li>
+                        <li><a href="../contact.html" class="text-base-100/70 hover:text-white transition-colors flex items-center"><i class="iconfont icon-arrow-right mr-2 text-xs text-primary"></i> Contact</a></li>
+                        <li><a href="../privacy.html" class="text-base-100/70 hover:text-white transition-colors flex items-center"><i class="iconfont icon-arrow-right mr-2 text-xs text-primary"></i> Privacy Policy</a></li>
+                        <li><a href="../terms.html" class="text-base-100/70 hover:text-white transition-colors flex items-center"><i class="iconfont icon-arrow-right mr-2 text-xs text-primary"></i> Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold mb-4 font-display">Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../categories/action.html" class="text-base-100/70 hover:text-white transition-colors flex items-center"><i class="iconfont icon-arrow-right mr-2 text-xs text-primary"></i> Action Games</a></li>
+                        <li><a href="../categories/adventure.html" class="text-base-100/70 hover:text-white transition-colors flex items-center"><i class="iconfont icon-arrow-right mr-2 text-xs text-primary"></i> Adventure Games</a></li>
+                        <li><a href="../categories/puzzle.html" class="text-base-100/70 hover:text-white transition-colors flex items-center"><i class="iconfont icon-arrow-right mr-2 text-xs text-primary"></i> Puzzle Games</a></li>
+                        <li><a href="../categories/sports.html" class="text-base-100/70 hover:text-white transition-colors flex items-center"><i class="iconfont icon-arrow-right mr-2 text-xs text-primary"></i> Sports Games</a></li>
+                        <li><a href="../categories/simulation.html" class="text-base-100/70 hover:text-white transition-colors flex items-center"><i class="iconfont icon-arrow-right mr-2 text-xs text-primary"></i> Simulation Games</a></li>
+                    </ul>
+                </div>
+                
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold mb-4 font-display">Newsletter</h4>
+                    <p class="text-base-100/70">Subscribe to our newsletter for updates on new games and features.</p>
+                    <form class="space-y-2">
+                        <input type="email" placeholder="Your email address" class="w-full px-4 py-2 rounded-lg bg-neutral-700 border border-base-100/20 focus:outline-none focus:ring-2 focus:ring-primary">
+                        <button type="submit" class="w-full bg-primary hover:bg-secondary text-white font-bold py-2 px-4 rounded-lg transition-colors flex items-center justify-center">
+                            <i class="iconfont icon-subscribe mr-2"></i> Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-base-100/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-base-100/70">&copy; 2023 PlayGameStation. All rights reserved. 10 Minutes Till Dawn is provided by its respective owner.</p>
+                <div class="mt-4 md:mt-0">
+                    <a href="#" class="text-base-100/70 hover:text-primary transition-colors mx-2">Privacy</a>
+                    <a href="#" class="text-base-100/70 hover:text-primary transition-colors mx-2">Terms</a>
+                    <a href="#" class="text-base-100/70 hover:text-primary transition-colors mx-2">Cookies</a>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="../assets/js/main.js"></script>
 </body>
-</html> 
+</html>

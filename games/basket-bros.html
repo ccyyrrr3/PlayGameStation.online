@@ -16,145 +16,279 @@
     <meta name="description" content="Play Basket Bros online for free. Challenge your friends in this fun multiplayer basketball game with hilarious physics and fast-paced gameplay.">
     <meta name="keywords" content="Basket Bros, basketball games, multiplayer games, sports games, free online games">
     <link rel="canonical" href="https://playgamestation.online/games/basket-bros.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'apple-blue': '#007AFF',
-                        'apple-green': '#34C759',
-                        'apple-red': '#FF3B30',
-                        'apple-gray': '#8E8E93',
-                        'apple-light': '#F2F2F7',
-                        'apple-dark': '#1C1C1E',
-                    }
+                        primary: '#4F46E5',
+                        secondary: '#7C3AED',
+                        accent: '#EC4899',
+                        neutral: '#6B7280',
+                        info: '#06B6D4',
+                        success: '#10B981',
+                        warning: '#F59E0B',
+                        error: '#EF4444',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Righteous', 'cursive'],
+                    },
+                    boxShadow: {
+                        'game-card': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+                        'hover': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                    },
                 }
             }
         }
     </script>
 </head>
-<body class="bg-apple-light text-apple-dark">
-    <header class="bg-apple-blue text-white py-4 shadow-md">
+<body class="bg-neutral-100 text-neutral-800 font-sans">
+    <header class="bg-primary text-white py-4 shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-center md:text-left mb-4 md:mb-0">
-                    <a href="/" class="text-2xl font-bold">PlayGameStation</a>
+                    <a href="../index.html" class="text-2xl font-bold font-display flex items-center">
+                        <i class="iconfont icon-gamepad mr-2"></i> PlayGameStation
+                    </a>
                 </div>
                 <nav>
                     <ul class="flex space-x-6">
-                        <li><a href="/" class="hover:text-apple-light transition">Home</a></li>
-                        <li><a href="/categories/card.html" class="hover:text-apple-light transition">Card Games</a></li>
-                        <li><a href="/categories/puzzle.html" class="hover:text-apple-light transition">Puzzle Games</a></li>
-                        <li><a href="/categories/sports.html" class="hover:text-apple-light transition font-bold">Sports Games</a></li>
-                        <li><a href="/categories/action.html" class="hover:text-apple-light transition">Action Games</a></li>
+                        <li><a href="../index.html" class="hover:text-info transition flex items-center"><i class="iconfont icon-home mr-1"></i> Home</a></li>
+                        <li><a href="../category/card.html" class="hover:text-info transition flex items-center"><i class="iconfont icon-cards mr-1"></i> Card</a></li>
+                        <li><a href="../category/puzzle.html" class="hover:text-info transition flex items-center"><i class="iconfont icon-puzzle mr-1"></i> Puzzle</a></li>
+                        <li><a href="../category/sports.html" class="hover:text-info transition font-bold flex items-center"><i class="iconfont icon-sports mr-1"></i> Sports</a></li>
+                        <li><a href="../category/action.html" class="hover:text-info transition flex items-center"><i class="iconfont icon-action mr-1"></i> Action</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <main class="container mx-auto px-4 py-8">
+    <main class="container mx-auto px-4 py-4">
         <section class="mb-8">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center text-apple-blue">Basket Bros</h1>
-            <p class="text-xl text-center mb-8 max-w-3xl mx-auto">Dunk on your opponents in this multiplayer basketball game featuring wacky physics and fast-paced action!</p>
-        </section>
-
-        <section class="mb-12">
-            <div class="w-full max-w-5xl mx-auto rounded-lg overflow-hidden shadow-xl border-4 border-apple-blue">
+            <div class="w-full max-w-5xl mx-auto rounded-xl overflow-hidden shadow-game-card border-4 border-primary">
                 <div class="w-full aspect-video flex items-center justify-center relative" style="z-index: 10;">
                     <iframe src="https://www.crazygames.com/embed/basketbros" style="width: 100%; height: 600px;" frameborder="0" allow="gamepad *;"></iframe>
                 </div>
             </div>
         </section>
-
-        <section class="mb-12 max-w-4xl mx-auto">
-            <h2 class="text-2xl font-bold mb-4 text-apple-blue">About Basket Bros</h2>
-            <div class="bg-white p-6 rounded-lg shadow-md mb-6">
-                <p class="mb-4">Basket Bros is a fun-filled multiplayer basketball game that combines skill, strategy, and hilarious physics. Challenge your friends or play against random opponents online as you aim to outscore them with spectacular dunks and impressive moves.</p>
-                <p>The game features simple controls but deep gameplay, allowing for both casual fun and competitive matches. With its unique physics system, every match is unpredictable and full of laugh-out-loud moments!</p>
+        
+        <section class="mb-8 relative overflow-hidden bg-gradient-to-br from-primary/80 to-secondary/80 rounded-2xl p-8 text-white">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-20 -mt-20"></div>
+            <div class="absolute bottom-0 left-0 w-40 h-40 bg-white/10 rounded-full -ml-10 -mb-10"></div>
+            <div class="relative z-10">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="mb-6 md:mb-0 md:mr-8">
+                        <h1 class="text-4xl md:text-5xl font-bold mb-4 font-display">Basket Bros</h1>
+                        <p class="text-xl mb-6 max-w-2xl">Dunk on your opponents in this multiplayer basketball game featuring wacky physics and fast-paced action!</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-success text-white text-xs font-bold px-3 py-1 rounded-full flex items-center">
+                                <i class="iconfont icon-sports mr-1"></i> Sports
+                            </span>
+                            <span class="bg-warning text-white text-xs font-bold px-3 py-1 rounded-full flex items-center">
+                                <i class="iconfont icon-multiplayer mr-1"></i> Multiplayer
+                            </span>
+                            <span class="bg-info text-white text-xs font-bold px-3 py-1 rounded-full flex items-center">
+                                <i class="iconfont icon-physics mr-1"></i> Physics
+                            </span>
+                            <span class="bg-accent text-white text-xs font-bold px-3 py-1 rounded-full flex items-center">
+                                <i class="iconfont icon-hot mr-1"></i> Popular
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <h2 class="text-2xl font-bold mb-4 text-apple-blue">How to Play</h2>
-            <div class="bg-white p-6 rounded-lg shadow-md mb-6">
-                <ul class="list-disc pl-5 mb-4">
-                    <li class="mb-2"><strong>Movement:</strong> Use WASD or arrow keys to move your character</li>
-                    <li class="mb-2"><strong>Jump:</strong> Press W, Up Arrow, or Spacebar to jump</li>
-                    <li class="mb-2"><strong>Grab Ball:</strong> Touch the ball to pick it up automatically</li>
-                    <li class="mb-2"><strong>Shoot:</strong> Press and hold the mouse button, then release to shoot</li>
-                    <li class="mb-2"><strong>Block:</strong> Jump in front of opponents to block their shots</li>
-                    <li class="mb-2"><strong>Steal:</strong> Touch an opponent holding the ball to steal it</li>
+        <section class="mb-12 max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-game-card">
+            <h2 class="text-2xl font-bold mb-6 text-primary border-b-2 border-primary pb-2 font-display flex items-center">
+                <i class="iconfont icon-info-circle mr-2"></i> About Basket Bros
+            </h2>
+            <div class="mb-6">
+                <p class="mb-4 text-neutral-700">Basket Bros is a fun-filled multiplayer basketball game that combines skill, strategy, and hilarious physics. Challenge your friends or play against random opponents online as you aim to outscore them with spectacular dunks and impressive moves.</p>
+                <p class="text-neutral-700">The game features simple controls but deep gameplay, allowing for both casual fun and competitive matches. With its unique physics system, every match is unpredictable and full of laugh-out-loud moments!</p>
+            </div>
+            
+            <div class="bg-gradient-to-r from-success/10 to-success/5 p-4 rounded-xl mb-4">
+                <h3 class="text-xl font-bold mb-3 text-success font-display flex items-center">
+                    <i class="iconfont icon-features mr-2"></i> Game Features
+                </h3>
+                <ul class="list-disc pl-5 space-y-2 text-neutral-700">
+                    <li><span class="font-medium">Multiplayer Gameplay:</span> Play with friends locally or challenge players online</li>
+                    <li><span class="font-medium">Wacky Physics:</span> Unpredictable and hilarious physics-based gameplay</li>
+                    <li><span class="font-medium">Simple Controls:</span> Easy to learn but difficult to master</li>
+                    <li><span class="font-medium">Various Game Modes:</span> 1v1, 2v2, and tournament options</li>
                 </ul>
-                <p>Score points by shooting the ball through the hoop. The player or team with the most points when time expires wins the match!</p>
             </div>
 
-            <h2 class="text-2xl font-bold mb-4 text-apple-blue">Why Players Love Basket Bros</h2>
-            <div class="bg-white p-6 rounded-lg shadow-md mb-6">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2 text-apple-green">Multiplayer Fun</h3>
-                        <p>Play with friends or against random opponents online for endless competitive gameplay.</p>
+            <h2 class="text-2xl font-bold mb-6 text-primary border-b-2 border-primary pb-2 font-display flex items-center">
+                <i class="iconfont icon-controller mr-2"></i> How to Play
+            </h2>
+            <div class="mb-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-gradient-to-r from-info/10 to-info/5 p-4 rounded-xl">
+                        <h3 class="text-xl font-bold mb-3 text-info font-display flex items-center">
+                            <i class="iconfont icon-controls mr-2"></i> Basic Controls
+                        </h3>
+                        <ul class="space-y-3 text-neutral-700">
+                            <li class="flex items-start">
+                                <span class="bg-primary text-white px-2 py-1 rounded mr-2 text-sm font-medium inline-block min-w-[80px] text-center">WASD / Arrows</span>
+                                <span>Move your character around the court</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-primary text-white px-2 py-1 rounded mr-2 text-sm font-medium inline-block min-w-[80px] text-center">W / Up / Space</span>
+                                <span>Jump to shoot or block</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-primary text-white px-2 py-1 rounded mr-2 text-sm font-medium inline-block min-w-[80px] text-center">Mouse</span>
+                                <span>Hold and release to shoot the ball</span>
+                            </li>
+                        </ul>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2 text-apple-green">Hilarious Physics</h3>
-                        <p>Unpredictable physics create funny moments and ensure no two matches play out the same way.</p>
+                    <div class="bg-gradient-to-r from-success/10 to-success/5 p-4 rounded-xl">
+                        <h3 class="text-xl font-bold mb-3 text-success font-display flex items-center">
+                            <i class="iconfont icon-rules mr-2"></i> Game Rules
+                        </h3>
+                        <ul class="list-disc pl-5 space-y-2 text-neutral-700">
+                            <li><span class="font-medium">Grab Ball:</span> Touch the ball to pick it up automatically</li>
+                            <li><span class="font-medium">Shoot:</span> Press and hold the mouse button, then release to shoot</li>
+                            <li><span class="font-medium">Block:</span> Jump in front of opponents to block their shots</li>
+                            <li><span class="font-medium">Steal:</span> Touch an opponent holding the ball to steal it</li>
+                            <li><span class="font-medium">Scoring:</span> The player or team with the most points when time expires wins!</li>
+                        </ul>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2 text-apple-green">Easy to Learn</h3>
-                        <p>Simple controls make it accessible to everyone, but mastering the game takes skill and practice.</p>
+                </div>
+                <p class="text-neutral-700 bg-warning/10 p-4 rounded-xl">Pro Tip: Master the timing of your jumps and shots to become unstoppable on the court. Practice makes perfect!</p>
+            </div>
+
+            <h2 class="text-2xl font-bold mb-6 text-primary border-b-2 border-primary pb-2 font-display flex items-center">
+                <i class="iconfont icon-heart mr-2"></i> Why Players Love Basket Bros
+            </h2>
+            <div class="bg-white p-6 rounded-xl shadow-game-card mb-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-info hover:shadow-hover transition-all duration-300 transform hover:-translate-y-1">
+                        <h3 class="text-xl font-bold mb-3 text-info font-display flex items-center">
+                            <i class="iconfont icon-multiplayer mr-2"></i> Multiplayer Fun
+                        </h3>
+                        <p class="text-neutral-700">Play with friends or against random opponents online for endless competitive gameplay.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-primary hover:shadow-hover transition-all duration-300 transform hover:-translate-y-1">
+                        <h3 class="text-xl font-bold mb-3 text-primary font-display flex items-center">
+                            <i class="iconfont icon-physics mr-2"></i> Hilarious Physics
+                        </h3>
+                        <p class="text-neutral-700">Unpredictable physics create funny moments and ensure no two matches play out the same way.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-success hover:shadow-hover transition-all duration-300 transform hover:-translate-y-1">
+                        <h3 class="text-xl font-bold mb-3 text-success font-display flex items-center">
+                            <i class="iconfont icon-learn mr-2"></i> Easy to Learn
+                        </h3>
+                        <p class="text-neutral-700">Simple controls make it accessible to everyone, but mastering the game takes skill and practice.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-6 text-apple-blue">Related Games</h2>
+            <h2 class="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2 font-display flex items-center">
+                <i class="iconfont icon-games mr-2"></i> Related Games You Might Enjoy
+            </h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-                    <a href="/games/playground.html" class="block">
-                        <div class="h-48 bg-apple-gray relative">
-                            <img src="/assets/images/games/playground.jpg" alt="Playground" class="absolute inset-0 w-full h-full object-cover">
-                            <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Playground</span>
+                <div class="bg-white rounded-xl overflow-hidden shadow-game-card hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 relative group">
+                    <a href="../games/playground.html" class="block">
+                        <div class="h-48 bg-neutral/10 relative overflow-hidden">
+                            <img src="../assets/images/games/playground.jpg" alt="Playground" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                            <div class="absolute top-2 left-2 bg-success text-white text-xs font-bold px-2 py-1 rounded-lg flex items-center">
+                                <i class="iconfont icon-popular mr-1"></i> Popular
+                            </div>
                         </div>
                         <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-2">Playground</h3>
-                            <p class="text-apple-gray mb-2">A fun physics playground with various sports mini-games</p>
+                            <h3 class="font-semibold text-lg mb-2 font-display">Playground</h3>
+                            <p class="text-sm text-neutral/70 mb-3">A fun physics playground with various sports mini-games</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-success/10 text-success text-xs px-2 py-1 rounded-full flex items-center">
+                                    <i class="iconfont icon-sports mr-1"></i> Sports
+                                </span>
+                                <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full flex items-center">
+                                    <i class="iconfont icon-physics mr-1"></i> Physics
+                                </span>
+                            </div>
                         </div>
                     </a>
                 </div>
-                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-                    <a href="/games/8-ball-billiards-classic.html" class="block">
-                        <div class="h-48 bg-apple-gray relative">
-                            <img src="/assets/images/games/8-ball-billiards-classic.jpg" alt="8-Ball Billiards Classic" class="absolute inset-0 w-full h-full object-cover">
-                            <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">8-Ball Billiards Classic</span>
+                <div class="bg-white rounded-xl overflow-hidden shadow-game-card hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 relative group">
+                    <a href="../games/8-ball-billiards-classic.html" class="block">
+                        <div class="h-48 bg-neutral/10 relative overflow-hidden">
+                            <img src="../assets/images/games/8-ball-billiards-classic.jpg" alt="8-Ball Billiards Classic" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                            <div class="absolute top-2 left-2 bg-primary text-white text-xs font-bold px-2 py-1 rounded-lg flex items-center">
+                                <i class="iconfont icon-featured mr-1"></i> Featured
+                            </div>
                         </div>
                         <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-2">8-Ball Billiards Classic</h3>
-                            <p class="text-apple-gray mb-2">Show your skills and become a billiards champion</p>
+                            <h3 class="font-semibold text-lg mb-2 font-display">8-Ball Billiards Classic</h3>
+                            <p class="text-sm text-neutral/70 mb-3">Show your skills and become a billiards champion</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-success/10 text-success text-xs px-2 py-1 rounded-full flex items-center">
+                                    <i class="iconfont icon-sports mr-1"></i> Sports
+                                </span>
+                                <span class="bg-info/10 text-info text-xs px-2 py-1 rounded-full flex items-center">
+                                    <i class="iconfont icon-skill mr-1"></i> Skill
+                                </span>
+                            </div>
                         </div>
                     </a>
                 </div>
-                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-                    <a href="/games/draw-climber.html" class="block">
-                        <div class="h-48 bg-apple-gray relative">
-                            <img src="/assets/images/games/draw-climber.jpg" alt="Draw Climber" class="absolute inset-0 w-full h-full object-cover">
-                            <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Draw Climber</span>
+                <div class="bg-white rounded-xl overflow-hidden shadow-game-card hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 relative group">
+                    <a href="../games/draw-climber.html" class="block">
+                        <div class="h-48 bg-neutral/10 relative overflow-hidden">
+                            <img src="../assets/images/games/draw-climber.jpg" alt="Draw Climber" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                            <div class="absolute top-2 left-2 bg-accent text-white text-xs font-bold px-2 py-1 rounded-lg flex items-center">
+                                <i class="iconfont icon-new mr-1"></i> New Game
+                            </div>
                         </div>
                         <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-2">Draw Climber</h3>
-                            <p class="text-apple-gray mb-2">Draw legs for your character and race to the finish line</p>
+                            <h3 class="font-semibold text-lg mb-2 font-display">Draw Climber</h3>
+                            <p class="text-sm text-neutral/70 mb-3">Draw legs for your character and race to the finish line</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-accent/10 text-accent text-xs px-2 py-1 rounded-full flex items-center">
+                                    <i class="iconfont icon-action mr-1"></i> Action
+                                </span>
+                                <span class="bg-warning/10 text-warning text-xs px-2 py-1 rounded-full flex items-center">
+                                    <i class="iconfont icon-puzzle mr-1"></i> Puzzle
+                                </span>
+                            </div>
                         </div>
                     </a>
                 </div>
-                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-                    <a href="/games/ragdoll-archers.html" class="block">
-                        <div class="h-48 bg-apple-gray relative">
-                            <img src="/assets/images/games/ragdoll-archers.jpg" alt="Ragdoll Archers" class="absolute inset-0 w-full h-full object-cover">
-                            <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Ragdoll Archers</span>
+                <div class="bg-white rounded-xl overflow-hidden shadow-game-card hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 relative group">
+                    <a href="../games/ragdoll-archers.html" class="block">
+                        <div class="h-48 bg-neutral/10 relative overflow-hidden">
+                            <img src="../assets/images/games/ragdoll-archers.jpg" alt="Ragdoll Archers" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                            <div class="absolute top-2 left-2 bg-warning text-white text-xs font-bold px-2 py-1 rounded-lg flex items-center">
+                                <i class="iconfont icon-hot mr-1"></i> Hot
+                            </div>
                         </div>
                         <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-2">Ragdoll Archers</h3>
-                            <p class="text-apple-gray mb-2">Engage in hilarious archery battles with ragdoll physics</p>
+                            <h3 class="font-semibold text-lg mb-2 font-display">Ragdoll Archers</h3>
+                            <p class="text-sm text-neutral/70 mb-3">Engage in hilarious archery battles with ragdoll physics</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-accent/10 text-accent text-xs px-2 py-1 rounded-full flex items-center">
+                                    <i class="iconfont icon-action mr-1"></i> Action
+                                </span>
+                                <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full flex items-center">
+                                    <i class="iconfont icon-physics mr-1"></i> Physics
+                                </span>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -162,38 +296,80 @@
         </section>
     </main>
 
-    <footer class="bg-apple-dark text-white py-8">
+    <footer class="bg-neutral-800 text-white py-12">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between">
-                <div class="mb-8 md:mb-0">
-                    <h2 class="text-2xl font-bold mb-4">PlayGameStation</h2>
-                    <p class="mb-4 max-w-md text-gray-400">Your destination for free online games. No downloads, no installations, play high-quality games instantly.</p>
-                </div>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
-                    <div>
-                        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                        <ul class="space-y-2">
-                            <li><a href="/" class="text-gray-400 hover:text-white transition">Home</a></li>
-                            <li><a href="/#featured-games" class="text-gray-400 hover:text-white transition">Featured Games</a></li>
-                            <li><a href="/#categories" class="text-gray-400 hover:text-white transition">Game Categories</a></li>
-                        </ul>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-1">
+                    <h3 class="text-xl font-bold mb-4 font-display text-primary flex items-center">
+                        <i class="iconfont icon-gamepad mr-2 text-primary"></i> PlayGameStation
+                    </h3>
+                    <p class="text-base-100/70 mb-4">The best place to play free online games. Discover new favorites and enjoy classic titles.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-base-100/70 hover:text-primary transition-colors">
+                            <i class="iconfont icon-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-base-100/70 hover:text-primary transition-colors">
+                            <i class="iconfont icon-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-base-100/70 hover:text-primary transition-colors">
+                            <i class="iconfont icon-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-base-100/70 hover:text-primary transition-colors">
+                            <i class="iconfont icon-discord text-xl"></i>
+                        </a>
                     </div>
-                    <div>
-                        <h3 class="text-lg font-semibold mb-4">Categories</h3>
-                        <ul class="space-y-2">
-                            <li><a href="/categories/card.html" class="text-gray-400 hover:text-white transition">Card Games</a></li>
-                            <li><a href="/categories/puzzle.html" class="text-gray-400 hover:text-white transition">Puzzle Games</a></li>
-                            <li><a href="/categories/sports.html" class="text-gray-400 hover:text-white transition">Sports Games</a></li>
-                            <li><a href="/categories/action.html" class="text-gray-400 hover:text-white transition">Action Games</a></li>
-                        </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-info font-display">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-base-100/70 hover:text-white transition-colors flex items-center">
+                            <i class="iconfont icon-arrow-right mr-2 text-xs text-info"></i> Home
+                        </a></li>
+                        <li><a href="../about.html" class="text-base-100/70 hover:text-white transition-colors flex items-center">
+                            <i class="iconfont icon-arrow-right mr-2 text-xs text-info"></i> About Us
+                        </a></li>
+                        <li><a href="../contact.html" class="text-base-100/70 hover:text-white transition-colors flex items-center">
+                            <i class="iconfont icon-arrow-right mr-2 text-xs text-info"></i> Contact
+                        </a></li>
+                        <li><a href="../privacy.html" class="text-base-100/70 hover:text-white transition-colors flex items-center">
+                            <i class="iconfont icon-arrow-right mr-2 text-xs text-info"></i> Privacy Policy
+                        </a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-success font-display">Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../category/action.html" class="text-base-100/70 hover:text-white transition-colors flex items-center">
+                            <i class="iconfont icon-arrow-right mr-2 text-xs text-success"></i> Action Games
+                        </a></li>
+                        <li><a href="../category/puzzle.html" class="text-base-100/70 hover:text-white transition-colors flex items-center">
+                            <i class="iconfont icon-arrow-right mr-2 text-xs text-success"></i> Puzzle Games
+                        </a></li>
+                        <li><a href="../category/sports.html" class="text-base-100/70 hover:text-white transition-colors flex items-center">
+                            <i class="iconfont icon-arrow-right mr-2 text-xs text-success"></i> Sports Games
+                        </a></li>
+                        <li><a href="../category/strategy.html" class="text-base-100/70 hover:text-white transition-colors flex items-center">
+                            <i class="iconfont icon-arrow-right mr-2 text-xs text-success"></i> Strategy Games
+                        </a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-warning font-display">Newsletter</h4>
+                    <p class="text-base-100/70 mb-4">Subscribe to our newsletter for updates on new games and features.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="bg-base-300 text-white px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-primary w-full">
+                        <button class="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-r-lg transition-colors">
+                            <i class="iconfont icon-send"></i>
+                        </button>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 PlayGameStation. All rights reserved.</p>
-                <p class="mt-2 text-sm">Basket Bros game is provided by CrazyGames.</p>
+            <div class="border-t border-base-100/20 mt-8 pt-8 text-center text-base-100/70">
+                <p>&copy; 2023 PlayGameStation. All rights reserved. | Designed with <i class="iconfont icon-heart text-primary"></i> for gamers</p>
             </div>
         </div>
     </footer>
+
+    <script src="../assets/js/main.js"></script>
 </body>
-</html> 
+</html>
