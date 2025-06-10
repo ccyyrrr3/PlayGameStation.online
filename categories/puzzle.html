@@ -13,8 +13,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puzzle Games - Play Online | PlayGameStation</title>
-    <meta name="description" content="Play free puzzle games online. Challenge your mind with brain teasers, matching games, and more entertaining puzzles.">
-    <meta name="keywords" content="puzzle games, free online puzzles, brain teasers, matching games, logic games">
+    <meta name="description" content="Play free puzzle games online. Challenge your brain with logic puzzles, matching games, and more with beautiful graphics and smooth gameplay.">
+    <meta name="keywords" content="puzzle games, free online puzzle games, brain games, logic puzzles, matching games">
     <link rel="canonical" href="https://playgamestation.online/categories/puzzle.html">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -22,128 +22,232 @@
             theme: {
                 extend: {
                     colors: {
-                        'apple-blue': '#007AFF',
-                        'apple-green': '#34C759',
-                        'apple-red': '#FF3B30',
-                        'apple-gray': '#8E8E93',
-                        'apple-light': '#F2F2F7',
-                        'apple-dark': '#1C1C1E',
-                    }
+                        'primary': '#6366F1', // 新的主色调：靛蓝色
+                        'secondary': '#4F46E5', // 深靛蓝色
+                        'accent': '#EC4899', // 亮粉色作为强调色
+                        'neutral': '#1F2937', // 深灰色
+                        'base-100': '#F3F4F6', // 浅灰色背景
+                        'info': '#3ABFF8', // 信息色
+                        'success': '#36D399', // 成功色
+                        'warning': '#FBBD23', // 警告色
+                        'error': '#F87272', // 错误色
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
+                        'display': ['Lexend', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'game-card': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+                        'hover': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                    },
                 }
             }
         }
     </script>
+    <!-- 添加Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- 添加iconfont图标库 -->
+    <link rel="stylesheet" href="../assets/css/iconfont.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
-<body class="bg-apple-light text-apple-dark">
-    <header class="bg-apple-blue text-white py-4 shadow-md">
+<body class="bg-base-100 text-neutral font-sans">
+    <header class="bg-primary text-white py-4 shadow-lg sticky top-0 z-50">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-center md:text-left mb-4 md:mb-0">
-                    <a href="/" class="text-2xl font-bold">PlayGameStation</a>
+                    <a href="../index.html" class="text-2xl font-bold font-display flex items-center">
+                        <i class="iconfont icon-gamepad text-3xl mr-2"></i> PlayGameStation
+                    </a>
                 </div>
                 <nav>
                     <ul class="flex space-x-6">
-                        <li><a href="/" class="hover:text-apple-light transition">Home</a></li>
-                        <li><a href="/categories/card.html" class="hover:text-apple-light transition">Card Games</a></li>
-                        <li><a href="/categories/puzzle.html" class="hover:text-apple-light transition font-bold">Puzzle Games</a></li>
-                        <li><a href="/categories/sports.html" class="hover:text-apple-light transition">Sports Games</a></li>
-                        <li><a href="/categories/action.html" class="hover:text-apple-light transition">Action Games</a></li>
+                        <li><a href="../index.html" class="hover:text-white/80 transition flex items-center"><i class="iconfont icon-home mr-1"></i> Home</a></li>
+                        <li><a href="card.html" class="hover:text-white/80 transition flex items-center"><i class="iconfont icon-poker mr-1"></i> Card Games</a></li>
+                        <li><a href="puzzle.html" class="hover:text-white/80 transition font-bold flex items-center"><i class="iconfont icon-puzzle mr-1"></i> Puzzle Games</a></li>
+                        <li><a href="sports.html" class="hover:text-white/80 transition flex items-center"><i class="iconfont icon-basketball mr-1"></i> Sports Games</a></li>
+                        <li><a href="action.html" class="hover:text-white/80 transition flex items-center"><i class="iconfont icon-rocket mr-1"></i> Action Games</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <main class="container mx-auto px-4 py-8">
-        <section class="mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center text-apple-blue">Puzzle Games</h1>
-            <p class="text-xl text-center mb-8">Challenge your mind with our collection of brain-teasing puzzle games.</p>
+    <main class="container mx-auto px-6 py-12">
+        <section class="mb-16 relative overflow-hidden bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white">
+            <div class="relative z-10">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 font-display">Puzzle Games</h1>
+                <p class="text-xl mb-6 max-w-2xl">Challenge your mind with our collection of brain-teasing puzzle games.</p>
+                <div class="flex space-x-4">
+                    <a href="#games" class="bg-white text-primary px-6 py-2 rounded-full font-medium hover:bg-opacity-90 transition flex items-center">
+                        <i class="iconfont icon-puzzle mr-2"></i> Browse Games
+                    </a>
+                </div>
+            </div>
+            <!-- 装饰元素 -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full -mr-20 -mt-20"></div>
+            <div class="absolute bottom-0 left-0 w-40 h-40 bg-accent opacity-20 rounded-full -ml-10 -mb-10"></div>
         </section>
 
-        <section class="mb-12">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-                    <a href="/games/draw-climber.html" class="block">
-                        <div class="h-48 bg-apple-gray relative">
-                            <img src="/assets/images/games/draw-climber.jpg" alt="Draw Climber" class="absolute inset-0 w-full h-full object-cover">
-                            <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Draw Climber</span>
+        <section id="games" class="mb-16">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold font-display">Featured Puzzle Games</h2>
+                <a href="#" class="text-primary hover:text-secondary transition flex items-center">
+                    <span>View All</span>
+                    <i class="iconfont icon-arrow-right ml-1"></i>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl overflow-hidden shadow-game-card hover:shadow-hover transition-all duration-300 transform hover:-translate-y-1">
+                    <a href="../games/draw-climber.html" class="block">
+                        <div class="h-48 relative overflow-hidden group">
+                            <img src="../assets/images/games/draw-climber.jpg" alt="Draw Climber" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
+                                <div class="absolute bottom-3 left-3 right-3">
+                                    <div class="flex justify-between items-end">
+                                        <h3 class="text-white font-bold text-lg">Draw Climber</h3>
+                                        <span class="bg-accent/90 text-white text-xs px-2 py-1 rounded-full flex items-center">
+                                            <i class="iconfont icon-new mr-1"></i> New Game
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-2">Draw Climber</h3>
-                            <p class="text-apple-gray mb-2">Draw legs for your character and race to the finish line</p>
-                            <div class="flex flex-wrap">
-                                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">New Game</span>
-                                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Physics</span>
-                                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Creative</span>
+                            <p class="text-neutral/80 mb-3">Draw legs for your character and race to the finish line</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full flex items-center">
+                                    <i class="iconfont icon-puzzle mr-1"></i> Puzzle
+                                </span>
+                                <span class="bg-secondary/10 text-secondary text-xs px-3 py-1 rounded-full flex items-center">
+                                    <i class="iconfont icon-physics mr-1"></i> Physics
+                                </span>
+                                <span class="bg-info/10 text-info text-xs px-3 py-1 rounded-full flex items-center">
+                                    <i class="iconfont icon-creative mr-1"></i> Creative
+                                </span>
                             </div>
                         </div>
                     </a>
                 </div>
 
-                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-                    <a href="/games/find-the-vampire.html" class="block">
-                        <div class="h-48 bg-apple-gray relative">
-                            <img src="/assets/images/games/find-the-vampire.jpg" alt="Find the Vampire" class="absolute inset-0 w-full h-full object-cover">
-                            <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Find the Vampire</span>
+                <div class="bg-white rounded-xl overflow-hidden shadow-game-card hover:shadow-hover transition-all duration-300 transform hover:-translate-y-1">
+                    <a href="../games/find-the-vampire.html" class="block">
+                        <div class="h-48 relative overflow-hidden group">
+                            <img src="../assets/images/games/find-the-vampire.jpg" alt="Find the Vampire" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
+                                <div class="absolute bottom-3 left-3 right-3">
+                                    <div class="flex justify-between items-end">
+                                        <h3 class="text-white font-bold text-lg">Find the Vampire</h3>
+                                        <span class="bg-accent/90 text-white text-xs px-2 py-1 rounded-full flex items-center">
+                                            <i class="iconfont icon-new mr-1"></i> New Game
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-2">Find the Vampire</h3>
-                            <p class="text-apple-gray mb-2">Test your observation skills in this hidden object game</p>
-                            <div class="flex flex-wrap">
-                                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">New Game</span>
-                                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Hidden Object</span>
+                            <p class="text-neutral/80 mb-3">Test your observation skills in this hidden object game</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full flex items-center">
+                                    <i class="iconfont icon-puzzle mr-1"></i> Puzzle
+                                </span>
+                                <span class="bg-secondary/10 text-secondary text-xs px-3 py-1 rounded-full flex items-center">
+                                    <i class="iconfont icon-search mr-1"></i> Hidden Object
+                                </span>
                             </div>
                         </div>
                     </a>
                 </div>
 
-                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-                    <a href="/games/jelly-collapse.html" class="block">
-                        <div class="h-48 bg-apple-gray relative">
-                            <img src="/assets/images/games/jelly-collapse.jpg" alt="Jelly Collapse" class="absolute inset-0 w-full h-full object-cover">
-                            <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Jelly Collapse</span>
+                <div class="bg-white rounded-xl overflow-hidden shadow-game-card hover:shadow-hover transition-all duration-300 transform hover:-translate-y-1">
+                    <a href="../games/jelly-collapse.html" class="block">
+                        <div class="h-48 relative overflow-hidden group">
+                            <img src="../assets/images/games/jelly-collapse.jpg" alt="Jelly Collapse" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
+                                <div class="absolute bottom-3 left-3 right-3">
+                                    <div class="flex justify-between items-end">
+                                        <h3 class="text-white font-bold text-lg">Jelly Collapse</h3>
+                                        <span class="bg-accent/90 text-white text-xs px-2 py-1 rounded-full flex items-center">
+                                            <i class="iconfont icon-hot mr-1"></i> Popular
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-2">Jelly Collapse</h3>
-                            <p class="text-apple-gray mb-2">Match and clear colorful jellies in this addictive puzzle</p>
-                            <div class="flex flex-wrap">
-                                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Matching</span>
-                                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Colorful</span>
+                            <p class="text-neutral/80 mb-3">Match and clear colorful jellies in this addictive puzzle</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full flex items-center">
+                                    <i class="iconfont icon-puzzle mr-1"></i> Puzzle
+                                </span>
+                                <span class="bg-warning/10 text-warning text-xs px-3 py-1 rounded-full flex items-center">
+                                    <i class="iconfont icon-match mr-1"></i> Matching
+                                </span>
+                                <span class="bg-info/10 text-info text-xs px-3 py-1 rounded-full flex items-center">
+                                    <i class="iconfont icon-color mr-1"></i> Colorful
+                                </span>
                             </div>
                         </div>
                     </a>
                 </div>
 
-                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-                    <a href="/games/zuma.html" class="block">
-                        <div class="h-48 bg-apple-gray relative">
-                            <img src="/assets/images/games/zuma.jpg" alt="Zuma" class="absolute inset-0 w-full h-full object-cover">
-                            <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Zuma</span>
+                <div class="bg-white rounded-xl overflow-hidden shadow-game-card hover:shadow-hover transition-all duration-300 transform hover:-translate-y-1">
+                    <a href="../games/zuma.html" class="block">
+                        <div class="h-48 relative overflow-hidden group">
+                            <img src="../assets/images/games/zuma.jpg" alt="Zuma" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
+                                <div class="absolute bottom-3 left-3 right-3">
+                                    <div class="flex justify-between items-end">
+                                        <h3 class="text-white font-bold text-lg">Zuma</h3>
+                                        <span class="bg-success/90 text-white text-xs px-2 py-1 rounded-full flex items-center">
+                                            <i class="iconfont icon-classic mr-1"></i> Classic
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-2">Zuma</h3>
-                            <p class="text-apple-gray mb-2">Classic puzzle game, shoot colored balls to eliminate chains</p>
-                            <div class="flex flex-wrap">
-                                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Classic</span>
-                                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Matching</span>
+                            <p class="text-neutral/80 mb-3">Classic puzzle game, shoot colored balls to eliminate chains</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full flex items-center">
+                                    <i class="iconfont icon-puzzle mr-1"></i> Puzzle
+                                </span>
+                                <span class="bg-warning/10 text-warning text-xs px-3 py-1 rounded-full flex items-center">
+                                    <i class="iconfont icon-match mr-1"></i> Matching
+                                </span>
                             </div>
                         </div>
                     </a>
                 </div>
 
-                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-                    <a href="/games/cut-in-half-please.html" class="block">
-                        <div class="h-48 bg-apple-gray relative">
-                            <img src="/assets/images/games/cut-in-half-please.jpg" alt="Cut in Half Please" class="absolute inset-0 w-full h-full object-cover">
-                            <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Cut in Half Please</span>
+                <div class="bg-white rounded-xl overflow-hidden shadow-game-card hover:shadow-hover transition-all duration-300 transform hover:-translate-y-1">
+                    <a href="../games/cut-in-half-please.html" class="block">
+                        <div class="h-48 relative overflow-hidden group">
+                            <img src="../assets/images/games/cut-in-half-please.jpg" alt="Cut in Half Please" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
+                                <div class="absolute bottom-3 left-3 right-3">
+                                    <div class="flex justify-between items-end">
+                                        <h3 class="text-white font-bold text-lg">Cut in Half Please</h3>
+                                        <span class="bg-accent/90 text-white text-xs px-2 py-1 rounded-full flex items-center">
+                                            <i class="iconfont icon-new mr-1"></i> New Game
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-2">Cut in Half Please</h3>
-                            <p class="text-apple-gray mb-2">A unique puzzle game with creative mechanics</p>
-                            <div class="flex flex-wrap">
-                                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">New Game</span>
-                                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Puzzle</span>
-                                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Brain</span>
+                            <p class="text-neutral/80 mb-3">A unique puzzle game with creative mechanics</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full flex items-center">
+                                    <i class="iconfont icon-puzzle mr-1"></i> Puzzle
+                                </span>
+                                <span class="bg-secondary/10 text-secondary text-xs px-3 py-1 rounded-full flex items-center">
+                                    <i class="iconfont icon-brain mr-1"></i> Brain
+                                </span>
+                                <span class="bg-info/10 text-info text-xs px-3 py-1 rounded-full flex items-center">
+                                    <i class="iconfont icon-creative mr-1"></i> Creative
+                                </span>
                             </div>
                         </div>
                     </a>
@@ -166,4 +270,4 @@
         </div>
     </footer>
 </body>
-</html> 
+</html>

@@ -22,58 +22,107 @@
             theme: {
                 extend: {
                     colors: {
-                        'apple-blue': '#007AFF',
-                        'apple-green': '#34C759',
-                        'apple-red': '#FF3B30',
-                        'apple-gray': '#8E8E93',
-                        'apple-light': '#F2F2F7',
-                        'apple-dark': '#1C1C1E',
-                    }
+                        'primary': '#6366F1', // 新的主色调：靛蓝色
+                        'secondary': '#4F46E5', // 深靛蓝色
+                        'accent': '#EC4899', // 亮粉色作为强调色
+                        'neutral': '#1F2937', // 深灰色
+                        'base-100': '#F3F4F6', // 浅灰色背景
+                        'info': '#3ABFF8', // 信息色
+                        'success': '#36D399', // 成功色
+                        'warning': '#FBBD23', // 警告色
+                        'error': '#F87272', // 错误色
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
+                        'display': ['Lexend', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'game-card': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+                        'hover': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                    },
                 }
             }
         }
     </script>
+    <!-- 添加Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- 添加iconfont图标库 -->
+    <link rel="stylesheet" href="../assets/css/iconfont.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
-<body class="bg-apple-light text-apple-dark">
-    <header class="bg-apple-blue text-white py-4 shadow-md">
+<body class="bg-base-100 text-neutral font-sans">
+    <header class="bg-primary text-white py-4 shadow-lg sticky top-0 z-50">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-center md:text-left mb-4 md:mb-0">
-                    <a href="/" class="text-2xl font-bold">PlayGameStation</a>
+                    <a href="../index.html" class="text-2xl font-bold font-display flex items-center">
+                        <i class="iconfont icon-gamepad text-3xl mr-2"></i> PlayGameStation
+                    </a>
                 </div>
                 <nav>
                     <ul class="flex space-x-6">
-                        <li><a href="/" class="hover:text-apple-light transition">Home</a></li>
-                        <li><a href="/categories/card.html" class="hover:text-apple-light transition font-bold">Card Games</a></li>
-                        <li><a href="/categories/puzzle.html" class="hover:text-apple-light transition">Puzzle Games</a></li>
-                        <li><a href="/categories/sports.html" class="hover:text-apple-light transition">Sports Games</a></li>
-                        <li><a href="/categories/action.html" class="hover:text-apple-light transition">Action Games</a></li>
+                        <li><a href="../index.html" class="hover:text-white/80 transition flex items-center"><i class="iconfont icon-home mr-1"></i> Home</a></li>
+                        <li><a href="card.html" class="hover:text-white/80 transition font-bold flex items-center"><i class="iconfont icon-poker mr-1"></i> Card Games</a></li>
+                        <li><a href="puzzle.html" class="hover:text-white/80 transition flex items-center"><i class="iconfont icon-puzzle mr-1"></i> Puzzle Games</a></li>
+                        <li><a href="sports.html" class="hover:text-white/80 transition flex items-center"><i class="iconfont icon-basketball mr-1"></i> Sports Games</a></li>
+                        <li><a href="action.html" class="hover:text-white/80 transition flex items-center"><i class="iconfont icon-rocket mr-1"></i> Action Games</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <main class="container mx-auto px-4 py-8">
-        <section class="mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center text-apple-blue">Card Games</h1>
-            <p class="text-xl text-center mb-8">Enjoy classic card games and modern variations with beautiful graphics and smooth gameplay.</p>
+    <main class="container mx-auto px-6 py-12">
+        <section class="mb-16 relative overflow-hidden bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white">
+            <div class="relative z-10">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 font-display">Card Games</h1>
+                <p class="text-xl mb-6 max-w-2xl">Enjoy classic card games and modern variations with beautiful graphics and smooth gameplay.</p>
+                <div class="flex space-x-4">
+                    <a href="#games" class="bg-white text-primary px-6 py-2 rounded-full font-medium hover:bg-opacity-90 transition flex items-center">
+                        <i class="iconfont icon-poker mr-2"></i> Browse Games
+                    </a>
+                </div>
+            </div>
+            <!-- 装饰元素 -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full -mr-20 -mt-20"></div>
+            <div class="absolute bottom-0 left-0 w-40 h-40 bg-accent opacity-20 rounded-full -ml-10 -mb-10"></div>
         </section>
 
-        <section class="mb-12">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-                    <a href="/games/spades-spider-solitaire.html" class="block">
-                        <div class="h-48 bg-apple-gray relative">
-                            <img src="/assets/images/games/spades-spider-solitaire.jpg" alt="Spades Spider Solitaire" class="absolute inset-0 w-full h-full object-cover">
-                            <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Spades Spider Solitaire</span>
+        <section id="games" class="mb-16">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold font-display">Featured Card Games</h2>
+                <a href="#" class="text-primary hover:text-secondary transition flex items-center">
+                    <span>View All</span>
+                    <i class="iconfont icon-arrow-right ml-1"></i>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl overflow-hidden shadow-game-card hover:shadow-hover transition-all duration-300 transform hover:-translate-y-1">
+                    <a href="../games/spades-spider-solitaire.html" class="block">
+                        <div class="h-48 relative overflow-hidden group">
+                            <img src="../assets/images/games/spades-spider-solitaire.jpg" alt="Spades Spider Solitaire" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
+                                <div class="absolute bottom-3 left-3 right-3">
+                                    <div class="flex justify-between items-end">
+                                        <h3 class="text-white font-bold text-lg">Spades Spider Solitaire</h3>
+                                        <span class="bg-accent/90 text-white text-xs px-2 py-1 rounded-full flex items-center">
+                                            <i class="iconfont icon-new mr-1"></i> New Game
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-2">Spades Spider Solitaire</h3>
-                            <p class="text-apple-gray mb-2">Classic card game with a spades theme</p>
-                            <div class="flex flex-wrap">
-                                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Solitaire</span>
-                                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Strategy</span>
+                            <p class="text-neutral/80 mb-3">Classic card game with a spades theme. Arrange cards in descending order to win.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full flex items-center">
+                                    <i class="iconfont icon-poker mr-1"></i> Solitaire
+                                </span>
+                                <span class="bg-secondary/10 text-secondary text-xs px-3 py-1 rounded-full flex items-center">
+                                    <i class="iconfont icon-strategy mr-1"></i> Strategy
+                                </span>
                             </div>
                         </div>
                     </a>
@@ -82,18 +131,68 @@
         </section>
     </main>
 
-    <footer class="bg-apple-dark text-white py-8">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <p class="text-xl font-bold">PlayGameStation</p>
-                    <p class="text-sm text-gray-400">Your destination for the best online games</p>
+    <footer class="bg-neutral text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1">
+                    <a href="../index.html" class="text-2xl font-bold font-display flex items-center mb-4">
+                        <i class="iconfont icon-gamepad text-3xl mr-2"></i> PlayGameStation
+                    </a>
+                    <p class="text-base-100/70 mb-4">Your destination for the best online games. Play instantly without downloads.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-accent transition">
+                            <i class="iconfont icon-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-accent transition">
+                            <i class="iconfont icon-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-accent transition">
+                            <i class="iconfont icon-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-accent transition">
+                            <i class="iconfont icon-youtube text-xl"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="text-sm text-gray-400">
-                    <p>&copy; 2025 PlayGameStation. All rights reserved.</p>
+                
+                <div class="col-span-1">
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-base-100/70 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-base-100/70 hover:text-white transition">Popular Games</a></li>
+                        <li><a href="#" class="text-base-100/70 hover:text-white transition">New Releases</a></li>
+                        <li><a href="#" class="text-base-100/70 hover:text-white transition">Top Rated</a></li>
+                    </ul>
                 </div>
+                
+                <div class="col-span-1">
+                    <h3 class="text-lg font-bold mb-4">Categories</h3>
+                    <ul class="space-y-2">
+                        <li><a href="action.html" class="text-base-100/70 hover:text-white transition">Action Games</a></li>
+                        <li><a href="card.html" class="text-base-100/70 hover:text-white transition">Card Games</a></li>
+                        <li><a href="puzzle.html" class="text-base-100/70 hover:text-white transition">Puzzle Games</a></li>
+                        <li><a href="sports.html" class="text-base-100/70 hover:text-white transition">Sports Games</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-span-1">
+                    <h3 class="text-lg font-bold mb-4">About Us</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-base-100/70 hover:text-white transition">About PlayGameStation</a></li>
+                        <li><a href="#" class="text-base-100/70 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-base-100/70 hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" class="text-base-100/70 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 mt-8 pt-8 text-center text-base-100/50">
+                <p>&copy; 2025 PlayGameStation. All rights reserved.</p>
             </div>
         </div>
     </footer>
+    
+    <!-- 添加JavaScript文件 -->
+    <script src="../assets/js/main.js"></script>
 </body>
-</html> 
+</html>

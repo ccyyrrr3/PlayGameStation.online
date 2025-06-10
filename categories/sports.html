@@ -16,38 +16,57 @@
     <meta name="description" content="Play free sports games online. Experience various sports including mini golf, billiards, and more, all from your browser.">
     <meta name="keywords" content="sports games, free online sports games, mini golf, billiards, pool games">
     <link rel="canonical" href="https://playgamestation.online/categories/sports.html">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/iconfont.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
                     colors: {
-                        'apple-blue': '#007AFF',
-                        'apple-green': '#34C759',
-                        'apple-red': '#FF3B30',
-                        'apple-gray': '#8E8E93',
-                        'apple-light': '#F2F2F7',
-                        'apple-dark': '#1C1C1E',
+                        primary: '#4F46E5',
+                        secondary: '#7C3AED',
+                        accent: '#EC4899',
+                        neutral: '#191D24',
+                        'base-100': '#FFFFFF',
+                        info: '#3ABFF8',
+                        success: '#36D399',
+                        warning: '#FBBD23',
+                        error: '#F87272',
+                        'gradient-start': '#4F46E5',
+                        'gradient-end': '#EC4899',
+                    },
+                    boxShadow: {
+                        'game-card': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+                        'game-card-hover': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-apple-light text-apple-dark">
-    <header class="bg-apple-blue text-white py-4 shadow-md">
+<body class="bg-base-100 text-neutral font-sans">
+    <header class="bg-gradient-to-r from-gradient-start to-gradient-end text-white py-4 shadow-md">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-center md:text-left mb-4 md:mb-0">
-                    <a href="/" class="text-2xl font-bold">PlayGameStation</a>
+                    <a href="../index.html" class="text-2xl font-bold flex items-center">
+                        <i class="icon-gamepad mr-2 text-3xl"></i>
+                        <span>PlayGameStation</span>
+                    </a>
                 </div>
                 <nav>
-                    <ul class="flex space-x-6">
-                        <li><a href="/" class="hover:text-apple-light transition">Home</a></li>
-                        <li><a href="/categories/card.html" class="hover:text-apple-light transition">Card Games</a></li>
-                        <li><a href="/categories/puzzle.html" class="hover:text-apple-light transition">Puzzle Games</a></li>
-                        <li><a href="/categories/sports.html" class="hover:text-apple-light transition font-bold">Sports Games</a></li>
-                        <li><a href="/categories/action.html" class="hover:text-apple-light transition">Action Games</a></li>
+                    <ul class="flex flex-wrap justify-center space-x-2 md:space-x-6">
+                        <li><a href="../index.html" class="hover:text-white/80 transition py-2 px-3 flex items-center"><i class="icon-home mr-1"></i> Home</a></li>
+                        <li><a href="card.html" class="hover:text-white/80 transition py-2 px-3 flex items-center"><i class="icon-spades mr-1"></i> Card Games</a></li>
+                        <li><a href="puzzle.html" class="hover:text-white/80 transition py-2 px-3 flex items-center"><i class="icon-puzzle mr-1"></i> Puzzle Games</a></li>
+                        <li><a href="sports.html" class="hover:text-white/80 transition py-2 px-3 flex items-center font-bold bg-white/20 rounded"><i class="icon-football mr-1"></i> Sports Games</a></li>
+                        <li><a href="action.html" class="hover:text-white/80 transition py-2 px-3 flex items-center"><i class="icon-fire mr-1"></i> Action Games</a></li>
+                        <li><a href="simulation.html" class="hover:text-white/80 transition py-2 px-3 flex items-center"><i class="icon-lab mr-1"></i> Simulation Games</a></li>
                     </ul>
                 </nav>
             </div>
@@ -55,95 +74,161 @@
     </header>
 
     <main class="container mx-auto px-4 py-8">
-        <section class="mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center text-apple-blue">Sports Games</h1>
-            <p class="text-xl text-center mb-8">Experience the thrill of various sports with our collection of fun and engaging sports games.</p>
+        <section class="mb-12 relative overflow-hidden bg-gradient-to-r from-gradient-start to-gradient-end text-white rounded-xl p-8 md:p-12">
+            <div class="relative z-10">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center">Sports Games</h1>
+                <p class="text-xl text-center mb-8 max-w-3xl mx-auto">Experience the thrill of various sports with our collection of fun and engaging sports games.</p>
+                <div class="flex justify-center">
+                    <span class="animate-bounce bg-white/20 p-2 w-10 h-10 ring-1 ring-white/20 shadow-lg rounded-full flex items-center justify-center">
+                        <i class="icon-chevron-down text-xl"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="absolute top-0 right-0 -mt-16 -mr-16 opacity-20">
+                <i class="icon-football text-9xl"></i>
+            </div>
+            <div class="absolute bottom-0 left-0 -mb-8 -ml-8 opacity-20 transform rotate-12">
+                <i class="icon-gamepad text-8xl"></i>
+            </div>
         </section>
 
         <section class="mb-12">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-                    <a href="/games/basket-bros.html" class="block">
-                        <div class="h-48 bg-apple-gray relative">
-                            <img src="/assets/images/games/basket-bros.jpg" alt="Basket Bros" class="absolute inset-0 w-full h-full object-cover">
-                            <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Basket Bros</span>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl overflow-hidden shadow-game-card hover:shadow-game-card-hover transition-all duration-300 transform hover:-translate-y-1">
+                    <a href="../games/basket-bros.html" class="block">
+                        <div class="h-48 bg-neutral/10 relative overflow-hidden group">
+                            <img src="../assets/images/games/basket-bros.jpg" alt="Basket Bros" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-80"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <h3 class="font-bold text-xl mb-1">Basket Bros</h3>
+                                <p class="text-sm text-white/80 line-clamp-2">Dunk on your opponents in this multiplayer basketball game</p>
+                            </div>
+                            <div class="absolute top-2 left-2">
+                                <span class="bg-accent/90 text-white text-xs px-2 py-1 rounded-full flex items-center">
+                                    <i class="icon-star-full mr-1"></i> New Game
+                                </span>
+                            </div>
                         </div>
                         <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-2">Basket Bros</h3>
-                            <p class="text-apple-gray mb-2">Dunk on your opponents in this multiplayer basketball game</p>
-                            <div class="flex flex-wrap">
-                                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">New Game</span>
-                                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Basketball</span>
-                                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Multiplayer</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-secondary/10 text-secondary text-xs px-2 py-1 rounded-full flex items-center">
+                                    <i class="icon-basketball mr-1"></i> Basketball
+                                </span>
+                                <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full flex items-center">
+                                    <i class="icon-users mr-1"></i> Multiplayer
+                                </span>
                             </div>
                         </div>
                     </a>
                 </div>
 
-                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-                    <a href="/games/playground.html" class="block">
-                        <div class="h-48 bg-apple-gray relative">
-                            <img src="/assets/images/games/playground.jpg" alt="Playground" class="absolute inset-0 w-full h-full object-cover">
-                            <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Playground</span>
+                <div class="bg-white rounded-xl overflow-hidden shadow-game-card hover:shadow-game-card-hover transition-all duration-300 transform hover:-translate-y-1">
+                    <a href="../games/playground.html" class="block">
+                        <div class="h-48 bg-neutral/10 relative overflow-hidden group">
+                            <img src="../assets/images/games/playground.jpg" alt="Playground" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-80"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <h3 class="font-bold text-xl mb-1">Playground</h3>
+                                <p class="text-sm text-white/80 line-clamp-2">A fun physics playground with various sports mini-games</p>
+                            </div>
+                            <div class="absolute top-2 left-2">
+                                <span class="bg-accent/90 text-white text-xs px-2 py-1 rounded-full flex items-center">
+                                    <i class="icon-star-full mr-1"></i> New Game
+                                </span>
+                            </div>
                         </div>
                         <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-2">Playground</h3>
-                            <p class="text-apple-gray mb-2">A fun physics playground with various sports mini-games</p>
-                            <div class="flex flex-wrap">
-                                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">New Game</span>
-                                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Physics</span>
-                                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Mini-Games</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-info/10 text-info text-xs px-2 py-1 rounded-full flex items-center">
+                                    <i class="icon-lab mr-1"></i> Physics
+                                </span>
+                                <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full flex items-center">
+                                    <i class="icon-gamepad mr-1"></i> Mini-Games
+                                </span>
                             </div>
                         </div>
                     </a>
                 </div>
 
-                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-                    <a href="/games/8-ball-billiards-classic.html" class="block">
-                        <div class="h-48 bg-apple-gray relative">
-                            <img src="/assets/images/games/8-ball-billiards-classic.jpg" alt="8-Ball Billiards Classic" class="absolute inset-0 w-full h-full object-cover">
-                            <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">8-Ball Billiards Classic</span>
+                <div class="bg-white rounded-xl overflow-hidden shadow-game-card hover:shadow-game-card-hover transition-all duration-300 transform hover:-translate-y-1">
+                    <a href="../games/8-ball-billiards-classic.html" class="block">
+                        <div class="h-48 bg-neutral/10 relative overflow-hidden group">
+                            <img src="../assets/images/games/8-ball-billiards-classic.jpg" alt="8-Ball Billiards Classic" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-80"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <h3 class="font-bold text-xl mb-1">8-Ball Billiards Classic</h3>
+                                <p class="text-sm text-white/80 line-clamp-2">Show your skills and become a billiards champion</p>
+                            </div>
+                            <div class="absolute top-2 left-2">
+                                <span class="bg-warning/90 text-white text-xs px-2 py-1 rounded-full flex items-center">
+                                    <i class="icon-trophy mr-1"></i> Popular
+                                </span>
+                            </div>
                         </div>
                         <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-2">8-Ball Billiards Classic</h3>
-                            <p class="text-apple-gray mb-2">Show your skills and become a billiards champion</p>
-                            <div class="flex flex-wrap">
-                                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Pool</span>
-                                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Precision</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-secondary/10 text-secondary text-xs px-2 py-1 rounded-full flex items-center">
+                                    <i class="icon-target mr-1"></i> Pool
+                                </span>
+                                <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full flex items-center">
+                                    <i class="icon-crosshair mr-1"></i> Precision
+                                </span>
                             </div>
                         </div>
                     </a>
                 </div>
 
-                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-                    <a href="/games/mini-putt-gem-forest.html" class="block">
-                        <div class="h-48 bg-apple-gray relative">
-                            <img src="/assets/images/games/mini-putt-gem-forest.jpg" alt="Mini Putt Gem Forest" class="absolute inset-0 w-full h-full object-cover">
-                            <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Mini Putt Gem Forest</span>
+                <div class="bg-white rounded-xl overflow-hidden shadow-game-card hover:shadow-game-card-hover transition-all duration-300 transform hover:-translate-y-1">
+                    <a href="../games/mini-putt-gem-forest.html" class="block">
+                        <div class="h-48 bg-neutral/10 relative overflow-hidden group">
+                            <img src="../assets/images/games/mini-putt-gem-forest.jpg" alt="Mini Putt Gem Forest" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-80"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <h3 class="font-bold text-xl mb-1">Mini Putt Gem Forest</h3>
+                                <p class="text-sm text-white/80 line-clamp-2">Magical forest-themed minigolf with beautiful courses</p>
+                            </div>
+                            <div class="absolute top-2 left-2">
+                                <span class="bg-success/90 text-white text-xs px-2 py-1 rounded-full flex items-center">
+                                    <i class="icon-leaf mr-1"></i> Popular
+                                </span>
+                            </div>
                         </div>
                         <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-2">Mini Putt Gem Forest</h3>
-                            <p class="text-apple-gray mb-2">Magical forest-themed minigolf with beautiful courses</p>
-                            <div class="flex flex-wrap">
-                                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Mini Golf</span>
-                                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Forest Theme</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-secondary/10 text-secondary text-xs px-2 py-1 rounded-full flex items-center">
+                                    <i class="icon-golf mr-1"></i> Mini Golf
+                                </span>
+                                <span class="bg-success/10 text-success text-xs px-2 py-1 rounded-full flex items-center">
+                                    <i class="icon-tree mr-1"></i> Forest Theme
+                                </span>
                             </div>
                         </div>
                     </a>
                 </div>
 
-                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-                    <a href="/games/mini-putt-gem-garden.html" class="block">
-                        <div class="h-48 bg-apple-gray relative">
-                            <img src="/assets/images/games/mini-putt-gem-garden.jpg" alt="Mini Putt Gem Garden" class="absolute inset-0 w-full h-full object-cover">
-                            <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Mini Putt Gem Garden</span>
+                <div class="bg-white rounded-xl overflow-hidden shadow-game-card hover:shadow-game-card-hover transition-all duration-300 transform hover:-translate-y-1">
+                    <a href="../games/mini-putt-gem-garden.html" class="block">
+                        <div class="h-48 bg-neutral/10 relative overflow-hidden group">
+                            <img src="../assets/images/games/mini-putt-gem-garden.jpg" alt="Mini Putt Gem Garden" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-80"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <h3 class="font-bold text-xl mb-1">Mini Putt Gem Garden</h3>
+                                <p class="text-sm text-white/80 line-clamp-2">Garden-themed minigolf with colorful challenges</p>
+                            </div>
+                            <div class="absolute top-2 left-2">
+                                <span class="bg-success/90 text-white text-xs px-2 py-1 rounded-full flex items-center">
+                                    <i class="icon-flower mr-1"></i> Popular
+                                </span>
+                            </div>
                         </div>
                         <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-2">Mini Putt Gem Garden</h3>
-                            <p class="text-apple-gray mb-2">Garden-themed minigolf with colorful challenges</p>
-                            <div class="flex flex-wrap">
-                                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Mini Golf</span>
-                                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded mr-2 mb-1">Garden Theme</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-secondary/10 text-secondary text-xs px-2 py-1 rounded-full flex items-center">
+                                    <i class="icon-golf mr-1"></i> Mini Golf
+                                </span>
+                                <span class="bg-success/10 text-success text-xs px-2 py-1 rounded-full flex items-center">
+                                    <i class="icon-flower mr-1"></i> Garden Theme
+                                </span>
                             </div>
                         </div>
                     </a>
@@ -152,18 +237,61 @@
         </section>
     </main>
 
-    <footer class="bg-apple-dark text-white py-8">
+    <footer class="bg-neutral text-white py-12">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <p class="text-xl font-bold">PlayGameStation</p>
-                    <p class="text-sm text-gray-400">Your destination for the best online games</p>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-1">
+                    <a href="../index.html" class="text-2xl font-bold flex items-center mb-4">
+                        <i class="icon-gamepad mr-2 text-3xl"></i>
+                        <span>PlayGameStation</span>
+                    </a>
+                    <p class="text-sm text-gray-400 mb-4">Your destination for the best online games. Play instantly in your browser.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-accent transition-colors">
+                            <i class="icon-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-accent transition-colors">
+                            <i class="icon-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-accent transition-colors">
+                            <i class="icon-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-accent transition-colors">
+                            <i class="icon-youtube text-xl"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="text-sm text-gray-400">
-                    <p>&copy; 2025 PlayGameStation. All rights reserved.</p>
+                
+                <div class="md:col-span-1">
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="md:col-span-1">
+                    <h3 class="text-lg font-semibold mb-4">Categories</h3>
+                    <ul class="space-y-2">
+                        <li><a href="card.html" class="text-gray-400 hover:text-white transition-colors">Card Games</a></li>
+                        <li><a href="puzzle.html" class="text-gray-400 hover:text-white transition-colors">Puzzle Games</a></li>
+                        <li><a href="sports.html" class="text-gray-400 hover:text-white transition-colors">Sports Games</a></li>
+                        <li><a href="action.html" class="text-gray-400 hover:text-white transition-colors">Action Games</a></li>
+                        <li><a href="simulation.html" class="text-gray-400 hover:text-white transition-colors">Simulation Games</a></li>
+                    </ul>
+                </div>
+                
+                <div class="md:col-span-1">
+                    <h3 class="text-lg font-semibold mb-4">About Us</h3>
+                    <p class="text-sm text-gray-400 mb-4">PlayGameStation is your go-to platform for free online games. Enjoy a wide variety of games without downloads or installations.</p>
+                    <p class="text-sm text-gray-400">&copy; 2025 PlayGameStation. All rights reserved.</p>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="../assets/js/main.js"></script>
 </body>
-</html> 
+</html>
