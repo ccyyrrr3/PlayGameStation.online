@@ -17,17 +17,37 @@
     <meta name="keywords" content="Nut Rush, arcade games, free games, online games, squirrel games, platform games">
     <link rel="canonical" href="https://playgamestation.online/games/nut-rush.html">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="/assets/iconfont/iconfont.css" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
+                    fontFamily: {
+                        'nunito': ['Nunito', 'sans-serif'],
+                        'bebas': ['Bebas Neue', 'cursive'],
+                    },
                     colors: {
-                        'apple-blue': '#007AFF',
-                        'apple-green': '#34C759',
-                        'apple-red': '#FF3B30',
-                        'apple-gray': '#8E8E93',
-                        'apple-light': '#F2F2F7',
-                        'apple-dark': '#1C1C1E',
+                        'primary': '#007AFF', // Blue
+                        'secondary': '#FF9500', // Orange
+                        'accent': '#34C759', // Green
+                        'neutral': '#1C1C1E', // Almost Black
+                        'base-100': '#FFFFFF', // White
+                        'base-200': '#F2F2F7', // Light Gray
+                        'base-300': '#E5E5EA', // Lighter Gray
+                        'info': '#00C7FF', // Cyan
+                        'success': '#30D158', // Bright Green
+                        'warning': '#FFD60A', // Yellow
+                        'error': '#FF453A', // Red
+                        'primary-content': '#FFFFFF',
+                        'secondary-content': '#FFFFFF',
+                        'accent-content': '#FFFFFF',
+                        'neutral-content': '#FFFFFF',
+                        'base-content': '#000000',
+                    },
+                    boxShadow: {
+                        'top': '0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06)',
                     }
                 }
             }
@@ -35,20 +55,20 @@
     </script>
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
-<body class="bg-apple-light text-apple-dark">
-    <header class="bg-apple-blue text-white py-4 shadow-md">
+<body class="font-nunito bg-base-200 text-base-content">
+    <header class="bg-base-100 text-base-content py-4 shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-center md:text-left mb-4 md:mb-0">
-                    <a href="/" class="text-2xl font-bold">PlayGameStation</a>
+                    <a href="/" class="text-2xl font-bebas tracking-wider text-primary flex items-center"><span class="icon-gamepad text-3xl mr-2"></span>PlayGameStation</a>
                 </div>
                 <nav>
-                    <ul class="flex space-x-6">
-                        <li><a href="/" class="hover:text-apple-light transition">Home</a></li>
-                        <li><a href="/categories/card.html" class="hover:text-apple-light transition">Card Games</a></li>
-                        <li><a href="/categories/puzzle.html" class="hover:text-apple-light transition">Puzzle Games</a></li>
-                        <li><a href="/categories/sports.html" class="hover:text-apple-light transition">Sports Games</a></li>
-                        <li><a href="/categories/action.html" class="hover:text-apple-light transition">Action Games</a></li>
+                    <ul class="flex space-x-6 font-semibold">
+                        <li><a href="/" class="hover:text-primary transition">Home</a></li>
+                        <li><a href="/categories/card.html" class="hover:text-primary transition">Card</a></li>
+                        <li><a href="/categories/puzzle.html" class="hover:text-primary transition">Puzzle</a></li>
+                        <li><a href="/categories/sports.html" class="hover:text-primary transition">Sports</a></li>
+                        <li><a href="/categories/action.html" class="hover:text-primary transition">Action</a></li>
                     </ul>
                 </nav>
             </div>
@@ -56,23 +76,12 @@
     </header>
 
     <main class="container mx-auto px-4 py-8">
-        <!-- Game Header -->
-        <section class="mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-apple-blue">Nut Rush</h1>
-            <div class="flex flex-wrap gap-2 mb-4">
-                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded">Arcade</span>
-                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded">Action</span>
-                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded">Platform</span>
-            </div>
-            <p class="text-xl mb-8">Join the adventure of a hungry squirrel as it collects nuts and navigates through various obstacles and enemies in this exciting platform game.</p>
-        </section>
-
         <!-- Game Frame -->
         <section class="mb-12">
-            <div class="w-full max-w-5xl mx-auto rounded-lg overflow-hidden shadow-xl border-4 border-apple-blue">
+            <div class="w-full max-w-5xl mx-auto rounded-lg overflow-hidden shadow-xl border-4 border-primary bg-neutral">
                 <iframe src="https://html5games.com/Game/Nut-Rush/4f474a79-47ab-47fc-9079-3b93efd3ce8d" 
                         class="w-full aspect-video relative" 
-                        style="z-index: 10; min-height: 600px; height: 70vh;"
+                        style="z-index: 10; min-height: 600px; height: 70vh;" 
                         allow="fullscreen" 
                         scrolling="no"
                         frameborder="0"
@@ -82,53 +91,66 @@
             </div>
         </section>
 
+        <!-- Game Header -->
+        <section class="mb-12 text-center">
+            <h1 class="text-4xl md:text-5xl font-bebas tracking-wider mb-3 text-secondary">Nut Rush</h1>
+            <div class="flex flex-wrap gap-2 justify-center mb-4">
+                <span class="bg-accent text-accent-content text-xs px-3 py-1 rounded-full font-semibold shadow-md">Arcade</span>
+                <span class="bg-accent text-accent-content text-xs px-3 py-1 rounded-full font-semibold shadow-md">Action</span>
+                <span class="bg-accent text-accent-content text-xs px-3 py-1 rounded-full font-semibold shadow-md">Platform</span>
+            </div>
+            <p class="text-lg text-base-content/80 max-w-3xl mx-auto">Join the adventure of a hungry squirrel as it collects nuts and navigates through various obstacles and enemies in this exciting platform game.</p>
+        </section>
+
         <!-- Game Info -->
         <section class="mb-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="col-span-2">
-                <h2 class="text-2xl font-bold mb-4 text-apple-blue">Game Description</h2>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <p class="mb-4">Nut Rush is an engaging platform game where you control a squirrel on a mission to collect as many nuts as possible. The game features colorful graphics, smooth controls, and increasingly challenging levels that will test your timing and reflexes.</p>
-                    <p class="mb-4">Along your journey, you'll encounter various obstacles and enemies that stand between you and your precious nuts. Use your agility to jump over barriers, dodge enemies, and collect power-ups that can help you on your adventure.</p>
+            <div class="col-span-2 bg-base-100 p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bebas tracking-wide mb-4 text-secondary flex items-center"><span class="icon-info text-3xl mr-2 text-accent"></span>Game Description</h2>
+                <div class="text-base-content/80 space-y-4">
+                    <p>Nut Rush is an engaging platform game where you control a squirrel on a mission to collect as many nuts as possible. The game features colorful graphics, smooth controls, and increasingly challenging levels that will test your timing and reflexes.</p>
+                    <p>Along your journey, you'll encounter various obstacles and enemies that stand between you and your precious nuts. Use your agility to jump over barriers, dodge enemies, and collect power-ups that can help you on your adventure.</p>
                     <p>With multiple levels to explore and secrets to discover, Nut Rush offers hours of entertainment for players of all ages. Do you have what it takes to help our squirrel friend collect all the nuts?</p>
                 </div>
             </div>
-            <div>
-                <h2 class="text-2xl font-bold mb-4 text-apple-blue">How to Play</h2>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <ul class="list-disc pl-5 space-y-2">
+            <div class="bg-base-100 p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bebas tracking-wide mb-4 text-secondary flex items-center"><span class="icon-joystick text-3xl mr-2 text-accent"></span>How to Play</h2>
+                <div class="text-base-content/80">
+                    <ul class="list-disc list-inside space-y-2 mb-6">
                         <li><strong>Movement:</strong> Arrow keys or WASD</li>
                         <li><strong>Jump:</strong> Space bar or Up arrow</li>
                         <li><strong>Crouch:</strong> Down arrow</li>
                         <li><strong>Pause:</strong> P key</li>
                     </ul>
-                    <div class="mt-6">
-                        <h3 class="font-bold text-lg mb-2">Tips:</h3>
-                        <ul class="list-disc pl-5 space-y-2">
-                            <li>Try to collect all nuts in each level</li>
-                            <li>Timing is crucial when jumping over enemies</li>
-                            <li>Some walls can be climbed - experiment!</li>
-                            <li>Health power-ups will restore your energy</li>
-                        </ul>
-                    </div>
+                    <h3 class="font-bebas tracking-wide text-xl mb-2 text-secondary">Tips:</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Try to collect all nuts in each level</li>
+                        <li>Timing is crucial when jumping over enemies</li>
+                        <li>Some walls can be climbed - experiment!</li>
+                        <li>Health power-ups will restore your energy</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <!-- Similar Games -->
         <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-6 text-apple-blue">You Might Also Like</h2>
+            <h2 class="text-3xl font-bebas tracking-wider mb-6 text-secondary flex items-center"><span class="icon-dice text-4xl mr-2 text-accent"></span>You Might Also Like</h2>
             <div id="related-games" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Related games will be dynamically loaded by JavaScript -->
                 
                 <!-- Static fallback content -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
+                <div class="bg-base-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 static-content group">
                     <a href="/games/nut-rush-2.html" class="block">
-                        <div class="h-48 bg-apple-gray flex items-center justify-center relative">
-                            <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Nut Rush 2: Summer Sprint</span>
+                        <div class="h-48 bg-neutral flex items-center justify-center relative overflow-hidden">
+                            <!-- Placeholder for game image - ideally replace with actual image or a more styled placeholder -->
+                            <span class="icon-image text-6xl text-base-300"></span> 
+                            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h4 class="text-white text-xl font-bebas tracking-wider p-4 text-center">Nut Rush 2: Summer Sprint</h4>
+                            </div>
                         </div>
                         <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-2">Nut Rush 2: Summer Sprint</h3>
-                            <p class="text-apple-gray mb-2">The exciting sequel with summer-themed levels</p>
+                            <h3 class="font-bebas tracking-wide text-lg mb-1 text-primary group-hover:text-secondary transition-colors">Nut Rush 2: Summer Sprint</h3>
+                            <p class="text-sm text-base-content/70 mb-2">The exciting sequel with summer-themed levels</p>
                         </div>
                     </a>
                 </div>
@@ -136,53 +158,56 @@
         </section>
     </main>
 
-    <footer class="bg-apple-dark text-white py-8">
+<footer class="bg-neutral text-white pt-16 pb-8 shadow-top">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between">
-                <div class="mb-8 md:mb-0">
-                    <h2 class="text-2xl font-bold mb-4">PlayGameStation</h2>
-                    <p class="mb-4 max-w-md text-gray-400">Your destination for free online games. No downloads, no installations, play high-quality games instantly.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition">Facebook</a>
-                        <a href="#" class="text-gray-400 hover:text-white transition">Twitter</a>
-                        <a href="#" class="text-gray-400 hover:text-white transition">Instagram</a>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-1 mb-8 md:mb-0">
+                    <a href="/" class="text-3xl font-bebas tracking-wider text-primary flex items-center mb-4"><span class="icon-gamepad text-4xl mr-2"></span>PlayGameStation</a>
+                    <p class="mb-4 text-base-100/70 text-sm leading-relaxed">Your ultimate destination for free online games. Dive into a world of fun with no downloads or installations required. Play high-quality browser games instantly!</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-base-100/70 hover:text-accent transition-colors duration-300 text-2xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-base-100/70 hover:text-accent transition-colors duration-300 text-2xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-base-100/70 hover:text-accent transition-colors duration-300 text-2xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-base-100/70 hover:text-accent transition-colors duration-300 text-2xl"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-base-100/70 hover:text-accent transition-colors duration-300 text-2xl"><i class="fab fa-discord"></i></a>
                     </div>
                 </div>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
-                    <div>
-                        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                        <ul class="space-y-2">
-                            <li><a href="/" class="text-gray-400 hover:text-white transition">Home</a></li>
-                            <li><a href="/#featured-games" class="text-gray-400 hover:text-white transition">Featured Games</a></li>
-                            <li><a href="/#categories" class="text-gray-400 hover:text-white transition">Game Categories</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-semibold mb-4">Categories</h3>
-                        <ul class="space-y-2">
-                            <li><a href="/categories/card.html" class="text-gray-400 hover:text-white transition">Card Games</a></li>
-                            <li><a href="/categories/puzzle.html" class="text-gray-400 hover:text-white transition">Puzzle Games</a></li>
-                            <li><a href="/categories/sports.html" class="text-gray-400 hover:text-white transition">Sports Games</a></li>
-                            <li><a href="/categories/action.html" class="text-gray-400 hover:text-white transition">Action Games</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-semibold mb-4">About Us</h3>
-                        <ul class="space-y-2">
-                            <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
-                        </ul>
-                    </div>
+
+                <div>
+                    <h3 class="text-xl font-bebas tracking-wider mb-5 text-secondary flex items-center"><span class="icon-link text-2xl mr-2 text-accent"></span>Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/" class="text-base-100/70 hover:text-white transition-colors duration-300 font-semibold text-sm">Home</a></li>
+                        <li><a href="/#featured-games" class="text-base-100/70 hover:text-white transition-colors duration-300 font-semibold text-sm">Featured Games</a></li>
+                        <li><a href="/#categories" class="text-base-100/70 hover:text-white transition-colors duration-300 font-semibold text-sm">Game Categories</a></li>
+                        <li><a href="/sitemap.xml" class="text-base-100/70 hover:text-white transition-colors duration-300 font-semibold text-sm">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bebas tracking-wider mb-5 text-secondary flex items-center"><span class="icon-category text-2xl mr-2 text-accent"></span>Categories</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/categories/action.html" class="text-base-100/70 hover:text-white transition-colors duration-300 font-semibold text-sm">Action</a></li>
+                        <li><a href="/categories/card.html" class="text-base-100/70 hover:text-white transition-colors duration-300 font-semibold text-sm">Card</a></li>
+                        <li><a href="/categories/puzzle.html" class="text-base-100/70 hover:text-white transition-colors duration-300 font-semibold text-sm">Puzzle</a></li>
+                        <li><a href="/categories/sports.html" class="text-base-100/70 hover:text-white transition-colors duration-300 font-semibold text-sm">Sports</a></li>
+                        <li><a href="/categories/simulation.html" class="text-base-100/70 hover:text-white transition-colors duration-300 font-semibold text-sm">Simulation</a></li> 
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bebas tracking-wider mb-5 text-secondary flex items-center"><span class="icon-info-circle text-2xl mr-2 text-accent"></span>About Us</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-base-100/70 hover:text-white transition-colors duration-300 font-semibold text-sm">About PlayGameStation</a></li>
+                        <li><a href="#" class="text-base-100/70 hover:text-white transition-colors duration-300 font-semibold text-sm">Contact Us</a></li>
+                        <li><a href="#" class="text-base-100/70 hover:text-white transition-colors duration-300 font-semibold text-sm">Privacy Policy</a></li>
+                        <li><a href="#" class="text-base-100/70 hover:text-white transition-colors duration-300 font-semibold text-sm">Terms of Service</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 PlayGameStation. All rights reserved.</p>
+            <div class="border-t border-base-100/10 pt-8 text-center text-base-100/50 text-sm">
+                <p>&copy; 2024 PlayGameStation. All rights reserved. Made with <span class="icon-heart text-red-500"></span> for gamers.</p>
             </div>
         </div>
     </footer>
 
     <script src="/assets/js/main.js"></script>
 </body>
-</html> 
+</html>
