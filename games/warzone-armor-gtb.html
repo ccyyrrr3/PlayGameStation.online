@@ -17,6 +17,7 @@
     <meta name="keywords" content="warzone armor gtb, action games, combat games, shooting games, free online games">
     <link rel="canonical" href="https://playgamestation.online/games/warzone-armor-gtb.html">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
     <script>
         tailwind.config = {
             theme: {
@@ -30,23 +31,49 @@
                         'apple-dark': '#1C1C1E',
                     }
                 }
-            }
+            },
+            daisyui: {
+                themes: ["light", "dark"],
+            },
         }
     </script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Optimize game iframe */
+        iframe {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        /* Game card hover effects */
+        .game-card {
+            transition: all 0.3s ease;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+    </style>
 </head>
-<body class="bg-apple-light text-apple-dark">
-    <header class="bg-apple-blue text-white py-4 shadow-md">
-        <div class="container mx-auto px-4">
+<body class="min-h-screen bg-base-200 text-base-content" data-theme="light">
+    <header class="bg-primary text-primary-content py-4 px-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-center md:text-left mb-4 md:mb-0">
-                    <a href="/" class="text-2xl font-bold">PlayGameStation</a>
+                    <a href="/" class="text-2xl font-bold flex items-center gap-2 hover:opacity-80 transition-opacity">
+                        <i class="fas fa-gamepad"></i>
+                        <span>PlayGameStation</span>
+                    </a>
                 </div>
                 <nav>
                     <ul class="flex space-x-6">
-                        <li><a href="/" class="hover:text-apple-light transition">Home</a></li>
-                        <li><a href="/categories/action.html" class="hover:text-apple-light transition">Action</a></li>
-                        <li><a href="/categories/shooting.html" class="hover:text-apple-light transition">Shooting</a></li>
-                        <li><a href="/categories/combat.html" class="hover:text-apple-light transition">Combat</a></li>
+                        <li><a href="/" class="hover:text-secondary transition-colors duration-300">Home</a></li>
+                        <li><a href="/categories/action.html" class="hover:text-secondary transition-colors duration-300">Action</a></li>
+                        <li><a href="/categories/shooting.html" class="hover:text-secondary transition-colors duration-300">Shooting</a></li>
+                        <li><a href="/categories/combat.html" class="hover:text-secondary transition-colors duration-300">Combat</a></li>
                     </ul>
                 </nav>
             </div>
@@ -55,139 +82,344 @@
 
     <main class="container mx-auto px-4 py-8">
         <section class="mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center text-apple-blue">Warzone Armor GTB</h1>
-            <p class="text-xl text-center mb-8">Enter the futuristic battlefield in this intense combat action game with advanced armor and weapons.</p>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center text-primary">Warzone Armor GTB</h1>
+            <div class="flex flex-wrap gap-2 justify-center mb-4">
+                <span class="badge badge-primary">Action</span>
+                <span class="badge badge-primary">Combat</span>
+                <span class="badge badge-secondary">Shooting</span>
+                <span class="badge badge-accent">Futuristic</span>
+                <span class="badge badge-outline">Strategy</span>
+            </div>
+            <p class="text-xl text-center mb-8 max-w-3xl mx-auto text-opacity-90">Enter the futuristic battlefield in this intense combat action game with advanced armor and weapons.</p>
             
-            <div class="w-full max-w-5xl mx-auto rounded-lg overflow-hidden shadow-xl border-4 border-apple-blue">
+            <div class="w-full max-w-5xl mx-auto rounded-xl overflow-hidden shadow-2xl border-4 border-primary">
                 <div class="w-full aspect-video flex items-center justify-center relative" style="z-index: 10;">
-                    <iframe src="https://games.crazygames.com/en_US/warzone-armor-gtb/index.html?v=1.328" style="width: 100%; height: 100%;" frameborder="0" allow="gamepad *;"></iframe>
+                    <iframe src="https://games.crazygames.com/en_US/warzone-armor-gtb/index.html?v=1.328" 
+                            style="width: 100%; height: 100%;" 
+                            frameborder="0" 
+                            allow="gamepad *;" 
+                            title="Warzone Armor GTB - Futuristic Combat Game"
+                            loading="lazy"></iframe>
                 </div>
             </div>
         </section>
 
         <section id="about" class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">About the Game</h2>
+            <h2 class="text-3xl font-bold mb-6 text-primary flex items-center gap-2">
+                <i class="fas fa-robot"></i>
+                <span>About the Game</span>
+            </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                    <p class="mb-4">Warzone Armor GTB is an action-packed combat game set in a futuristic battlefield. Players control advanced armored units equipped with powerful weapons and special abilities. The game features intense battles, strategic gameplay, and stunning visual effects.</p>
-                    <p class="mb-4">With its fast-paced combat, diverse weapon systems, and tactical elements, Warzone Armor GTB offers an exhilarating gaming experience. Players must master different armor types and weapons while adapting to various battlefield conditions and enemy tactics.</p>
+                    <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                        <div class="card-body">
+                            <p class="mb-4">Warzone Armor GTB is an action-packed combat game set in a futuristic battlefield. Players control advanced armored units equipped with powerful weapons and special abilities. The game features intense battles, strategic gameplay, and stunning visual effects.</p>
+                            <p class="mb-4">With its fast-paced combat, diverse weapon systems, and tactical elements, Warzone Armor GTB offers an exhilarating gaming experience. Players must master different armor types and weapons while adapting to various battlefield conditions and enemy tactics.</p>
+                        </div>
+                    </div>
                 </div>
                 <div>
-                    <h3 class="text-2xl font-semibold mb-3 text-apple-green">Game Features</h3>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li>Advanced armor systems</li>
-                        <li>Multiple weapon types</li>
-                        <li>Special abilities and power-ups</li>
-                        <li>Dynamic battlefield environments</li>
-                        <li>Progressive difficulty levels</li>
-                        <li>Upgrade and customization options</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="controls" class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">How to Play</h2>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-3 text-apple-green">Basic Controls</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Move</span>
-                                <span>WASD or Arrow keys to move</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Aim</span>
-                                <span>Mouse to aim</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Shoot</span>
-                                <span>Left Click to fire weapons</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Special</span>
-                                <span>Space for special abilities</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-3 text-apple-green">Game Rules</h3>
-                        <p class="mb-3">The objective is to dominate the battlefield:</p>
-                        <ul class="list-disc pl-5 space-y-2">
-                            <li>Eliminate enemy units</li>
-                            <li>Capture strategic points</li>
-                            <li>Complete mission objectives</li>
-                            <li>Upgrade your armor and weapons</li>
-                            <li>Survive increasingly challenging waves</li>
-                        </ul>
+                    <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                        <div class="card-body">
+                            <h3 class="card-title text-secondary flex items-center gap-2">
+                                <i class="fas fa-star"></i>
+                                <span>Game Features</span>
+                            </h3>
+                            <ul class="space-y-2 mt-4">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-success mt-1"></i>
+                                    <span>Advanced armor systems with unique capabilities</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-success mt-1"></i>
+                                    <span>Multiple weapon types for different combat situations</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-success mt-1"></i>
+                                    <span>Special abilities and power-ups to enhance gameplay</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-success mt-1"></i>
+                                    <span>Dynamic battlefield environments with destructible elements</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-success mt-1"></i>
+                                    <span>Progressive difficulty levels for continuous challenge</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-success mt-1"></i>
+                                    <span>Upgrade and customization options for your armor</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">Why Players Love This Game</h2>
+        <section id="how-to-play" class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-primary flex items-center gap-2">
+                <i class="fas fa-gamepad"></i>
+                <span>How to Play</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                        <div class="card-body">
+                            <h3 class="card-title text-secondary flex items-center gap-2">
+                                <i class="fas fa-keyboard"></i>
+                                <span>Controls</span>
+                            </h3>
+                            <ul class="space-y-3 mt-4">
+                                <li class="flex items-center gap-3">
+                                    <span class="badge badge-primary font-mono">WASD</span>
+                                    <span>Move your armor unit</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="badge badge-primary font-mono">Mouse</span>
+                                    <span>Aim your weapons</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="badge badge-primary font-mono">Left Click</span>
+                                    <span>Fire primary weapon</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="badge badge-primary font-mono">Right Click</span>
+                                    <span>Fire secondary weapon</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="badge badge-primary font-mono">Spacebar</span>
+                                    <span>Jump/Boost</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="badge badge-primary font-mono">Shift</span>
+                                    <span>Sprint</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="badge badge-primary font-mono">E</span>
+                                    <span>Use special ability</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="badge badge-primary font-mono">Q</span>
+                                    <span>Switch weapons</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="badge badge-primary font-mono">R</span>
+                                    <span>Reload</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                        <div class="card-body">
+                            <h3 class="card-title text-secondary flex items-center gap-2">
+                                <i class="fas fa-scroll"></i>
+                                <span>Game Rules</span>
+                            </h3>
+                            <ul class="space-y-2 mt-4">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-crosshairs text-error mt-1"></i>
+                                    <span>Eliminate enemy units to score points and progress</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-bolt text-warning mt-1"></i>
+                                    <span>Collect power-ups to enhance your abilities temporarily</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-shield-alt text-info mt-1"></i>
+                                    <span>Manage your armor's health and energy levels carefully</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-mountain text-success mt-1"></i>
+                                    <span>Use cover and terrain to your tactical advantage</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-tasks text-primary mt-1"></i>
+                                    <span>Complete objectives to progress through levels</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-wrench text-secondary mt-1"></i>
+                                    <span>Upgrade your armor and weapons between missions</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-play" class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-primary flex items-center gap-2">
+                <i class="fas fa-heart"></i>
+                <span>Why Players Love This Game</span>
+            </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-green">Intense Action</h3>
-                    <p>Fast-paced combat with powerful weapons and special abilities creates an adrenaline-pumping experience.</p>
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="card-body">
+                        <h3 class="card-title text-secondary flex items-center gap-2">
+                            <i class="fas fa-fighter-jet"></i>
+                            <span>Intense Action</span>
+                        </h3>
+                        <p>Fast-paced combat with powerful weapons and special abilities creates an adrenaline-pumping experience that keeps you on the edge of your seat.</p>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-green">Strategic Depth</h3>
-                    <p>Different armor types and weapons require tactical thinking and adaptation to various situations.</p>
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="card-body">
+                        <h3 class="card-title text-secondary flex items-center gap-2">
+                            <i class="fas fa-chess"></i>
+                            <span>Strategic Depth</span>
+                        </h3>
+                        <p>Different armor types and weapons require tactical thinking and adaptation to various situations, offering a deeper gameplay experience.</p>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-green">Progression System</h3>
-                    <p>Upgrade your armor and weapons to become more powerful and tackle greater challenges.</p>
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="card-body">
+                        <h3 class="card-title text-secondary flex items-center gap-2">
+                            <i class="fas fa-level-up-alt"></i>
+                            <span>Progression System</span>
+                        </h3>
+                        <p>Upgrade your armor and weapons to become more powerful and tackle greater challenges, creating a rewarding sense of advancement.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="mb-8">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">Related Games You Might Enjoy</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                    <a href="/games/murder-mafia.html" class="block">
-                        <div class="h-40 bg-apple-gray relative">
-                            <img src="/assets/images/games/murder-mafia.jpg" alt="Murder Mafia" class="w-full h-full object-cover">
-                            <span class="text-white text-lg absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 z-10">Murder Mafia</span>
+        <section id="related-games" class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-primary flex items-center gap-2">
+                <i class="fas fa-gamepad"></i>
+                <span>Related Games You Might Enjoy</span>
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <figure class="relative overflow-hidden h-48">
+                        <img src="/assets/images/games/murder-mafia.jpg" alt="Murder Mafia" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                            <div class="p-4 text-white w-full">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="text-lg font-bold">Murder Mafia</h3>
+                                    <span class="badge badge-primary">Mystery</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="p-4">
-                            <h3 class="font-semibold mb-2">Murder Mafia</h3>
-                            <p class="text-sm text-apple-gray">A thrilling multiplayer mystery game.</p>
+                    </figure>
+                    <div class="card-body p-4">
+                        <p class="text-sm opacity-80">A thrilling multiplayer mystery game where deception and detective work collide.</p>
+                        <div class="card-actions justify-end mt-2">
+                            <a href="/games/murder-mafia.html" class="btn btn-primary btn-sm">Play Now</a>
                         </div>
-                    </a>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                    <a href="/games/cut-in-half-please.html" class="block">
-                        <div class="h-40 bg-apple-gray relative">
-                            <img src="/assets/images/games/cut-in-half-please.jpg" alt="Cut in Half Please" class="w-full h-full object-cover">
-                            <span class="text-white text-lg absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 z-10">Cut in Half Please</span>
+                
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <figure class="relative overflow-hidden h-48">
+                        <img src="/assets/images/games/cut-in-half-please.jpg" alt="Cut in Half Please" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                            <div class="p-4 text-white w-full">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="text-lg font-bold">Cut in Half Please</h3>
+                                    <span class="badge badge-primary">Puzzle</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="p-4">
-                            <h3 class="font-semibold mb-2">Cut in Half Please</h3>
-                            <p class="text-sm text-apple-gray">A unique puzzle game with creative mechanics.</p>
+                    </figure>
+                    <div class="card-body p-4">
+                        <p class="text-sm opacity-80">A unique puzzle game with creative mechanics that will challenge your spatial reasoning.</p>
+                        <div class="card-actions justify-end mt-2">
+                            <a href="/games/cut-in-half-please.html" class="btn btn-primary btn-sm">Play Now</a>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-apple-dark text-white py-8">
+    <footer class="bg-base-300 text-base-content py-10">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <p class="text-xl font-bold">PlayGameStation</p>
-                    <p class="text-sm text-gray-400">Your destination for the best online games</p>
+            <div class="footer p-10 bg-base-300 text-base-content">
+                <div>
+                    <span class="footer-title opacity-80">About</span> 
+                    <a href="/about.html" class="link link-hover">About Us</a> 
+                    <a href="/contact.html" class="link link-hover">Contact</a> 
+                    <a href="/faq.html" class="link link-hover">FAQ</a> 
+                </div> 
+                <div>
+                    <span class="footer-title opacity-80">Quick Links</span> 
+                    <a href="/" class="link link-hover">Home</a> 
+                    <a href="/games" class="link link-hover">All Games</a> 
+                    <a href="/new-games" class="link link-hover">New Games</a> 
+                    <a href="/top-games" class="link link-hover">Top Games</a>
+                </div> 
+                <div>
+                    <span class="footer-title opacity-80">Categories</span> 
+                    <a href="/categories/action" class="link link-hover">Action</a> 
+                    <a href="/categories/puzzle" class="link link-hover">Puzzle</a> 
+                    <a href="/categories/racing" class="link link-hover">Racing</a> 
+                    <a href="/categories/strategy" class="link link-hover">Strategy</a>
+                </div> 
+                <div>
+                    <span class="footer-title opacity-80">Legal</span> 
+                    <a href="/terms" class="link link-hover">Terms of use</a> 
+                    <a href="/privacy" class="link link-hover">Privacy policy</a> 
+                    <a href="/cookies" class="link link-hover">Cookie policy</a>
                 </div>
-                <div class="text-sm text-gray-400">
-                    <p>&copy; 2025 PlayGameStation. All rights reserved.</p>
-                    <p>Warzone Armor GTB game is provided by CrazyGames</p>
+                <div>
+                    <span class="footer-title opacity-80">PlayGameStation</span>
+                    <p class="opacity-80 max-w-xs">Your destination for the best online games. Play instantly in your browser!</p>
+                    <div class="mt-4 flex gap-4">
+                        <a href="#" class="btn btn-circle btn-ghost btn-sm">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="btn btn-circle btn-ghost btn-sm">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="btn btn-circle btn-ghost btn-sm">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="btn btn-circle btn-ghost btn-sm">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center mt-8 pt-8 border-t border-base-content/10">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-gamepad text-primary text-xl"></i>
+                    <p class="font-bold">PlayGameStation</p>
+                </div>
+                <div class="flex items-center gap-4 mt-4 md:mt-0">
+                    <p class="text-sm opacity-80">&copy; 2025 PlayGameStation. All rights reserved.</p>
+                    <p class="text-sm opacity-80">Warzone Armor GTB game is provided by CrazyGames</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <label class="swap swap-rotate">
+                        <input type="checkbox" class="theme-controller" value="dark" />
+                        <i class="fas fa-sun swap-on text-xl"></i>
+                        <i class="fas fa-moon swap-off text-xl"></i>
+                    </label>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Theme switcher
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeController = document.querySelector('.theme-controller');
+            
+            // Check for saved theme preference or use device preference
+            const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            themeController.checked = savedTheme === 'dark';
+            
+            // Switch theme when toggle is clicked
+            themeController.addEventListener('change', function() {
+                const newTheme = this.checked ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+        });
+    </script>
 </body>
-</html> 
+</html>

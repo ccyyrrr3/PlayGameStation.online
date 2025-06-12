@@ -13,181 +13,393 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poxel.io - Play Online | PlayGameStation</title>
-    <meta name="description" content="Play Poxel.io online for free. Battle other players in this voxel-based multiplayer game with unique building and combat mechanics on PlayGameStation.">
-    <meta name="keywords" content="poxel io, multiplayer games, voxel games, building games, free online games">
+    <meta name="description" content="Play Poxel.io online for free. Build, fight, and survive in this multiplayer voxel-based battle royale game.">
+    <meta name="keywords" content="poxel.io, voxel games, battle royale, multiplayer games, free online games">
     <link rel="canonical" href="https://playgamestation.online/games/poxel-io.html">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'apple-blue': '#007AFF',
-                        'apple-green': '#34C759',
-                        'apple-red': '#FF3B30',
-                        'apple-gray': '#8E8E93',
-                        'apple-light': '#F2F2F7',
-                        'apple-dark': '#1C1C1E',
-                    }
-                }
-            }
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* 优化游戏iframe的样式 */
+        .game-frame {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s ease;
         }
-    </script>
+        .game-frame:hover {
+            transform: scale(1.01);
+        }
+        /* 优化游戏卡片样式 */
+        .game-card {
+            transition: all 0.3s ease;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
 </head>
-<body class="bg-apple-light text-apple-dark">
-    <header class="bg-apple-blue text-white py-4 shadow-md">
+<body class="bg-base-200 text-neutral" data-theme="mytheme">
+    <header class="bg-primary text-primary-content py-4 shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-center md:text-left mb-4 md:mb-0">
-                    <a href="/" class="text-2xl font-bold">PlayGameStation</a>
+                    <a href="/" class="text-2xl font-bold hover:opacity-80 transition-opacity flex items-center">
+                        <i class="fas fa-gamepad mr-2"></i>PlayGameStation
+                    </a>
                 </div>
                 <nav>
-                    <ul class="flex space-x-6">
-                        <li><a href="/" class="hover:text-apple-light transition">Home</a></li>
-                        <li><a href="/categories/multiplayer.html" class="hover:text-apple-light transition">Multiplayer</a></li>
-                        <li><a href="/categories/action.html" class="hover:text-apple-light transition">Action</a></li>
-                        <li><a href="/categories/building.html" class="hover:text-apple-light transition">Building</a></li>
+                    <ul class="flex space-x-4 sm:space-x-6">
+                        <li><a href="/" class="hover:text-secondary transition">Home</a></li>
+                        <li><a href="/categories/action.html" class="hover:text-secondary transition">Action</a></li>
+                        <li><a href="/categories/multiplayer.html" class="hover:text-secondary transition">Multiplayer</a></li>
+                        <li><a href="/categories/puzzle.html" class="hover:text-secondary transition">Puzzle</a></li>
+                        <li><a href="/categories/sports.html" class="hover:text-secondary transition">Sports</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <main class="container mx-auto px-4 py-8">
+    <main class="container mx-auto px-4 py-8 pt-20"> <!-- Added pt-20 for sticky header -->
         <section class="mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center text-apple-blue">Poxel.io</h1>
-            <p class="text-xl text-center mb-8">Battle other players in this exciting voxel-based multiplayer game with building and combat elements.</p>
-            
-            <div class="w-full max-w-5xl mx-auto rounded-lg overflow-hidden shadow-xl border-4 border-apple-blue">
-                <div class="w-full aspect-video flex items-center justify-center relative" style="z-index: 10;">
-                    <iframe src="https://games.crazygames.com/en_US/poxel-io/index.html?v=1.329" style="width: 100%; height: 100%;" frameborder="0" allow="gamepad *;"></iframe>
-                </div>
+            <div class="w-full max-w-5xl mx-auto rounded-lg overflow-hidden shadow-xl border-4 border-primary game-frame">
+                <iframe src="https://games.crazygames.com/en_US/poxel-io/index.html?v=1.329" 
+                        class="w-full aspect-video" 
+                        allowfullscreen 
+                        allow="gamepad *;" 
+                        frameborder="0"
+                        title="Poxel.io"
+                        loading="lazy"></iframe>
             </div>
+        </section>
+
+        <section class="mb-12 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-primary">Poxel.io</h1>
+            <div class="flex flex-wrap justify-center gap-2 mb-4">
+                <span class="badge badge-secondary badge-outline">Multiplayer</span>
+                <span class="badge badge-accent badge-outline">Action</span>
+                <span class="badge badge-info badge-outline">Building</span>
+                <span class="badge badge-primary badge-outline">.io</span>
+            </div>
+            <p class="text-lg text-center mb-8 max-w-3xl mx-auto">Battle other players in this exciting voxel-based multiplayer game with building and combat elements.</p>
         </section>
 
         <section id="about" class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">About the Game</h2>
+            <h2 class="text-3xl font-bold mb-6 text-primary flex items-center gap-2">
+                <i class="fas fa-cube"></i>
+                <span>About Poxel.io</span>
+            </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                    <p class="mb-4">Poxel.io is a multiplayer voxel-based game where players compete against each other in a colorful, blocky world. Build structures, collect resources, and battle other players in this fast-paced action game that combines elements of building and combat.</p>
-                    <p class="mb-4">With its unique combination of construction and competitive gameplay, Poxel.io offers an engaging experience that rewards both creativity and combat skills. Adapt your strategy on the fly, build defensive structures, or go on the offensive against other players.</p>
+                    <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                        <div class="card-body">
+                            <p class="mb-4">Poxel.io is a multiplayer voxel-based game where players compete against each other in a colorful, blocky world. Build structures, collect resources, and battle other players in this fast-paced action game that combines elements of building and combat.</p>
+                            <p class="mb-4">With its unique combination of construction and competitive gameplay, Poxel.io offers an engaging experience that rewards both creativity and combat skills. Adapt your strategy on the fly, build defensive structures, or go on the offensive against other players.</p>
+                        </div>
+                    </div>
                 </div>
                 <div>
-                    <h3 class="text-2xl font-semibold mb-3 text-apple-green">Game Features</h3>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li>Real-time multiplayer battles</li>
-                        <li>Creative building mechanics</li>
-                        <li>Various weapons and tools</li>
-                        <li>Colorful voxel-based graphics</li>
-                        <li>Different game modes</li>
-                        <li>Resource collection and management</li>
-                    </ul>
+                    <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                        <div class="card-body">
+                            <h3 class="card-title text-secondary flex items-center gap-2">
+                                <i class="fas fa-star"></i>
+                                <span>Game Features</span>
+                            </h3>
+                            <ul class="space-y-2 mt-4">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-users text-primary mt-1"></i>
+                                    <span>Real-time multiplayer battles with players worldwide</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-hammer text-primary mt-1"></i>
+                                    <span>Creative building mechanics for defense and strategy</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-crosshairs text-primary mt-1"></i>
+                                    <span>Various weapons and tools to defeat opponents</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-palette text-primary mt-1"></i>
+                                    <span>Colorful voxel-based graphics with unique style</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-gamepad text-primary mt-1"></i>
+                                    <span>Different game modes to keep gameplay fresh</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-box text-primary mt-1"></i>
+                                    <span>Resource collection and management systems</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="controls" class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">How to Play</h2>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-3 text-apple-green">Basic Controls</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Move</span>
-                                <span>WASD or Arrow keys to move</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Build</span>
-                                <span>Left click to place blocks</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Attack</span>
-                                <span>Right click to attack</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Jump</span>
-                                <span>Space bar to jump</span>
-                            </li>
-                        </ul>
+        <section id="how-to-play" class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-primary flex items-center gap-2">
+                <i class="fas fa-gamepad"></i>
+                <span>How to Play</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                        <div class="card-body">
+                            <h3 class="card-title text-secondary flex items-center gap-2">
+                                <i class="fas fa-keyboard"></i>
+                                <span>Basic Controls</span>
+                            </h3>
+                            <ul class="space-y-3 mt-4">
+                                <li class="flex items-center gap-3">
+                                    <span class="badge badge-primary font-mono">WASD</span>
+                                    <span>Move your character around the world</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="badge badge-primary font-mono">Left Click</span>
+                                    <span>Place blocks to build structures</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="badge badge-primary font-mono">Right Click</span>
+                                    <span>Attack other players and structures</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="badge badge-primary font-mono">Space</span>
+                                    <span>Jump over obstacles</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="badge badge-primary font-mono">1-9</span>
+                                    <span>Switch between different blocks and tools</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-3 text-apple-green">Game Rules</h3>
-                        <p class="mb-3">Your objective is to dominate the arena:</p>
-                        <ul class="list-disc pl-5 space-y-2">
-                            <li>Collect resources from the environment</li>
-                            <li>Build structures for defense or tactical advantage</li>
-                            <li>Eliminate other players to gain points</li>
-                            <li>Survive as long as possible</li>
-                            <li>Adapt your strategy based on the game mode</li>
-                        </ul>
+                </div>
+                <div>
+                    <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                        <div class="card-body">
+                            <h3 class="card-title text-secondary flex items-center gap-2">
+                                <i class="fas fa-scroll"></i>
+                                <span>Game Rules</span>
+                            </h3>
+                            <p class="mb-3 mt-2">Your objective is to dominate the arena:</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-gem text-info mt-1"></i>
+                                    <span>Collect resources from the environment to build with</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-shield-alt text-success mt-1"></i>
+                                    <span>Build structures for defense or tactical advantage</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-skull text-error mt-1"></i>
+                                    <span>Eliminate other players to gain points and resources</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-heartbeat text-warning mt-1"></i>
+                                    <span>Survive as long as possible to climb the leaderboard</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chess text-primary mt-1"></i>
+                                    <span>Adapt your strategy based on the current game mode</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">Why Players Love This Game</h2>
+            <h2 class="text-3xl font-bold mb-6 text-primary flex items-center gap-2">
+                <i class="fas fa-heart"></i>
+                <span>Why Players Love Poxel.io</span>
+            </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-green">Creative Freedom</h3>
-                    <p>The building mechanics allow players to express their creativity while also serving strategic purposes.</p>
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    <div class="card-body">
+                        <h3 class="card-title text-secondary flex items-center gap-2">
+                            <i class="fas fa-paint-brush text-success"></i>
+                            <span>Creative Freedom</span>
+                        </h3>
+                        <p class="mt-2">Build anything you can imagine with the simple yet powerful block system. Create fortresses, traps, or artistic masterpieces.</p>
+                        <div class="card-actions justify-end mt-2">
+                            <div class="badge badge-outline">Building</div>
+                            <div class="badge badge-outline">Creativity</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-green">Fast-Paced Action</h3>
-                    <p>Quick matches and intense combat keep players engaged and coming back for more.</p>
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    <div class="card-body">
+                        <h3 class="card-title text-secondary flex items-center gap-2">
+                            <i class="fas fa-chess-knight text-primary"></i>
+                            <span>Strategic Depth</span>
+                        </h3>
+                        <p class="mt-2">Every match offers new challenges and opportunities. Adapt your strategy based on the terrain, opponents, and available resources.</p>
+                        <div class="card-actions justify-end mt-2">
+                            <div class="badge badge-outline">Tactics</div>
+                            <div class="badge badge-outline">Adaptation</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-green">Multiplayer Competition</h3>
-                    <p>Playing against real opponents provides a dynamic and unpredictable experience every time.</p>
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    <div class="card-body">
+                        <h3 class="card-title text-secondary flex items-center gap-2">
+                            <i class="fas fa-bolt text-warning"></i>
+                            <span>Constant Action</span>
+                        </h3>
+                        <p class="mt-2">Fast-paced gameplay ensures there's never a dull moment. Build, fight, and survive in an ever-changing battlefield.</p>
+                        <div class="card-actions justify-end mt-2">
+                            <div class="badge badge-outline">Fast-paced</div>
+                            <div class="badge badge-outline">Combat</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="mb-8">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">Related Games You Might Enjoy</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                    <a href="/games/teacher-simulator.html" class="block">
-                        <div class="h-40 bg-apple-gray relative">
-                            <img src="/assets/images/games/teacher-simulator.jpg" alt="Teacher Simulator" class="w-full h-full object-cover">
-                            <span class="text-white text-lg absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 z-10">Teacher Simulator</span>
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-primary flex items-center gap-2">
+                <i class="fas fa-gamepad"></i>
+                <span>Related Games You Might Enjoy</span>
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden">
+                    <figure class="relative h-48">
+                        <img src="/assets/images/games/teacher-simulator.jpg" alt="Teacher Simulator" class="w-full h-full object-cover" loading="lazy">
+                        <div class="absolute top-2 right-2 flex gap-1">
+                            <div class="badge badge-primary">Simulation</div>
                         </div>
-                        <div class="p-4">
-                            <h3 class="font-semibold mb-2">Teacher Simulator</h3>
-                            <p class="text-sm text-apple-gray">Experience the challenging life of a teacher in this fun simulation.</p>
+                    </figure>
+                    <div class="card-body p-4">
+                        <h3 class="card-title text-secondary">Teacher Simulator</h3>
+                        <p class="text-sm text-opacity-90">Experience the challenging life of a teacher in this fun simulation.</p>
+                        <div class="card-actions justify-end mt-2">
+                            <a href="/games/teacher-simulator.html" class="btn btn-sm btn-primary">
+                                <i class="fas fa-play mr-1"></i> Play Now
+                            </a>
                         </div>
-                    </a>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                    <a href="/games/traffic-rider-vvq.html" class="block">
-                        <div class="h-40 bg-apple-gray relative">
-                            <img src="/assets/images/games/traffic-rider-vvq.jpg" alt="Traffic Rider VVQ" class="w-full h-full object-cover">
-                            <span class="text-white text-lg absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 z-10">Traffic Rider VVQ</span>
+                
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden">
+                    <figure class="relative h-48">
+                        <img src="/assets/images/games/traffic-rider-vvq.jpg" alt="Traffic Rider VVQ" class="w-full h-full object-cover" loading="lazy">
+                        <div class="absolute top-2 right-2 flex gap-1">
+                            <div class="badge badge-error">Racing</div>
                         </div>
-                        <div class="p-4">
-                            <h3 class="font-semibold mb-2">Traffic Rider VVQ</h3>
-                            <p class="text-sm text-apple-gray">Race through traffic in this thrilling motorcycle game.</p>
+                    </figure>
+                    <div class="card-body p-4">
+                        <h3 class="card-title text-secondary">Traffic Rider VVQ</h3>
+                        <p class="text-sm text-opacity-90">Race through traffic in this thrilling motorcycle game.</p>
+                        <div class="card-actions justify-end mt-2">
+                            <a href="/games/traffic-rider-vvq.html" class="btn btn-sm btn-primary">
+                                <i class="fas fa-play mr-1"></i> Play Now
+                            </a>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-apple-dark text-white py-8">
+    <footer class="bg-neutral text-neutral-content py-10">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">About</h3>
+                    <p class="text-sm opacity-80 mb-4">PlayGameStation is your destination for the best free online games. Play instantly in your browser without downloads.</p>
+                    <div class="flex items-center">
+                        <label class="swap swap-rotate mr-2">
+                            <input type="checkbox" class="theme-controller" value="dark" />
+                            <i class="fas fa-sun swap-on text-yellow-400 text-lg"></i>
+                            <i class="fas fa-moon swap-off text-blue-300 text-lg"></i>
+                        </label>
+                        <span class="text-xs opacity-80">Theme</span>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/" class="hover:text-primary transition-colors flex items-center"><i class="fas fa-home mr-2 text-xs"></i> Home</a></li>
+                        <li><a href="/popular.html" class="hover:text-primary transition-colors flex items-center"><i class="fas fa-fire mr-2 text-xs"></i> Popular Games</a></li>
+                        <li><a href="/new.html" class="hover:text-primary transition-colors flex items-center"><i class="fas fa-plus-circle mr-2 text-xs"></i> New Games</a></li>
+                        <li><a href="/categories.html" class="hover:text-primary transition-colors flex items-center"><i class="fas fa-th-large mr-2 text-xs"></i> Categories</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Categories</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/categories/action.html" class="hover:text-primary transition-colors">Action</a></li>
+                        <li><a href="/categories/adventure.html" class="hover:text-primary transition-colors">Adventure</a></li>
+                        <li><a href="/categories/puzzle.html" class="hover:text-primary transition-colors">Puzzle</a></li>
+                        <li><a href="/categories/multiplayer.html" class="hover:text-primary transition-colors">Multiplayer</a></li>
+                        <li><a href="/categories/racing.html" class="hover:text-primary transition-colors">Racing</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Legal</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/privacy.html" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-primary transition-colors">Terms of Service</a></li>
+                        <li><a href="/cookies.html" class="hover:text-primary transition-colors">Cookie Policy</a></li>
+                        <li><a href="/contact.html" class="hover:text-primary transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center pt-6 border-t border-neutral-focus">
                 <div class="mb-4 md:mb-0">
-                    <p class="text-xl font-bold">PlayGameStation</p>
-                    <p class="text-sm text-gray-400">Your destination for the best online games</p>
+                    <p class="text-xl font-bold flex items-center">
+                        <i class="fas fa-gamepad mr-2 text-primary"></i>PlayGameStation
+                    </p>
                 </div>
-                <div class="text-sm text-gray-400">
-                    <p>&copy; 2025 PlayGameStation. All rights reserved.</p>
-                    <p>Poxel.io game is provided by CrazyGames</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-neutral-content hover:text-primary transition-colors" aria-label="Facebook">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="text-neutral-content hover:text-primary transition-colors" aria-label="Twitter">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-neutral-content hover:text-primary transition-colors" aria-label="Instagram">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-neutral-content hover:text-primary transition-colors" aria-label="Discord">
+                        <i class="fab fa-discord text-xl"></i>
+                    </a>
                 </div>
+            </div>
+            
+            <div class="text-center mt-6 text-sm opacity-80">
+                <p>&copy; 2025 PlayGameStation. All rights reserved.</p>
+                <p class="mt-1">Poxel.io game is provided by CrazyGames</p>
             </div>
         </div>
     </footer>
+    
+    <script>
+        // Theme toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeController = document.querySelector('.theme-controller');
+            
+            // Check for saved theme preference or use device preference
+            const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            themeController.checked = savedTheme === 'light';
+            
+            // Theme switch event handler
+            themeController.addEventListener('change', function(e) {
+                const newTheme = e.target.checked ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+        });
+    </script>
 </body>
-</html> 
+</html>

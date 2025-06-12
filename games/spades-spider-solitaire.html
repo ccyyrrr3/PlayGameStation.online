@@ -17,172 +17,187 @@
     <meta name="keywords" content="spades spider solitaire, spider solitaire, card games, solitaire games, free online games, puzzle games">
     <link rel="canonical" href="https://playgamestation.online/games/spades-spider-solitaire.html">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'apple-blue': '#007AFF',
-                        'apple-green': '#34C759',
-                        'apple-red': '#FF3B30',
-                        'apple-gray': '#8E8E93',
-                        'apple-light': '#F2F2F7',
-                        'apple-dark': '#1C1C1E',
-                    }
-                }
-            }
-        }
-    </script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body class="bg-apple-light text-apple-dark">
-    <header class="bg-apple-blue text-white py-4 shadow-md">
+<body class="bg-base-100 text-base-content font-sans">
+    <script>
+        // Apply theme from localStorage or default to 'light'
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+    </script>
+    <header class="bg-primary text-primary-content py-4 shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-center md:text-left mb-4 md:mb-0">
-                    <a href="/" class="text-2xl font-bold">PlayGameStation</a>
+                    <a href="/" class="text-2xl font-bold hover:opacity-80 transition-opacity">PlayGameStation</a>
                 </div>
                 <nav>
-                    <ul class="flex space-x-6">
-                        <li><a href="/" class="hover:text-apple-light transition">Home</a></li>
-                        <li><a href="/categories/card.html" class="hover:text-apple-light transition">Card Games</a></li>
-                        <li><a href="/categories/puzzle.html" class="hover:text-apple-light transition">Puzzle</a></li>
-                        <li><a href="/categories/strategy.html" class="hover:text-apple-light transition">Strategy</a></li>
+                    <ul class="flex space-x-4 sm:space-x-6">
+                        <li><a href="/" class="hover:text-secondary transition">Home</a></li>
+                        <li><a href="/categories/action.html" class="hover:text-secondary transition">Action</a></li>
+                        <li><a href="/categories/multiplayer.html" class="hover:text-secondary transition">Multiplayer</a></li>
+                        <li><a href="/categories/puzzle.html" class="hover:text-secondary transition">Puzzle</a></li>
+                        <li><a href="/categories/sports.html" class="hover:text-secondary transition">Sports</a></li>
                     </ul>
+                    <button id="theme-toggle" class="btn btn-ghost btn-circle ml-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                    </button>
                 </nav>
             </div>
         </div>
     </header>
 
-    <main class="container mx-auto px-4 py-8">
+    <main class="container mx-auto px-4 py-8 pt-20"> <!-- Added pt-20 for sticky header -->
         <section class="mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center text-apple-blue">Spades Spider Solitaire</h1>
-            <p class="text-xl text-center mb-8">Enjoy this classic Spider Solitaire card game with a Spades theme in a beautifully designed interface.</p>
-            
-            <div class="w-full max-w-5xl mx-auto rounded-lg overflow-hidden shadow-xl border-4 border-apple-blue">
-                <div class="w-full aspect-video flex items-center justify-center relative" style="z-index: 10;">
+            <div class="w-full max-w-5xl mx-auto rounded-lg overflow-hidden shadow-xl border-4 border-primary mb-8">
+                <div class="w-full aspect-video flex items-center justify-center relative" style="z-index: 1;">
                     <script src="https://cdn.htmlgames.com/embed.js?game=SpadesSpiderSolitaire&bgcolor=white"></script>
                 </div>
             </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center text-primary">Spades Spider Solitaire</h1>
+            <div class="text-center mb-4">
+                <span class="badge badge-accent badge-outline mr-2">Card Game</span>
+                <span class="badge badge-secondary badge-outline mr-2">Solitaire</span>
+                <span class="badge badge-info badge-outline">Strategy</span>
+            </div>
+            <p class="text-lg text-center mb-8 max-w-3xl mx-auto">Enjoy this classic Spider Solitaire card game with a Spades theme in a beautifully designed interface.</p>
         </section>
 
-        <section id="about" class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">About the Game</h2>
+        <section id="about" class="mb-12 p-6 bg-base-200 rounded-lg shadow">
+            <h2 class="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2">About the Game</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                    <p class="mb-4">Spades Spider Solitaire combines the traditional Spider Solitaire gameplay with a Spades theme. This addictive card game challenges you to arrange all cards in descending order by suit. Clear the board by building complete sequences from King to Ace and improve your strategic thinking skills.</p>
-                    <p class="mb-4">Whether you're a solitaire expert or new to card games, Spades Spider Solitaire offers an engaging experience that will keep you entertained for hours. The game features multiple difficulty levels to match your skill level.</p>
+                    <p class="mb-4 leading-relaxed">Spades Spider Solitaire combines the traditional Spider Solitaire gameplay with a Spades theme. This addictive card game challenges you to arrange all cards in descending order by suit. Clear the board by building complete sequences from King to Ace and improve your strategic thinking skills.</p>
+                    <p class="mb-4 leading-relaxed">Whether you're a solitaire expert or new to card games, Spades Spider Solitaire offers an engaging experience that will keep you entertained for hours. The game features multiple difficulty levels to match your skill level.</p>
                 </div>
                 <div>
-                    <h3 class="text-2xl font-semibold mb-3 text-apple-green">Game Features</h3>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li>Classic Spider Solitaire gameplay</li>
-                        <li>Beautiful card designs with Spades theme</li>
-                        <li>Multiple difficulty levels</li>
-                        <li>Undo feature for fixing mistakes</li>
-                        <li>Hint system for when you're stuck</li>
-                        <li>Game timer to track your progress</li>
+                    <h3 class="text-2xl font-semibold mb-3 text-accent">Game Features</h3>
+                    <ul class="list-disc list-inside pl-5 space-y-2 text-base-content">
+                        <li><i class="fas fa-puzzle-piece text-success mr-2"></i>Classic Spider Solitaire gameplay</li>
+                        <li><i class="fas fa-paint-brush text-success mr-2"></i>Beautiful card designs with Spades theme</li>
+                        <li><i class="fas fa-signal text-success mr-2"></i>Multiple difficulty levels</li>
+                        <li><i class="fas fa-undo text-success mr-2"></i>Undo feature for fixing mistakes</li>
+                        <li><i class="fas fa-lightbulb text-success mr-2"></i>Hint system for when you're stuck</li>
+                        <li><i class="fas fa-stopwatch text-success mr-2"></i>Game timer to track your progress</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section id="controls" class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">How to Play</h2>
-            <div class="bg-white p-6 rounded-lg shadow-md">
+        <section id="controls" class="mb-12 p-6 bg-base-200 rounded-lg shadow">
+            <h2 class="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2">How to Play</h2>
+            <div class="bg-base-100 p-6 rounded-lg shadow-inner">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                        <h3 class="text-2xl font-semibold mb-3 text-apple-green">Basic Controls</h3>
+                        <h3 class="text-2xl font-semibold mb-3 text-accent">Basic Controls</h3>
                         <ul class="space-y-3">
-                            <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Move</span>
-                                <span>Click and drag cards to move them</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Stack</span>
-                                <span>Arrange cards in descending order</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Deal</span>
-                                <span>Click the deck to deal more cards when available</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Undo</span>
-                                <span>Use the undo button to revert your last move</span>
-                            </li>
+                            <li class="flex items-center"><i class="fas fa-mouse-pointer text-info mr-3"></i><span>Click and drag cards to move them</span></li>
+                            <li class="flex items-center"><i class="fas fa-layer-group text-info mr-3"></i><span>Arrange cards in descending order</span></li>
+                            <li class="flex items-center"><i class="fas fa-hand-sparkles text-info mr-3"></i><span>Click the deck to deal more cards when available</span></li>
+                            <li class="flex items-center"><i class="fas fa-undo-alt text-info mr-3"></i><span>Use the undo button to revert your last move</span></li>
                         </ul>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-semibold mb-3 text-apple-green">Game Rules</h3>
-                        <p class="mb-3">Spider Solitaire follows these basic rules:</p>
-                        <ul class="list-disc pl-5 space-y-2">
-                            <li>Cards can be placed on cards of one rank higher (e.g., 5 on 6)</li>
-                            <li>Complete sequences from King to Ace are automatically removed</li>
-                            <li>Empty columns can be filled with any card or sequence</li>
-                            <li>You can only move visible cards at the bottom of each column</li>
-                            <li>Win by removing all cards from the table</li>
+                        <h3 class="text-2xl font-semibold mb-3 text-accent">Game Rules</h3>
+                        <p class="mb-3 leading-relaxed">Spider Solitaire follows these basic rules:</p>
+                        <ul class="list-disc list-inside pl-5 space-y-2">
+                            <li><i class="fas fa-sort-numeric-down text-info mr-2"></i>Cards can be placed on cards of one rank higher (e.g., 5 on 6)</li>
+                            <li><i class="fas fa-check-double text-info mr-2"></i>Complete sequences from King to Ace are automatically removed</li>
+                            <li><i class="fas fa-plus-square text-info mr-2"></i>Empty columns can be filled with any card or sequence</li>
+                            <li><i class="fas fa-eye text-info mr-2"></i>You can only move visible cards at the bottom of each column</li>
+                            <li><i class="fas fa-trophy text-info mr-2"></i>Win by removing all cards from the table</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">Why Players Love This Game</h2>
+        <section class="mb-12 p-6 bg-base-200 rounded-lg shadow">
+            <h2 class="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2">Why Players Love This Game</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-green">Strategic Depth</h3>
-                    <p>Each game offers unique challenges, requiring careful planning and forethought to successfully clear the board.</p>
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+                    <div class="card-body items-center text-center">
+                        <h3 class="card-title text-accent">Strategic Depth</h3>
+                        <p>Each game offers unique challenges, requiring careful planning and forethought to successfully clear the board.</p>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-green">Elegant Design</h3>
-                    <p>The Spades theme provides a visually pleasing experience with clean, intuitive interface that's easy to navigate.</p>
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+                    <div class="card-body items-center text-center">
+                        <h3 class="card-title text-accent">Elegant Design</h3>
+                        <p>The Spades theme provides a visually pleasing experience with clean, intuitive interface that's easy to navigate.</p>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-green">Perfect for All Skill Levels</h3>
-                    <p>Multiple difficulty settings and helpful features like undo and hints make the game accessible to everyone.</p>
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+                    <div class="card-body items-center text-center">
+                        <h3 class="card-title text-accent">Perfect for All Skill Levels</h3>
+                        <p>Multiple difficulty settings and helpful features like undo and hints make the game accessible to everyone.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="mb-8">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">Related Games You Might Enjoy</h2>
-            <div id="related-games" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <section class="mb-8 p-6 bg-base-200 rounded-lg shadow">
+            <h2 class="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2">Related Games You Might Enjoy</h2>
+            <div id="related-games" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Related games will be dynamically populated by JavaScript -->
                 
                 <!-- Fallback static cards -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                    <a href="/games/fit-it-quick.html" class="block">
-                        <div class="h-40 bg-apple-gray relative">
-                            <img src="/assets/images/games/fit-it-quick.jpg" alt="Fit It Quick" class="w-full h-full object-cover">
-                            <span class="text-white text-lg absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 z-10">Fit It Quick</span>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-semibold mb-2">Fit It Quick</h3>
-                            <p class="text-sm text-apple-gray">Test your spatial awareness in this fast-paced puzzle game.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                    <a href="/games/love-tester.html" class="block">
-                        <div class="h-40 bg-apple-gray relative">
-                            <img src="/assets/images/games/love-tester.jpg" alt="Love Tester" class="w-full h-full object-cover">
-                            <span class="text-white text-lg absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 z-10">Love Tester</span>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-semibold mb-2">Love Tester</h3>
-                            <p class="text-sm text-apple-gray">Test your compatibility in this fun social game.</p>
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+                    <a href="/games/fit-it-quick.html" class="block group">
+                        <figure class="h-40 relative overflow-hidden">
+                            <img src="/assets/images/games/fit-it-quick.jpg" alt="Fit It Quick" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <span class="text-white text-lg font-semibold">Fit It Quick</span>
+                            </div>
+                        </figure>
+                        <div class="card-body p-4">
+                            <h3 class="card-title text-lg">Fit It Quick</h3>
+                            <p class="text-sm text-base-content/70">Test your spatial awareness in this fast-paced puzzle game.</p>
                         </div>
                     </a>
                 </div>
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                    <a href="/games/jelly-collapse.html" class="block">
-                        <div class="h-40 bg-apple-gray relative">
-                            <img src="/assets/images/games/jelly-collapse.jpg" alt="Jelly Collapse" class="w-full h-full object-cover">
-                            <span class="text-white text-lg absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 z-10">Jelly Collapse</span>
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+                    <a href="/games/love-tester.html" class="block group">
+                        <figure class="h-40 relative overflow-hidden">
+                            <img src="/assets/images/games/love-tester.jpg" alt="Love Tester" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <span class="text-white text-lg font-semibold">Love Tester</span>
+                            </div>
+                        </figure>
+                        <div class="card-body p-4">
+                            <h3 class="card-title text-lg">Love Tester</h3>
+                            <p class="text-sm text-base-content/70">Test your compatibility in this fun social game.</p>
                         </div>
-                        <div class="p-4">
-                            <h3 class="font-semibold mb-2">Jelly Collapse</h3>
-                            <p class="text-sm text-apple-gray">Match and clear colorful jellies in this addictive puzzle.</p>
+                    </a>
+                </div>
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+                    <a href="/games/jelly-collapse.html" class="block group">
+                        <figure class="h-40 relative overflow-hidden">
+                            <img src="/assets/images/games/jelly-collapse.jpg" alt="Jelly Collapse" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <span class="text-white text-lg font-semibold">Jelly Collapse</span>
+                            </div>
+                        </figure>
+                        <div class="card-body p-4">
+                            <h3 class="card-title text-lg">Jelly Collapse</h3>
+                            <p class="text-sm text-base-content/70">Match and clear colorful jellies in this addictive puzzle.</p>
+                        </div>
+                    </a>
+                </div>
+                 <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+                    <a href="/games/solitaire-classic.html" class="block group">
+                        <figure class="h-40 relative overflow-hidden">
+                            <img src="/assets/images/games/solitaire-classic.jpg" alt="Solitaire Classic" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <span class="text-white text-lg font-semibold">Solitaire Classic</span>
+                            </div>
+                        </figure>
+                        <div class="card-body p-4">
+                            <h3 class="card-title text-lg">Solitaire Classic</h3>
+                            <p class="text-sm text-base-content/70">The timeless Klondike Solitaire experience.</p>
                         </div>
                     </a>
                 </div>
@@ -190,29 +205,24 @@
         </section>
     </main>
 
-    <footer class="bg-apple-dark text-white py-8">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <p class="text-xl font-bold">PlayGameStation</p>
-                    <p class="text-sm text-gray-400">Your destination for the best online games</p>
+    <footer class="footer footer-center p-10 bg-neutral text-neutral-content">
+        <aside>
+                <p class="text-2xl font-bold">PlayGameStation</p>
+                <p class="font-semibold">
+                    Your destination for the best online games <br />Providing fun since 2023
+                </p>
+                <p>Copyright © 2024 - All right reserved</p>
+                <p class="text-xs">Spades Spider Solitaire game is provided by HTMLGames. We are not affiliated with HTMLGames.</p>
+            </aside>
+            <nav>
+                <div class="grid grid-flow-col gap-4">
+                    <a href="https://twitter.com/playgamestation" class="link link-hover" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-.422.724-.665 1.56-.665 2.452 0 1.613.823 3.043 2.074 3.863-.766-.024-1.483-.233-2.11-.583v.06c0 2.256 1.605 4.14 3.737 4.568-.39.107-.802.165-1.227.165-.3 0-.593-.028-.875-.082.593 1.85 2.307 3.198 4.342 3.234-1.595 1.248-3.604 1.992-5.786 1.992-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.572 0 13.266-7.094 13.266-13.266 0-.202-.005-.403-.014-.603.91-.658 1.7-1.476 2.323-2.408z"></path></svg></a>
+                    <a href="https://youtube.com/playgamestation" class="link link-hover" aria-label="Youtube"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.701v-8l8 3.993-8 4.007z"></path></svg></a>
+                    <a href="https://facebook.com/playgamestation" class="link link-hover" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
                 </div>
-                <nav class="mb-4 md:mb-0">
-                    <ul class="flex flex-wrap justify-center gap-4">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
-                    </ul>
-                </nav>
-                <div class="text-sm text-gray-400 text-center md:text-right">
-                    <p>&copy; 2025 PlayGameStation. All rights reserved.</p>
-                    <p>Spades Spider Solitaire game is provided by HTMLGames</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
+            </nav>
+        </footer>
     <script src="/assets/js/main.js"></script>
+    <script src="../assets/js/theme-toggle.js"></script>
 </body>
-</html> 
+</html>

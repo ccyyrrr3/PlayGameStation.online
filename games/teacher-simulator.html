@@ -13,157 +13,184 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teacher Simulator - Play Online | PlayGameStation</title>
-    <meta name="description" content="Play Teacher Simulator online for free. Experience the challenging and humorous life of a teacher in this fun simulation game on PlayGameStation.">
-    <meta name="keywords" content="teacher simulator, simulation games, education games, funny games, free online games">
+    <meta name="description" content="Play Teacher Simulator online for free. Experience the challenging life of a teacher in this fun simulation game on PlayGameStation.">
+    <meta name="keywords" content="teacher simulator, simulation games, education games, free online games">
     <link rel="canonical" href="https://playgamestation.online/games/teacher-simulator.html">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'apple-blue': '#007AFF',
-                        'apple-green': '#34C759',
-                        'apple-red': '#FF3B30',
-                        'apple-gray': '#8E8E93',
-                        'apple-light': '#F2F2F7',
-                        'apple-dark': '#1C1C1E',
-                    }
-                }
-            }
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* 优化游戏iframe的样式 */
+        .game-frame {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s ease;
         }
-    </script>
+        .game-frame:hover {
+            transform: scale(1.01);
+        }
+        /* 优化游戏卡片样式 */
+        .game-card {
+            transition: all 0.3s ease;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
 </head>
-<body class="bg-apple-light text-apple-dark">
-    <header class="bg-apple-blue text-white py-4 shadow-md">
+<body class="bg-base-200 text-neutral" data-theme="mytheme">
+    <header class="bg-primary text-primary-content py-4 shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-center md:text-left mb-4 md:mb-0">
-                    <a href="/" class="text-2xl font-bold">PlayGameStation</a>
+                    <a href="/" class="text-2xl font-bold hover:opacity-80 transition-opacity flex items-center">
+                        <i class="fas fa-gamepad mr-2"></i>PlayGameStation
+                    </a>
                 </div>
                 <nav>
                     <ul class="flex space-x-6">
-                        <li><a href="/" class="hover:text-apple-light transition">Home</a></li>
-                        <li><a href="/categories/puzzle.html" class="hover:text-apple-light transition">Puzzle</a></li>
-                        <li><a href="/categories/simulation.html" class="hover:text-apple-light transition">Simulation</a></li>
-                        <li><a href="/categories/action.html" class="hover:text-apple-light transition">Action</a></li>
+                        <li><a href="/" class="hover:text-base-200 transition-colors duration-300">Home</a></li>
+                        <li><a href="/categories/simulation.html" class="hover:text-base-200 transition-colors duration-300">Simulation</a></li>
+                        <li><a href="/categories/puzzle.html" class="hover:text-base-200 transition-colors duration-300">Puzzle</a></li>
+                        <li><a href="/categories/action.html" class="hover:text-base-200 transition-colors duration-300">Action</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <main class="container mx-auto px-4 py-8">
+    <main class="container mx-auto px-6 py-10">
         <section class="mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center text-apple-blue">Teacher Simulator</h1>
-            <p class="text-xl text-center mb-8">Step into the shoes of a teacher and experience the challenges and fun of managing a classroom.</p>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center text-primary">Teacher Simulator</h1>
+            <div class="flex flex-wrap gap-2 mb-4 justify-center">
+                <span class="badge badge-primary">Simulation</span>
+                <span class="badge badge-primary">Education</span>
+                <span class="badge badge-primary">Funny</span>
+            </div>
+            <p class="text-xl text-center mb-8 max-w-3xl mx-auto">Step into the shoes of a teacher and experience the challenges and fun of managing a classroom.</p>
             
-            <div class="w-full max-w-5xl mx-auto rounded-lg overflow-hidden shadow-xl border-4 border-apple-blue">
+            <div class="w-full max-w-5xl mx-auto rounded-xl overflow-hidden shadow-2xl border-4 border-primary game-frame">
                 <div class="w-full aspect-video flex items-center justify-center relative" style="z-index: 10;">
-                    <iframe src="https://games.crazygames.com/en_US/teacher-simulator/index.html?v=1.329" style="width: 100%; height: 100%;" frameborder="0" allow="gamepad *;"></iframe>
+                    <iframe src="https://games.crazygames.com/en_US/teacher-simulator/index.html?v=1.329" style="width: 100%; height: 100%;" frameborder="0" scrolling="no" allow="gamepad *; fullscreen" loading="lazy" title="Teacher Simulator"></iframe>
                 </div>
             </div>
         </section>
 
         <section id="about" class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">About the Game</h2>
+            <h2 class="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2">About the Game</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
+                <div class="bg-base-100 p-6 rounded-lg shadow-lg">
                     <p class="mb-4">Teacher Simulator is a humorous simulation game that puts you in the role of a teacher managing a classroom full of students. Deal with various classroom situations, maintain discipline, and help your students learn while keeping your sanity intact.</p>
                     <p class="mb-4">With its comedic approach to the challenges of teaching, the game offers a lighthearted yet surprisingly insightful look into the profession. Navigate through different scenarios, make quick decisions, and see how your teaching style affects the classroom dynamics.</p>
                 </div>
-                <div>
-                    <h3 class="text-2xl font-semibold mb-3 text-apple-green">Game Features</h3>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li>Realistic classroom management scenarios</li>
-                        <li>Various student personalities to interact with</li>
-                        <li>Multiple teaching approaches and outcomes</li>
-                        <li>Humorous events and unexpected situations</li>
-                        <li>Performance rating system</li>
-                        <li>Progressively challenging levels</li>
+                <div class="bg-base-100 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-3 text-secondary">Game Features</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-success mr-2"></i> Realistic classroom management scenarios</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-success mr-2"></i> Various student personalities to interact with</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-success mr-2"></i> Multiple teaching approaches and outcomes</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-success mr-2"></i> Humorous events and unexpected situations</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-success mr-2"></i> Performance rating system</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-success mr-2"></i> Progressively challenging levels</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section id="controls" class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">How to Play</h2>
-            <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2">How to Play</h2>
+            <div class="bg-base-100 p-6 rounded-lg shadow-lg">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-3 text-apple-green">Basic Controls</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Click</span>
-                                <span>Mouse click to interact with objects and students</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Drag</span>
-                                <span>Click and drag to move objects</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Menu</span>
-                                <span>Access options and different teaching methods</span>
-                            </li>
-                        </ul>
+                    <div class="card bg-base-200 shadow-md">
+                        <div class="card-body">
+                            <h3 class="text-2xl font-semibold mb-3 text-secondary card-title">Basic Controls</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <span class="badge badge-primary mr-3 p-3">Move</span>
+                                    <span>Use mouse to interact with objects and students</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="badge badge-primary mr-3 p-3">Interact</span>
+                                    <span>Click on students, objects, or options</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="badge badge-primary mr-3 p-3">Choices</span>
+                                    <span>Select dialogue options when prompted</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-3 text-apple-green">Game Rules</h3>
-                        <p class="mb-3">Your objective is to successfully manage your classroom:</p>
-                        <ul class="list-disc pl-5 space-y-2">
-                            <li>Maintain classroom discipline</li>
-                            <li>Respond appropriately to student behaviors</li>
-                            <li>Complete teaching objectives within time limits</li>
-                            <li>Balance strictness with approachability</li>
-                            <li>Adapt to unexpected classroom events</li>
-                        </ul>
+                    <div class="card bg-base-200 shadow-md">
+                        <div class="card-body">
+                            <h3 class="text-2xl font-semibold mb-3 text-secondary card-title">Game Rules</h3>
+                            <p class="mb-3">Your objective is to be an effective teacher:</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-center"><i class="fas fa-graduation-cap text-primary mr-2"></i> Maintain classroom discipline</li>
+                                <li class="flex items-center"><i class="fas fa-graduation-cap text-primary mr-2"></i> Respond appropriately to student behavior</li>
+                                <li class="flex items-center"><i class="fas fa-graduation-cap text-primary mr-2"></i> Complete teaching objectives</li>
+                                <li class="flex items-center"><i class="fas fa-graduation-cap text-primary mr-2"></i> Balance strictness with approachability</li>
+                                <li class="flex items-center"><i class="fas fa-graduation-cap text-primary mr-2"></i> Manage your stress levels</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">Why Players Love This Game</h2>
+            <h2 class="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2">Why Players Love This Game</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-green">Humorous Scenarios</h3>
-                    <p>The game's lighthearted approach to teaching creates many funny and memorable moments.</p>
+                <div class="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="card-body">
+                        <h3 class="card-title text-xl font-semibold mb-3 text-secondary"><i class="fas fa-laugh-beam mr-2"></i>Humorous Gameplay</h3>
+                        <p>The game's comedic take on teaching situations creates laugh-out-loud moments and entertaining scenarios.</p>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-green">Relatable Situations</h3>
-                    <p>Many players recognize classroom dynamics from their own school experiences, adding to the enjoyment.</p>
+                <div class="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="card-body">
+                        <h3 class="card-title text-xl font-semibold mb-3 text-secondary"><i class="fas fa-chalkboard-teacher mr-2"></i>Relatable Challenges</h3>
+                        <p>Teachers will recognize familiar classroom dynamics, while non-teachers gain insight into the profession's unique challenges.</p>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-green">Decision-Making</h3>
-                    <p>Quick thinking and strategic choices make for engaging gameplay with different possible outcomes.</p>
+                <div class="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="card-body">
+                        <h3 class="card-title text-xl font-semibold mb-3 text-secondary"><i class="fas fa-chess mr-2"></i>Strategic Choices</h3>
+                        <p>Each decision affects classroom outcomes, creating a game with meaningful consequences and multiple paths to success.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="mb-8">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">Related Games You Might Enjoy</h2>
+            <h2 class="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2">Related Games You Might Enjoy</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="card bg-base-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 game-card">
                     <a href="/games/poxel-io.html" class="block">
-                        <div class="h-40 bg-apple-gray relative">
-                            <img src="/assets/images/games/poxel-io.jpg" alt="Poxel.io" class="w-full h-full object-cover">
-                            <span class="text-white text-lg absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 z-10">Poxel.io</span>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-semibold mb-2">Poxel.io</h3>
-                            <p class="text-sm text-apple-gray">Competitive voxel-based multiplayer game.</p>
+                        <figure class="relative">
+                            <img src="/assets/images/games/poxel-io.jpg" alt="Poxel.io" class="w-full h-48 object-cover transition-all duration-300 transform hover:scale-110">
+                            <div class="absolute inset-0 bg-black bg-opacity-30 hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                                <span class="text-white text-lg font-bold">Poxel.io</span>
+                            </div>
+                        </figure>
+                        <div class="card-body p-4">
+                            <h3 class="card-title text-lg">Poxel.io</h3>
+                            <p class="text-sm opacity-70">A multiplayer voxel-based battle royale game.</p>
                         </div>
                     </a>
                 </div>
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="card bg-base-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 game-card">
                     <a href="/games/traffic-rider-vvq.html" class="block">
-                        <div class="h-40 bg-apple-gray relative">
-                            <img src="/assets/images/games/traffic-rider-vvq.jpg" alt="Traffic Rider VVQ" class="w-full h-full object-cover">
-                            <span class="text-white text-lg absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 z-10">Traffic Rider VVQ</span>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-semibold mb-2">Traffic Rider VVQ</h3>
-                            <p class="text-sm text-apple-gray">Race through traffic in this thrilling motorcycle game.</p>
+                        <figure class="relative">
+                            <img src="/assets/images/games/traffic-rider-vvq.jpg" alt="Traffic Rider VVQ" class="w-full h-48 object-cover transition-all duration-300 transform hover:scale-110">
+                            <div class="absolute inset-0 bg-black bg-opacity-30 hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                                <span class="text-white text-lg font-bold">Traffic Rider VVQ</span>
+                            </div>
+                        </figure>
+                        <div class="card-body p-4">
+                            <h3 class="card-title text-lg">Traffic Rider VVQ</h3>
+                            <p class="text-sm opacity-70">Race through traffic in this thrilling motorcycle game.</p>
                         </div>
                     </a>
                 </div>
@@ -171,19 +198,59 @@
         </section>
     </main>
 
-    <footer class="bg-apple-dark text-white py-8">
+    <footer class="bg-neutral text-neutral-content py-8">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <p class="text-xl font-bold">PlayGameStation</p>
-                    <p class="text-sm text-gray-400">Your destination for the best online games</p>
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <h2 class="text-2xl font-bold mb-4 flex items-center"><i class="fas fa-gamepad mr-2"></i>PlayGameStation</h2>
+                    <p class="mb-4 max-w-md opacity-75">Your destination for free online games. No downloads, no installations, play high-quality games instantly.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="btn btn-circle btn-sm btn-ghost"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-circle btn-sm btn-ghost"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-circle btn-sm btn-ghost"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
-                <div class="text-sm text-gray-400">
-                    <p>&copy; 2025 PlayGameStation. All rights reserved.</p>
-                    <p>Teacher Simulator game is provided by CrazyGames</p>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                        <ul class="space-y-2">
+                            <li><a href="/" class="hover:text-primary transition-colors duration-300">Home</a></li>
+                            <li><a href="/#featured-games" class="hover:text-primary transition-colors duration-300">Featured Games</a></li>
+                            <li><a href="/#categories" class="hover:text-primary transition-colors duration-300">Game Categories</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Categories</h3>
+                        <ul class="space-y-2">
+                            <li><a href="/categories/simulation.html" class="hover:text-primary transition-colors duration-300">Simulation</a></li>
+                            <li><a href="/categories/puzzle.html" class="hover:text-primary transition-colors duration-300">Puzzle</a></li>
+                            <li><a href="/categories/action.html" class="hover:text-primary transition-colors duration-300">Action</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-primary transition-colors duration-300">Privacy Policy</a></li>
+                            <li><a href="#" class="hover:text-primary transition-colors duration-300">Terms of Service</a></li>
+                            <li><a href="#" class="hover:text-primary transition-colors duration-300">Contact Us</a></li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
+            <div class="border-t border-base-300 mt-8 pt-8 text-center opacity-75">
+                <p>&copy; 2025 PlayGameStation. All rights reserved.</p>
+                <p class="mt-2">Teacher Simulator game is provided by CrazyGames</p>
             </div>
         </div>
     </footer>
+    
+    <script>
+        // 主题切换功能
+        document.addEventListener('DOMContentLoaded', function() {
+            // 检查本地存储中的主题设置
+            const currentTheme = localStorage.getItem('theme') || 'mytheme';
+            document.documentElement.setAttribute('data-theme', currentTheme);
+        });
+    </script>
 </body>
-</html> 
+</html>

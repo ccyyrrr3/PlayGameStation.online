@@ -17,184 +17,197 @@
     <meta name="keywords" content="ragdoll archers, archery game, multiplayer game, physics game, free online games">
     <link rel="canonical" href="https://playgamestation.online/games/ragdoll-archers.html">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'apple-blue': '#007AFF',
-                        'apple-green': '#34C759',
-                        'apple-red': '#FF3B30',
-                        'apple-gray': '#8E8E93',
-                        'apple-light': '#F2F2F7',
-                        'apple-dark': '#1C1C1E',
-                    }
-                }
-            }
-        }
-    </script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body class="bg-apple-light text-apple-dark">
-    <header class="bg-apple-blue text-white py-4 shadow-md">
+<body class="bg-base-100 text-base-content font-sans">
+    <script>
+        // Apply theme from localStorage or default to 'light'
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+    </script>
+    <header class="bg-primary text-primary-content py-4 shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-center md:text-left mb-4 md:mb-0">
-                    <a href="/" class="text-2xl font-bold">PlayGameStation</a>
+                    <a href="/" class="text-2xl font-bold hover:opacity-80 transition-opacity">PlayGameStation</a>
                 </div>
                 <nav>
-                    <ul class="flex space-x-6">
-                        <li><a href="/" class="hover:text-apple-light transition">Home</a></li>
-                        <li><a href="/categories/action.html" class="hover:text-apple-light transition">Action</a></li>
-                        <li><a href="/categories/multiplayer.html" class="hover:text-apple-light transition">Multiplayer</a></li>
+                    <ul class="flex space-x-4 sm:space-x-6">
+                        <li><a href="/" class="hover:text-secondary transition">Home</a></li>
+                        <li><a href="/categories/action.html" class="hover:text-secondary transition">Action</a></li>
+                        <li><a href="/categories/multiplayer.html" class="hover:text-secondary transition">Multiplayer</a></li>
+                        <li><a href="/categories/puzzle.html" class="hover:text-secondary transition">Puzzle</a></li>
+                        <li><a href="/categories/sports.html" class="hover:text-secondary transition">Sports</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <main class="container mx-auto px-4 py-8">
+    <main class="container mx-auto px-4 py-8 pt-20"> <!-- Added pt-20 for sticky header -->
         <section class="mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center text-apple-blue">Ragdoll Archers</h1>
-            <p class="text-xl text-center mb-8">Engage in hilarious archery battles with ragdoll physics. Take aim, fire, and watch the chaos unfold in this fun multiplayer game.</p>
-            
-            <div class="w-full max-w-5xl mx-auto rounded-lg overflow-hidden shadow-xl border-4 border-apple-blue">
+            <div class="w-full max-w-5xl mx-auto rounded-lg overflow-hidden shadow-xl border-4 border-primary mb-8">
                 <iframe src="https://www.crazygames.com/embed/ragdoll-archers" 
                         class="w-full aspect-video relative" 
-                        style="z-index: 10;"
+                        style="z-index: 1;" <!-- Lowered z-index for iframe -->
                         allow="gamepad *;" 
                         frameborder="0"
                         title="Ragdoll Archers"
                         loading="lazy"></iframe>
             </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center text-primary">Ragdoll Archers</h1>
+            <div class="text-center mb-4">
+                <span class="badge badge-accent badge-outline mr-2">Archery</span>
+                <span class="badge badge-secondary badge-outline mr-2">Multiplayer</span>
+                <span class="badge badge-info badge-outline">Physics</span>
+            </div>
+            <p class="text-lg text-center mb-8 max-w-3xl mx-auto">Engage in hilarious archery battles with ragdoll physics. Take aim, fire, and watch the chaos unfold in this fun multiplayer game.</p>
         </section>
 
-        <section id="about" class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">About the Game</h2>
+        <section id="about" class="mb-12 p-6 bg-base-200 rounded-lg shadow">
+            <h2 class="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2">About the Game</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                    <p class="mb-4">Ragdoll Archers is a hilarious multiplayer archery game featuring ragdoll physics. Players take turns shooting arrows at each other, with the goal of knocking their opponent off the platform or dealing enough damage to win.</p>
-                    <p class="mb-4">The game's physics-based mechanics create unpredictable and entertaining moments, making each match unique and full of surprises. With various weapons and power-ups available, the gameplay remains fresh and exciting.</p>
+                    <p class="mb-4 leading-relaxed">Ragdoll Archers is a hilarious multiplayer archery game featuring ragdoll physics. Players take turns shooting arrows at each other, with the goal of knocking their opponent off the platform or dealing enough damage to win.</p>
+                    <p class="mb-4 leading-relaxed">The game's physics-based mechanics create unpredictable and entertaining moments, making each match unique and full of surprises. With various weapons and power-ups available, the gameplay remains fresh and exciting.</p>
                 </div>
                 <div>
-                    <h3 class="text-2xl font-semibold mb-3 text-apple-green">Game Features</h3>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li>Ragdoll physics for hilarious gameplay</li>
-                        <li>Multiplayer battles with friends</li>
-                        <li>Various weapons and power-ups</li>
-                        <li>Different game modes</li>
-                        <li>Customizable characters</li>
-                        <li>Fun and chaotic battles</li>
+                    <h3 class="text-2xl font-semibold mb-3 text-accent">Game Features</h3>
+                    <ul class="list-disc list-inside pl-5 space-y-2 text-base-content">
+                        <li><i class="fas fa-check-circle text-success mr-2"></i>Ragdoll physics for hilarious gameplay</li>
+                        <li><i class="fas fa-users text-success mr-2"></i>Multiplayer battles with friends</li>
+                        <li><i class="fas fa-bomb text-success mr-2"></i>Various weapons and power-ups</li>
+                        <li><i class="fas fa-gamepad text-success mr-2"></i>Different game modes</li>
+                        <li><i class="fas fa-paint-brush text-success mr-2"></i>Customizable characters</li>
+                        <li><i class="fas fa-fire text-success mr-2"></i>Fun and chaotic battles</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section id="controls" class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">How to Play</h2>
-            <div class="bg-white p-6 rounded-lg shadow-md">
+        <section id="controls" class="mb-12 p-6 bg-base-200 rounded-lg shadow">
+            <h2 class="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2">How to Play</h2>
+            <div class="bg-base-100 p-6 rounded-lg shadow-inner">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                        <h3 class="text-2xl font-semibold mb-3 text-apple-green">Basic Controls</h3>
+                        <h3 class="text-2xl font-semibold mb-3 text-accent">Basic Controls</h3>
                         <ul class="space-y-3">
                             <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Aim</span>
+                                <span class="badge badge-primary mr-3">Aim</span>
                                 <span>Move your mouse to aim your bow</span>
                             </li>
                             <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Power</span>
+                                <span class="badge badge-primary mr-3">Power</span>
                                 <span>Hold left mouse button to charge your shot</span>
                             </li>
                             <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Shoot</span>
+                                <span class="badge badge-primary mr-3">Shoot</span>
                                 <span>Release to fire your arrow</span>
                             </li>
                             <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Move</span>
+                                <span class="badge badge-primary mr-3">Move</span>
                                 <span>Use WASD or arrow keys to move your character</span>
                             </li>
                         </ul>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-semibold mb-3 text-apple-green">Game Rules</h3>
+                        <h3 class="text-2xl font-semibold mb-3 text-accent">Game Rules</h3>
                         <p class="mb-3">The objective is to defeat your opponent:</p>
-                        <ul class="list-disc pl-5 space-y-2">
-                            <li>Take turns shooting arrows at each other</li>
-                            <li>Knock your opponent off the platform to win</li>
-                            <li>Deal enough damage to win the round</li>
-                            <li>Use power-ups strategically</li>
-                            <li>Win multiple rounds to win the match</li>
+                        <ul class="list-disc list-inside pl-5 space-y-2">
+                            <li><i class="fas fa-bullseye text-info mr-2"></i>Take turns shooting arrows at each other</li>
+                            <li><i class="fas fa-angle-double-down text-info mr-2"></i>Knock your opponent off the platform to win</li>
+                            <li><i class="fas fa-heartbeat text-info mr-2"></i>Deal enough damage to win the round</li>
+                            <li><i class="fas fa-star text-info mr-2"></i>Use power-ups strategically</li>
+                            <li><i class="fas fa-trophy text-info mr-2"></i>Win multiple rounds to win the match</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">Why Players Love This Game</h2>
+        <section class="mb-12 p-6 bg-base-200 rounded-lg shadow">
+            <h2 class="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2">Why Players Love This Game</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-green">Hilarious Physics</h3>
-                    <p>The ragdoll physics create unpredictable and funny moments in every match.</p>
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+                    <div class="card-body items-center text-center">
+                        <h3 class="card-title text-accent">Hilarious Physics</h3>
+                        <p>The ragdoll physics create unpredictable and funny moments in every match.</p>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-green">Multiplayer Fun</h3>
-                    <p>Perfect for playing with friends, creating memorable gaming moments.</p>
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+                    <div class="card-body items-center text-center">
+                        <h3 class="card-title text-accent">Multiplayer Fun</h3>
+                        <p>Perfect for playing with friends, creating memorable gaming moments.</p>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-green">Easy to Learn</h3>
-                    <p>Simple controls make it accessible while maintaining strategic depth.</p>
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+                    <div class="card-body items-center text-center">
+                        <h3 class="card-title text-accent">Easy to Learn</h3>
+                        <p>Simple controls make it accessible while maintaining strategic depth.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="mb-8">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">Related Games You Might Enjoy</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                    <a href="/games/find-the-vampire.html" class="block">
-                        <div class="h-40 bg-apple-gray relative">
-                            <img src="/assets/images/games/find-the-vampire.jpg" alt="Find the Vampire" class="w-full h-full object-cover">
-                            <span class="text-white text-lg absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 z-10">Find the Vampire</span>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-semibold mb-2">Find the Vampire</h3>
-                            <p class="text-sm text-apple-gray">Test your observation skills in this hidden object game.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                    <a href="/games/10-minutes-till-dawn.html" class="block">
-                        <div class="h-40 bg-apple-gray relative">
-                            <img src="/assets/images/games/10-minutes-till-dawn.jpg" alt="10 Minutes Till Dawn" class="w-full h-full object-cover">
-                            <span class="text-white text-lg absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 z-10">10 Minutes Till Dawn</span>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-semibold mb-2">10 Minutes Till Dawn</h3>
-                            <p class="text-sm text-apple-gray">Survive for 10 minutes in this intense action game.</p>
+        <section class="mb-8 p-6 bg-base-200 rounded-lg shadow">
+            <h2 class="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2">Related Games You Might Enjoy</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+                    <a href="/games/find-the-vampire.html" class="block group">
+                        <figure class="h-40 relative overflow-hidden">
+                            <img src="/assets/images/games/find-the-vampire.jpg" alt="Find the Vampire" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <span class="text-white text-lg font-semibold">Find the Vampire</span>
+                            </div>
+                        </figure>
+                        <div class="card-body p-4">
+                            <h3 class="card-title text-lg">Find the Vampire</h3>
+                            <p class="text-sm text-base-content/70">Test your observation skills in this hidden object game.</p>
                         </div>
                     </a>
                 </div>
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                    <a href="/games/idle-saga.html" class="block">
-                        <div class="h-40 bg-apple-gray relative">
-                            <img src="/assets/images/games/idle-saga.jpg" alt="Idle Saga" class="w-full h-full object-cover">
-                            <span class="text-white text-lg absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 z-10">Idle Saga</span>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-semibold mb-2">Idle Saga</h3>
-                            <p class="text-sm text-apple-gray">Build your empire in this engaging idle game.</p>
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+                    <a href="/games/10-minutes-till-dawn.html" class="block group">
+                        <figure class="h-40 relative overflow-hidden">
+                            <img src="/assets/images/games/10-minutes-till-dawn.jpg" alt="10 Minutes Till Dawn" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <span class="text-white text-lg font-semibold">10 Minutes Till Dawn</span>
+                            </div>
+                        </figure>
+                        <div class="card-body p-4">
+                            <h3 class="card-title text-lg">10 Minutes Till Dawn</h3>
+                            <p class="text-sm text-base-content/70">Survive for 10 minutes in this intense action game.</p>
                         </div>
                     </a>
                 </div>
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                    <a href="/games/solar-smash.html" class="block">
-                        <div class="h-40 bg-apple-gray relative">
-                            <img src="/assets/images/games/solar-smash.jpg" alt="Solar Smash" class="w-full h-full object-cover">
-                            <span class="text-white text-lg absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 z-10">Solar Smash</span>
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+                    <a href="/games/idle-saga.html" class="block group">
+                        <figure class="h-40 relative overflow-hidden">
+                            <img src="/assets/images/games/idle-saga.jpg" alt="Idle Saga" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <span class="text-white text-lg font-semibold">Idle Saga</span>
+                            </div>
+                        </figure>
+                        <div class="card-body p-4">
+                            <h3 class="card-title text-lg">Idle Saga</h3>
+                            <p class="text-sm text-base-content/70">Build your empire in this engaging idle game.</p>
                         </div>
-                        <div class="p-4">
-                            <h3 class="font-semibold mb-2">Solar Smash</h3>
-                            <p class="text-sm text-apple-gray">Destroy planets in this satisfying simulation game.</p>
+                    </a>
+                </div>
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+                    <a href="/games/solar-smash.html" class="block group">
+                        <figure class="h-40 relative overflow-hidden">
+                            <img src="/assets/images/games/solar-smash.jpg" alt="Solar Smash" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <span class="text-white text-lg font-semibold">Solar Smash</span>
+                            </div>
+                        </figure>
+                        <div class="card-body p-4">
+                            <h3 class="card-title text-lg">Solar Smash</h3>
+                            <p class="text-sm text-base-content/70">Destroy planets in this satisfying simulation game.</p>
                         </div>
                     </a>
                 </div>
@@ -202,19 +215,23 @@
         </section>
     </main>
 
-    <footer class="bg-apple-dark text-white py-8">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <p class="text-xl font-bold">PlayGameStation</p>
-                    <p class="text-sm text-gray-400">Your destination for the best online games</p>
+    <footer class="footer footer-center p-10 bg-neutral text-neutral-content">
+        <aside>
+                <p class="text-2xl font-bold">PlayGameStation</p>
+                <p class="font-semibold">
+                    Your destination for the best online games <br />Providing fun since 2023
+                </p>
+                <p>Copyright © 2024 - All right reserved</p>
+                <p class="text-xs">Ragdoll Archers game is provided by CrazyGames. We are not affiliated with CrazyGames.</p>
+            </aside>
+            <nav>
+                <div class="grid grid-flow-col gap-4">
+                    <a href="https://twitter.com/playgamestation" class="link link-hover" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-.422.724-.665 1.56-.665 2.452 0 1.613.823 3.043 2.074 3.863-.766-.024-1.483-.233-2.11-.583v.06c0 2.256 1.605 4.14 3.737 4.568-.39.107-.802.165-1.227.165-.3 0-.593-.028-.875-.082.593 1.85 2.307 3.198 4.342 3.234-1.595 1.248-3.604 1.992-5.786 1.992-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.572 0 13.266-7.094 13.266-13.266 0-.202-.005-.403-.014-.603.91-.658 1.7-1.476 2.323-2.408z"></path></svg></a>
+                    <a href="https://youtube.com/playgamestation" class="link link-hover" aria-label="Youtube"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.701v-8l8 3.993-8 4.007z"></path></svg></a>
+                    <a href="https://facebook.com/playgamestation" class="link link-hover" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
                 </div>
-                <div class="text-sm text-gray-400">
-                    <p>&copy; 2025 PlayGameStation. All rights reserved.</p>
-                    <p>Ragdoll Archers game is provided by CrazyGames</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+            </nav>
+        </footer>
+    <script src="../assets/js/theme-toggle.js"></script>
 </body>
-</html> 
+</html>

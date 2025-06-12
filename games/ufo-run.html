@@ -17,6 +17,7 @@
     <meta name="keywords" content="UFO Run, action games, space games, obstacle games, free games, online games, arcade games">
     <link rel="canonical" href="https://playgamestation.online/games/ufo-run.html">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
     <script>
         tailwind.config = {
             theme: {
@@ -30,25 +31,50 @@
                         'apple-dark': '#1C1C1E',
                     }
                 }
-            }
+            },
+            daisyui: {
+                themes: ["light", "dark"],
+            },
         }
     </script>
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Optimize game iframe */
+        iframe {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        /* Game card hover effects */
+        .game-card {
+            transition: all 0.3s ease;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+    </style>
 </head>
-<body class="bg-apple-light text-apple-dark">
-    <header class="bg-apple-blue text-white py-4 shadow-md">
-        <div class="container mx-auto px-4">
+<body class="min-h-screen bg-base-200 text-base-content">
+    <header class="bg-primary text-primary-content py-4 px-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-center md:text-left mb-4 md:mb-0">
-                    <a href="/" class="text-2xl font-bold">PlayGameStation</a>
+                    <a href="/" class="text-2xl font-bold flex items-center gap-2 hover:opacity-80 transition-opacity">
+                        <i class="fas fa-gamepad"></i>
+                        <span>PlayGameStation</span>
+                    </a>
                 </div>
                 <nav>
                     <ul class="flex space-x-6">
-                        <li><a href="/" class="hover:text-apple-light transition">Home</a></li>
-                        <li><a href="/categories/card.html" class="hover:text-apple-light transition">Card Games</a></li>
-                        <li><a href="/categories/puzzle.html" class="hover:text-apple-light transition">Puzzle Games</a></li>
-                        <li><a href="/categories/sports.html" class="hover:text-apple-light transition">Sports Games</a></li>
-                        <li><a href="/categories/action.html" class="hover:text-apple-light transition">Action Games</a></li>
+                        <li><a href="/" class="hover:text-secondary transition-colors duration-300">Home</a></li>
+                        <li><a href="/categories/card.html" class="hover:text-secondary transition-colors duration-300">Card Games</a></li>
+                        <li><a href="/categories/puzzle.html" class="hover:text-secondary transition-colors duration-300">Puzzle Games</a></li>
+                        <li><a href="/categories/sports.html" class="hover:text-secondary transition-colors duration-300">Sports Games</a></li>
+                        <li><a href="/categories/action.html" class="hover:text-secondary transition-colors duration-300">Action Games</a></li>
                     </ul>
                 </nav>
             </div>
@@ -58,25 +84,27 @@
     <main class="container mx-auto px-4 py-8">
         <!-- Game Header -->
         <section class="mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-apple-blue">UFO Run</h1>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-primary">UFO Run</h1>
             <div class="flex flex-wrap gap-2 mb-4">
-                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded">Action</span>
-                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded">Arcade</span>
-                <span class="bg-apple-blue text-white text-xs px-2 py-1 rounded">Space</span>
+                <span class="badge badge-primary">Action</span>
+                <span class="badge badge-primary">Arcade</span>
+                <span class="badge badge-primary">Space</span>
+                <span class="badge badge-secondary">Obstacle Course</span>
+                <span class="badge badge-accent">Single Player</span>
             </div>
-            <p class="text-xl mb-8">Pilot your UFO through a challenging obstacle course in this fast-paced action game. Dodge hazards, collect power-ups, and see how far you can go in this addictive space adventure!</p>
+            <p class="text-xl mb-8 max-w-3xl text-opacity-90">Pilot your UFO through a challenging obstacle course in this fast-paced action game. Dodge hazards, collect power-ups, and see how far you can go in this addictive space adventure!</p>
         </section>
 
         <!-- Game Frame -->
         <section class="mb-12">
-            <div class="w-full max-w-5xl mx-auto rounded-lg overflow-hidden shadow-xl border-4 border-apple-blue">
+            <div class="w-full max-w-5xl mx-auto rounded-xl overflow-hidden shadow-2xl border-4 border-primary">
                 <iframe src="https://html5games.com/Game/Ufo-Run/ce813d50-e738-43e5-886f-61960f2e31e9" 
                         class="w-full aspect-video relative" 
                         style="z-index: 10; min-height: 600px; height: 70vh;"
                         allow="fullscreen" 
                         scrolling="no"
                         frameborder="0"
-                        title="UFO Run"
+                        title="UFO Run - Pilot your UFO through challenging obstacles"
                         loading="lazy">
                 </iframe>
             </div>
@@ -85,29 +113,88 @@
         <!-- Game Info -->
         <section class="mb-12 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="col-span-2">
-                <h2 class="text-2xl font-bold mb-4 text-apple-blue">Game Description</h2>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <p class="mb-4">UFO Run is an exciting action-arcade game that puts your reflexes and timing to the test. As the pilot of a small but agile UFO, your mission is to navigate through a dangerous obstacle course filled with hazardous barriers, enemy defenses, and challenging terrain.</p>
-                    <p class="mb-4">The controls are simple - tap or click to make your UFO move up, and release to let it fall down - but the gameplay quickly becomes challenging as you encounter increasingly difficult obstacle patterns. Along the way, you can collect special power-ups that give you temporary abilities like invincibility, slow motion, or the ability to destroy obstacles.</p>
-                    <p>With its colorful, dynamic visuals, engaging sound effects, and perfectly balanced difficulty curve, UFO Run delivers an addictive gaming experience that will keep you coming back for "just one more try." How far can you pilot your UFO before crash landing?</p>
+                <h2 class="text-2xl font-bold mb-4 text-primary flex items-center gap-2">
+                    <i class="fas fa-rocket"></i>
+                    <span>About the Game</span>
+                </h2>
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    <div class="card-body">
+                        <p class="mb-4">UFO Run is an exciting action-arcade game that puts your reflexes and timing to the test. As the pilot of a small but agile UFO, your mission is to navigate through a dangerous obstacle course filled with hazardous barriers, enemy defenses, and challenging terrain.</p>
+                        <p class="mb-4">The controls are simple - tap or click to make your UFO move up, and release to let it fall down - but the gameplay quickly becomes challenging as you encounter increasingly difficult obstacle patterns. Along the way, you can collect special power-ups that give you temporary abilities like invincibility, slow motion, or the ability to destroy obstacles.</p>
+                        <p>With its colorful, dynamic visuals, engaging sound effects, and perfectly balanced difficulty curve, UFO Run delivers an addictive gaming experience that will keep you coming back for "just one more try." How far can you pilot your UFO before crash landing?</p>
+                        
+                        <div class="mt-6">
+                            <h3 class="text-xl font-bold mb-4 text-secondary flex items-center gap-2">
+                                <i class="fas fa-star"></i>
+                                <span>Game Features</span>
+                            </h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-success mt-1"></i>
+                                    <span><strong>Fast-paced Action:</strong> Test your reflexes with quick decision-making gameplay</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-success mt-1"></i>
+                                    <span><strong>Power-ups:</strong> Collect special abilities to help navigate difficult sections</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-success mt-1"></i>
+                                    <span><strong>Increasing Difficulty:</strong> Face progressively challenging obstacle patterns</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-success mt-1"></i>
+                                    <span><strong>Score System:</strong> Compete for high scores based on distance traveled</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div>
-                <h2 class="text-2xl font-bold mb-4 text-apple-blue">How to Play</h2>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li><strong>Controls:</strong> Click/tap to move up, release to move down</li>
-                        <li><strong>Avoid:</strong> Don't hit any obstacles or the edges</li>
-                        <li><strong>Collect:</strong> Grab power-ups for special abilities</li>
-                        <li><strong>Distance:</strong> Try to travel as far as possible</li>
-                    </ul>
-                    <div class="mt-6">
-                        <h3 class="font-bold text-lg mb-2">Tips:</h3>
-                        <ul class="list-disc pl-5 space-y-2">
-                            <li>Keep tapping gently for better control in tight spaces</li>
-                            <li>Watch the pattern of upcoming obstacles carefully</li>
-                            <li>Use power-ups strategically during difficult sections</li>
-                            <li>Stay in the middle area when possible for better reaction time</li>
+                <h2 class="text-2xl font-bold mb-4 text-primary flex items-center gap-2">
+                    <i class="fas fa-gamepad"></i>
+                    <span>How to Play</span>
+                </h2>
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    <div class="card-body">
+                        <h3 class="card-title text-secondary">Controls</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-hand-pointer text-info mt-1"></i>
+                                <span><strong>Click/tap</strong> to move up</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-hand-paper text-info mt-1"></i>
+                                <span><strong>Release</strong> to move down</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-ban text-error mt-1"></i>
+                                <span><strong>Avoid</strong> obstacles and edges</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-gem text-success mt-1"></i>
+                                <span><strong>Collect</strong> power-ups for abilities</span>
+                            </li>
+                        </ul>
+                        <div class="divider"></div>
+                        <h3 class="card-title text-secondary">Pro Tips</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-lightbulb text-warning mt-1"></i>
+                                <span>Keep tapping gently for better control in tight spaces</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-lightbulb text-warning mt-1"></i>
+                                <span>Watch the pattern of upcoming obstacles carefully</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-lightbulb text-warning mt-1"></i>
+                                <span>Use power-ups strategically during difficult sections</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-lightbulb text-warning mt-1"></i>
+                                <span>Stay in the middle area when possible for better reaction time</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -116,33 +203,48 @@
 
         <!-- Similar Games -->
         <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-6 text-apple-blue">You Might Also Like</h2>
+            <h2 class="text-2xl font-bold mb-6 text-primary flex items-center gap-2">
+                <i class="fas fa-gamepad"></i>
+                <span>Related Games You Might Enjoy</span>
+            </h2>
             <div id="related-games" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Related games will be dynamically loaded by JavaScript -->
                 
                 <!-- Static fallback content -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
+                <div class="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 game-card">
                     <a href="/games/fit-it-quick.html" class="block">
-                        <div class="h-48 bg-apple-gray flex items-center justify-center relative">
-                            <img src="/assets/images/games/fit-it-quick.jpg" alt="Fit It Quick" class="w-full h-full object-cover">
-                            <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Fit It Quick</span>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-2">Fit It Quick</h3>
-                            <p class="text-apple-gray mb-2">Test your shape-fitting skills in this fast-paced puzzle</p>
+                        <figure class="relative">
+                            <img src="/assets/images/games/fit-it-quick.jpg" alt="Fit It Quick" class="w-full h-48 object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                                <span class="btn btn-sm btn-primary">Play Now</span>
+                            </div>
+                        </figure>
+                        <div class="card-body p-4">
+                            <h3 class="card-title text-lg">Fit It Quick</h3>
+                            <p class="text-opacity-70 text-base-content">Test your shape-fitting skills in this fast-paced puzzle</p>
+                            <div class="card-actions justify-end mt-2">
+                                <span class="badge badge-outline">Puzzle</span>
+                                <span class="badge badge-outline">Arcade</span>
+                            </div>
                         </div>
                     </a>
                 </div>
                 
-                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition static-content">
+                <div class="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 game-card">
                     <a href="/games/jelly-collapse.html" class="block">
-                        <div class="h-48 bg-apple-gray flex items-center justify-center relative">
-                            <img src="/assets/images/games/jelly-collapse.jpg" alt="Jelly Collapse" class="w-full h-full object-cover">
-                            <span class="text-white text-xl absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">Jelly Collapse</span>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-2">Jelly Collapse</h3>
-                            <p class="text-apple-gray mb-2">Match and clear colorful jellies in this addictive puzzle</p>
+                        <figure class="relative">
+                            <img src="/assets/images/games/jelly-collapse.jpg" alt="Jelly Collapse" class="w-full h-48 object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                                <span class="btn btn-sm btn-primary">Play Now</span>
+                            </div>
+                        </figure>
+                        <div class="card-body p-4">
+                            <h3 class="card-title text-lg">Jelly Collapse</h3>
+                            <p class="text-opacity-70 text-base-content">Match and clear colorful jellies in this addictive puzzle</p>
+                            <div class="card-actions justify-end mt-2">
+                                <span class="badge badge-outline">Puzzle</span>
+                                <span class="badge badge-outline">Match-3</span>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -150,53 +252,94 @@
         </section>
     </main>
 
-    <footer class="bg-apple-dark text-white py-8">
+    <footer class="bg-neutral text-neutral-content py-12">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between">
-                <div class="mb-8 md:mb-0">
-                    <h2 class="text-2xl font-bold mb-4">PlayGameStation</h2>
-                    <p class="mb-4 max-w-md text-gray-400">Your destination for free online games. No downloads, no installations, play high-quality games instantly.</p>
+            <div class="flex flex-col md:flex-row justify-between mb-8">
+                <div class="mb-8 md:mb-0 md:w-1/3">
+                    <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <i class="fas fa-gamepad text-primary"></i>
+                        <span>PlayGameStation</span>
+                    </h2>
+                    <p class="mb-6 text-neutral-content text-opacity-80">Your destination for free online games. No downloads, no installations, play high-quality games instantly.</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition">Facebook</a>
-                        <a href="#" class="text-gray-400 hover:text-white transition">Twitter</a>
-                        <a href="#" class="text-gray-400 hover:text-white transition">Instagram</a>
+                        <a href="#" class="btn btn-circle btn-outline btn-sm">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="btn btn-circle btn-outline btn-sm">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="btn btn-circle btn-outline btn-sm">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="btn btn-circle btn-outline btn-sm">
+                            <i class="fab fa-discord"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8 md:w-2/3">
                     <div>
-                        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                        <h3 class="text-lg font-semibold mb-4 text-primary">Quick Links</h3>
                         <ul class="space-y-2">
-                            <li><a href="/" class="text-gray-400 hover:text-white transition">Home</a></li>
-                            <li><a href="/#featured-games" class="text-gray-400 hover:text-white transition">Featured Games</a></li>
-                            <li><a href="/#categories" class="text-gray-400 hover:text-white transition">Game Categories</a></li>
+                            <li><a href="/" class="link link-hover">Home</a></li>
+                            <li><a href="/#featured-games" class="link link-hover">Featured Games</a></li>
+                            <li><a href="/#new-games" class="link link-hover">New Games</a></li>
+                            <li><a href="/#categories" class="link link-hover">Game Categories</a></li>
                         </ul>
                     </div>
                     <div>
-                        <h3 class="text-lg font-semibold mb-4">Categories</h3>
+                        <h3 class="text-lg font-semibold mb-4 text-primary">Categories</h3>
                         <ul class="space-y-2">
-                            <li><a href="/categories/card.html" class="text-gray-400 hover:text-white transition">Card Games</a></li>
-                            <li><a href="/categories/puzzle.html" class="text-gray-400 hover:text-white transition">Puzzle Games</a></li>
-                            <li><a href="/categories/sports.html" class="text-gray-400 hover:text-white transition">Sports Games</a></li>
-                            <li><a href="/categories/action.html" class="text-gray-400 hover:text-white transition">Action Games</a></li>
+                            <li><a href="/categories/action.html" class="link link-hover">Action Games</a></li>
+                            <li><a href="/categories/puzzle.html" class="link link-hover">Puzzle Games</a></li>
+                            <li><a href="/categories/sports.html" class="link link-hover">Sports Games</a></li>
+                            <li><a href="/categories/card.html" class="link link-hover">Card Games</a></li>
+                            <li><a href="/categories/simulation.html" class="link link-hover">Simulation Games</a></li>
                         </ul>
                     </div>
                     <div>
-                        <h3 class="text-lg font-semibold mb-4">About Us</h3>
+                        <h3 class="text-lg font-semibold mb-4 text-primary">Legal</h3>
                         <ul class="space-y-2">
-                            <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                            <li><a href="#" class="link link-hover">About Us</a></li>
+                            <li><a href="#" class="link link-hover">Contact Us</a></li>
+                            <li><a href="#" class="link link-hover">Privacy Policy</a></li>
+                            <li><a href="#" class="link link-hover">Terms of Service</a></li>
+                            <li><a href="#" class="link link-hover">Cookie Policy</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 PlayGameStation. All rights reserved.</p>
+            <div class="divider"></div>
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-neutral-content text-opacity-60">&copy; 2025 PlayGameStation. All rights reserved.</p>
+                <div class="mt-4 md:mt-0">
+                    <label class="swap swap-rotate">
+                        <input type="checkbox" class="theme-controller" value="dark" />
+                        <i class="fas fa-sun swap-on text-yellow-500 text-xl"></i>
+                        <i class="fas fa-moon swap-off text-slate-300 text-xl"></i>
+                    </label>
+                </div>
             </div>
         </div>
     </footer>
 
     <script src="/assets/js/main.js"></script>
+    <script>
+        // Theme switcher
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeController = document.querySelector('.theme-controller');
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            
+            // Set initial theme
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            themeController.checked = currentTheme === 'dark';
+            
+            // Handle theme changes
+            themeController.addEventListener('change', (e) => {
+                const newTheme = e.target.checked ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+        });
+    </script>
 </body>
-</html> 
+</html>

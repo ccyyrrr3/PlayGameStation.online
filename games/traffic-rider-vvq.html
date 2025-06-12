@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="mytheme">
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2QR0Z9JXHZ"></script>
@@ -16,6 +16,9 @@
     <meta name="description" content="Play Traffic Rider VVQ online for free. Race through traffic on your motorcycle in this thrilling racing game with realistic graphics and exciting challenges on PlayGameStation.">
     <meta name="keywords" content="traffic rider vvq, racing games, motorcycle games, driving games, free online games">
     <link rel="canonical" href="https://playgamestation.online/games/traffic-rider-vvq.html">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -33,20 +36,43 @@
             }
         }
     </script>
+    <style>
+        /* 优化游戏iframe容器 */
+        .game-iframe-container {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+        }
+        
+        .game-iframe-container:hover {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        /* 游戏卡片悬停效果 */
+        .game-card {
+            transition: all 0.3s ease;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
 </head>
-<body class="bg-apple-light text-apple-dark">
-    <header class="bg-apple-blue text-white py-4 shadow-md">
-        <div class="container mx-auto px-4">
+<body class="min-h-screen bg-base-200 text-base-content">
+    <header class="bg-base-100 text-base-content py-4 px-4 shadow-md sticky top-0 z-30">
+        <div class="container mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-center md:text-left mb-4 md:mb-0">
-                    <a href="/" class="text-2xl font-bold">PlayGameStation</a>
+                    <a href="/" class="text-2xl font-bold flex items-center hover:text-primary transition-colors">
+                        <i class="fas fa-gamepad mr-2"></i>
+                        <span>PlayGameStation</span>
+                    </a>
                 </div>
                 <nav>
                     <ul class="flex space-x-6">
-                        <li><a href="/" class="hover:text-apple-light transition">Home</a></li>
-                        <li><a href="/categories/racing.html" class="hover:text-apple-light transition">Racing</a></li>
-                        <li><a href="/categories/action.html" class="hover:text-apple-light transition">Action</a></li>
-                        <li><a href="/categories/sports.html" class="hover:text-apple-light transition">Sports</a></li>
+                        <li><a href="/" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="/categories/racing.html" class="hover:text-primary transition-colors">Racing</a></li>
+                        <li><a href="/categories/action.html" class="hover:text-primary transition-colors">Action</a></li>
+                        <li><a href="/categories/sports.html" class="hover:text-primary transition-colors">Sports</a></li>
                     </ul>
                 </nav>
             </div>
@@ -55,119 +81,136 @@
 
     <main class="container mx-auto px-4 py-8">
         <section class="mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center text-apple-blue">Traffic Rider VVQ</h1>
-            <p class="text-xl text-center mb-8">Race through traffic on your motorcycle in this adrenaline-pumping racing game with realistic physics.</p>
+            <div class="text-center mb-6">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 text-primary">Traffic Rider VVQ</h1>
+                <div class="flex flex-wrap justify-center gap-2 mb-4">
+                    <span class="badge badge-primary">Racing</span>
+                    <span class="badge badge-secondary">Motorcycle</span>
+                    <span class="badge badge-accent">3D</span>
+                    <span class="badge">Single Player</span>
+                </div>
+                <p class="text-xl mb-8 max-w-3xl mx-auto text-opacity-90">Race through traffic on your motorcycle in this adrenaline-pumping racing game with realistic physics.</p>
+            </div>
             
-            <div class="w-full max-w-5xl mx-auto rounded-lg overflow-hidden shadow-xl border-4 border-apple-blue">
+            <div class="w-full max-w-5xl mx-auto rounded-xl overflow-hidden shadow-xl border-4 border-primary game-iframe-container">
                 <div class="w-full aspect-video flex items-center justify-center relative" style="z-index: 10;">
-                    <iframe src="https://games.crazygames.com/en_US/traffic-rider-vvq/index.html?v=1.329" style="width: 100%; height: 100%;" frameborder="0" allow="gamepad *;"></iframe>
+                    <iframe src="https://games.crazygames.com/en_US/traffic-rider-vvq/index.html?v=1.329" style="width: 100%; height: 100%;" frameborder="0" allow="gamepad *;" loading="lazy" title="Play Traffic Rider VVQ Online"></iframe>
                 </div>
             </div>
         </section>
 
         <section id="about" class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">About the Game</h2>
+            <h2 class="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2">About the Game</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                    <p class="mb-4">Traffic Rider VVQ is an exciting motorcycle racing game that challenges players to weave through traffic at high speeds. Experience the thrill of riding through increasingly difficult roads and weather conditions while avoiding crashes and completing objectives.</p>
-                    <p class="mb-4">With its realistic graphics, responsive controls, and engaging progression system, Traffic Rider VVQ offers an immersive racing experience. Unlock new motorcycles, customize your ride, and challenge yourself with different game modes as you become a master rider.</p>
+                <div class="card bg-base-100 shadow-md p-6 rounded-xl">
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center text-primary"><i class="fas fa-motorcycle mr-2"></i>Game Overview</h3>
+                    <p class="mb-4 opacity-90">Traffic Rider VVQ is an exciting motorcycle racing game that challenges players to weave through traffic at high speeds. Experience the thrill of riding through increasingly difficult roads and weather conditions while avoiding crashes and completing objectives.</p>
+                    <p class="opacity-90">With its realistic graphics, responsive controls, and engaging progression system, Traffic Rider VVQ offers an immersive racing experience. Unlock new motorcycles, customize your ride, and challenge yourself with different game modes as you become a master rider.</p>
                 </div>
-                <div>
-                    <h3 class="text-2xl font-semibold mb-3 text-apple-green">Game Features</h3>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li>Multiple motorcycles to unlock</li>
-                        <li>Various racing environments and weather</li>
-                        <li>Different game modes and challenges</li>
-                        <li>Realistic physics and controls</li>
-                        <li>Progression and upgrade system</li>
-                        <li>Impressive graphics and sound effects</li>
+                <div class="card bg-base-100 shadow-md p-6 rounded-xl">
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center text-secondary"><i class="fas fa-star mr-2"></i>Game Features</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start"><i class="fas fa-check-circle text-success mr-2 mt-1"></i>Multiple motorcycles to unlock</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-success mr-2 mt-1"></i>Various racing environments and weather</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-success mr-2 mt-1"></i>Different game modes and challenges</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-success mr-2 mt-1"></i>Realistic physics and controls</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-success mr-2 mt-1"></i>Progression and upgrade system</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-success mr-2 mt-1"></i>Impressive graphics and sound effects</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section id="controls" class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">How to Play</h2>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-3 text-apple-green">Basic Controls</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Accelerate</span>
-                                <span>W key or Up Arrow</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Brake</span>
-                                <span>S key or Down Arrow</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Steer</span>
-                                <span>A/D keys or Left/Right Arrows</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="bg-apple-blue text-white px-3 py-1 rounded mr-3">Horn</span>
-                                <span>H key</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-3 text-apple-green">Game Rules</h3>
-                        <p class="mb-3">Your objective is to race successfully:</p>
-                        <ul class="list-disc pl-5 space-y-2">
-                            <li>Navigate through traffic without crashing</li>
-                            <li>Complete distance objectives</li>
-                            <li>Earn points for close calls and high speeds</li>
-                            <li>Unlock new motorcycles and tracks</li>
-                            <li>Try different game modes for varied challenges</li>
-                        </ul>
-                    </div>
+            <h2 class="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2">How to Play</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card bg-base-100 p-6 rounded-xl shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center text-primary"><i class="fas fa-keyboard mr-2"></i>Basic Controls</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <span class="badge badge-primary p-3 mr-3">Accelerate</span>
+                            <span class="flex items-center"><i class="fas fa-arrow-up mr-2"></i>W key or Up Arrow</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="badge badge-primary p-3 mr-3">Brake</span>
+                            <span class="flex items-center"><i class="fas fa-arrow-down mr-2"></i>S key or Down Arrow</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="badge badge-primary p-3 mr-3">Steer</span>
+                            <span class="flex items-center"><i class="fas fa-arrows-left-right mr-2"></i>A/D keys or Left/Right Arrows</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="badge badge-primary p-3 mr-3">Horn</span>
+                            <span class="flex items-center"><i class="fas fa-volume-high mr-2"></i>H key</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card bg-base-100 p-6 rounded-xl shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center text-secondary"><i class="fas fa-list-check mr-2"></i>Game Rules</h3>
+                    <p class="mb-4 opacity-90">Your objective is to race successfully:</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start"><i class="fas fa-motorcycle text-accent mr-2 mt-1"></i>Navigate through traffic without crashing</li>
+                        <li class="flex items-start"><i class="fas fa-road text-accent mr-2 mt-1"></i>Complete distance objectives</li>
+                        <li class="flex items-start"><i class="fas fa-gauge-high text-accent mr-2 mt-1"></i>Earn points for close calls and high speeds</li>
+                        <li class="flex items-start"><i class="fas fa-unlock text-accent mr-2 mt-1"></i>Unlock new motorcycles and tracks</li>
+                        <li class="flex items-start"><i class="fas fa-gamepad text-accent mr-2 mt-1"></i>Try different game modes for varied challenges</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">Why Players Love This Game</h2>
+            <h2 class="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2">Why Players Love This Game</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-green">Adrenaline Rush</h3>
-                    <p>The high-speed racing and close calls with traffic create an exciting and thrilling gameplay experience.</p>
+                <div class="card bg-base-100 shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="card-body">
+                        <h3 class="card-title text-xl mb-3 flex items-center"><i class="fas fa-bolt text-warning mr-2"></i>Adrenaline Rush</h3>
+                        <p class="opacity-90">The high-speed racing and close calls with traffic create an exciting and thrilling gameplay experience.</p>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-green">Realistic Physics</h3>
-                    <p>The motorcycle handling and physics feel authentic, providing a satisfying and challenging racing experience.</p>
+                <div class="card bg-base-100 shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="card-body">
+                        <h3 class="card-title text-xl mb-3 flex items-center"><i class="fas fa-balance-scale text-info mr-2"></i>Realistic Physics</h3>
+                        <p class="opacity-90">The motorcycle handling and physics feel authentic, providing a satisfying and challenging racing experience.</p>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-green">Progression System</h3>
-                    <p>Unlocking new motorcycles and upgrading your ride gives a sense of achievement and keeps players motivated.</p>
+                <div class="card bg-base-100 shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="card-body">
+                        <h3 class="card-title text-xl mb-3 flex items-center"><i class="fas fa-trophy text-success mr-2"></i>Progression System</h3>
+                        <p class="opacity-90">Unlocking new motorcycles and upgrading your ride gives a sense of achievement and keeps players motivated.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="mb-8">
-            <h2 class="text-3xl font-bold mb-6 text-apple-blue border-b-2 border-apple-blue pb-2">Related Games You Might Enjoy</h2>
+            <h2 class="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2">Related Games You Might Enjoy</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="card bg-base-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 game-card">
                     <a href="/games/teacher-simulator.html" class="block">
-                        <div class="h-40 bg-apple-gray relative">
-                            <img src="/assets/images/games/teacher-simulator.jpg" alt="Teacher Simulator" class="w-full h-full object-cover">
-                            <span class="text-white text-lg absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 z-10">Teacher Simulator</span>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-semibold mb-2">Teacher Simulator</h3>
-                            <p class="text-sm text-apple-gray">Experience the challenging life of a teacher in this fun simulation.</p>
+                        <figure class="relative">
+                            <img src="/assets/images/games/teacher-simulator.jpg" alt="Teacher Simulator" class="w-full h-48 object-cover transition-all duration-300 transform hover:scale-110">
+                            <div class="absolute inset-0 bg-black bg-opacity-30 hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                                <span class="text-white text-lg font-bold">Teacher Simulator</span>
+                            </div>
+                        </figure>
+                        <div class="card-body p-4">
+                            <h3 class="card-title text-lg">Teacher Simulator</h3>
+                            <p class="text-sm opacity-70">Experience the challenging life of a teacher in this fun simulation.</p>
                         </div>
                     </a>
                 </div>
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="card bg-base-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 game-card">
                     <a href="/games/poxel-io.html" class="block">
-                        <div class="h-40 bg-apple-gray relative">
-                            <img src="/assets/images/games/poxel-io.jpg" alt="Poxel.io" class="w-full h-full object-cover">
-                            <span class="text-white text-lg absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 z-10">Poxel.io</span>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-semibold mb-2">Poxel.io</h3>
-                            <p class="text-sm text-apple-gray">Competitive voxel-based multiplayer game.</p>
+                        <figure class="relative">
+                            <img src="/assets/images/games/poxel-io.jpg" alt="Poxel.io" class="w-full h-48 object-cover transition-all duration-300 transform hover:scale-110">
+                            <div class="absolute inset-0 bg-black bg-opacity-30 hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                                <span class="text-white text-lg font-bold">Poxel.io</span>
+                            </div>
+                        </figure>
+                        <div class="card-body p-4">
+                            <h3 class="card-title text-lg">Poxel.io</h3>
+                            <p class="text-sm opacity-70">Competitive voxel-based multiplayer game.</p>
                         </div>
                     </a>
                 </div>
@@ -175,19 +218,59 @@
         </section>
     </main>
 
-    <footer class="bg-apple-dark text-white py-8">
+    <footer class="bg-neutral text-neutral-content py-8">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <p class="text-xl font-bold">PlayGameStation</p>
-                    <p class="text-sm text-gray-400">Your destination for the best online games</p>
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <h2 class="text-2xl font-bold mb-4 flex items-center"><i class="fas fa-gamepad mr-2"></i>PlayGameStation</h2>
+                    <p class="mb-4 max-w-md opacity-75">Your destination for free online games. No downloads, no installations, play high-quality games instantly.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="btn btn-circle btn-sm btn-ghost"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-circle btn-sm btn-ghost"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-circle btn-sm btn-ghost"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
-                <div class="text-sm text-gray-400">
-                    <p>&copy; 2025 PlayGameStation. All rights reserved.</p>
-                    <p>Traffic Rider VVQ game is provided by CrazyGames</p>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                        <ul class="space-y-2">
+                            <li><a href="/" class="hover:text-primary transition-colors duration-300">Home</a></li>
+                            <li><a href="/#featured-games" class="hover:text-primary transition-colors duration-300">Featured Games</a></li>
+                            <li><a href="/#categories" class="hover:text-primary transition-colors duration-300">Game Categories</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Categories</h3>
+                        <ul class="space-y-2">
+                            <li><a href="/categories/racing.html" class="hover:text-primary transition-colors duration-300">Racing</a></li>
+                            <li><a href="/categories/action.html" class="hover:text-primary transition-colors duration-300">Action</a></li>
+                            <li><a href="/categories/sports.html" class="hover:text-primary transition-colors duration-300">Sports</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-primary transition-colors duration-300">Privacy Policy</a></li>
+                            <li><a href="#" class="hover:text-primary transition-colors duration-300">Terms of Service</a></li>
+                            <li><a href="#" class="hover:text-primary transition-colors duration-300">Contact Us</a></li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
+            <div class="border-t border-base-300 mt-8 pt-8 text-center opacity-75">
+                <p>&copy; 2025 PlayGameStation. All rights reserved.</p>
+                <p class="mt-2">Traffic Rider VVQ game is provided by CrazyGames</p>
             </div>
         </div>
     </footer>
+    
+    <script>
+        // 主题切换功能
+        document.addEventListener('DOMContentLoaded', function() {
+            // 检查本地存储中的主题设置
+            const currentTheme = localStorage.getItem('theme') || 'mytheme';
+            document.documentElement.setAttribute('data-theme', currentTheme);
+        });
+    </script>
 </body>
-</html> 
+</html>
